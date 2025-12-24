@@ -1,0 +1,348 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef1"
+            },
+            "ExternalId": "0koaj0000003kG1AAI",
+            "FlexcardName": "testSelectedCardsChild",
+            "VersionNumber": 4,
+            "VersionCount": 4,
+            "Author": "Developer",
+            "IsChildCard": true,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-30T12:23:40.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef2"
+            },
+            "ExternalId": "0koaj0000003ek5AAA",
+            "FlexcardName": "Account",
+            "VersionNumber": 1,
+            "VersionCount": 1,
+            "Author": "RevenueClassification",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-24T16:04:30.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef3"
+            },
+            "ExternalId": "0koaj0000003eqXAAQ",
+            "FlexcardName": "opportunityHistoryChildComponent",
+            "VersionNumber": 2,
+            "VersionCount": 2,
+            "Author": "Developer",
+            "IsChildCard": true,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-22T20:28:34.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef4"
+            },
+            "ExternalId": "0koaj0000003l2PAAQ",
+            "FlexcardName": "testWeatherCard",
+            "VersionNumber": 2,
+            "VersionCount": 2,
+            "Author": "Weather",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-11-02T12:04:25.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef5"
+            },
+            "ExternalId": "0koaj0000003mWLAAY",
+            "FlexcardName": "testCountryDetails",
+            "VersionNumber": 3,
+            "VersionCount": 3,
+            "Author": "Developer",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-11-04T07:43:04.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef6"
+            },
+            "ExternalId": "0koaj0000003eiTAAQ",
+            "FlexcardName": "AccountInformation",
+            "VersionNumber": 1,
+            "VersionCount": 1,
+            "Author": "SimpleAccounts",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-12-10T09:07:53.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef7"
+            },
+            "ExternalId": "0koaj0000003jgXAAQ",
+            "FlexcardName": "accountRelatedContacts",
+            "VersionNumber": 2,
+            "VersionCount": 2,
+            "Author": "Account",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-29T12:13:52.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef8"
+            },
+            "ExternalId": "0koaj0000003nAfAAI",
+            "FlexcardName": "teamAssetList",
+            "VersionNumber": 1,
+            "VersionCount": 1,
+            "Author": "Developer",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-11-05T10:01:27.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef9"
+            },
+            "ExternalId": "FinancialAccounts_SalesforceDemo_1",
+            "FlexcardName": "FinancialAccounts",
+            "VersionNumber": 1,
+            "VersionCount": 1,
+            "Author": "SalesforceDemo",
+            "IsChildCard": false,
+            "IsFileBased": true,
+            "IsManagedUsingStdDesigner": false
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef10"
+            },
+            "ExternalId": "0koaj0000003lvFAAQ",
+            "FlexcardName": "primaryContactCard",
+            "VersionNumber": 4,
+            "VersionCount": 4,
+            "Author": "Account",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-11-03T09:16:49.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef11"
+            },
+            "ExternalId": "0koaj0000003kCnAAI",
+            "FlexcardName": "productList",
+            "VersionNumber": 2,
+            "VersionCount": 2,
+            "Author": "Product",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-11-03T11:22:22.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef12"
+            },
+            "ExternalId": "0koaj0000003lK9AAI",
+            "FlexcardName": "teamAccountInformationCard",
+            "VersionNumber": 4,
+            "VersionCount": 4,
+            "Author": "Account",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-11-02T09:41:25.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef13"
+            },
+            "ExternalId": "0koaj00000044D7AAI",
+            "FlexcardName": "getAccountClassification",
+            "VersionNumber": 5,
+            "VersionCount": 5,
+            "Author": "Developer",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-12-23T10:04:25.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef14"
+            },
+            "ExternalId": "0koaj0000003jlNAAQ",
+            "FlexcardName": "pantherschoolsSelectedLists",
+            "VersionNumber": 3,
+            "VersionCount": 3,
+            "Author": "PantherSchools",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-11-02T15:39:41.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef15"
+            },
+            "ExternalId": "0koaj0000003jmzAAA",
+            "FlexcardName": "testSelectedCards",
+            "VersionNumber": 1,
+            "VersionCount": 1,
+            "Author": "Developer",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-30T10:42:36.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef16"
+            },
+            "ExternalId": "0koaj0000003kW9AAI",
+            "FlexcardName": "parentCard",
+            "VersionNumber": 1,
+            "VersionCount": 1,
+            "Author": "Developer",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-31T12:37:05.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef17"
+            },
+            "ExternalId": "0koaj0000003iPVAAY",
+            "FlexcardName": "simpleFlexCardContactDetails",
+            "VersionNumber": 1,
+            "VersionCount": 1,
+            "Author": "Contact",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-24T16:15:26.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef18"
+            },
+            "ExternalId": "0koaj0000003hlBAAQ",
+            "FlexcardName": "relatedOpportunityTable",
+            "VersionNumber": 1,
+            "VersionCount": 1,
+            "Author": "Account",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-22T18:24:21.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef19"
+            },
+            "ExternalId": "0koaj0000003ja5AAA",
+            "FlexcardName": "childOpportunityHistory",
+            "VersionNumber": 2,
+            "VersionCount": 2,
+            "Author": "Opportunity",
+            "IsChildCard": true,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-29T12:55:06.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef20"
+            },
+            "ExternalId": "0koaj0000003lonAAA",
+            "FlexcardName": "weatherInformationCard",
+            "VersionNumber": 7,
+            "VersionCount": 7,
+            "Author": "Developer",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-11-03T04:39:11.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef21"
+            },
+            "ExternalId": "0koaj0000003jdJAAQ",
+            "FlexcardName": "relatedOpporrtunityRecords",
+            "VersionNumber": 8,
+            "VersionCount": 8,
+            "Author": "Accounts",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-29T13:04:07.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef22"
+            },
+            "ExternalId": "0koaj0000003iULAAY",
+            "FlexcardName": "relatedOpportunitiesFlexCard",
+            "VersionNumber": 3,
+            "VersionCount": 3,
+            "Author": "Account",
+            "IsChildCard": false,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-24T19:07:41.000+0000",
+            "IsManagedUsingStdDesigner": true
+        },
+        {
+            "attributes": {
+                "type": "OmniFlexCardView",
+                "referenceId": "OmniFlexCardViewRef23"
+            },
+            "ExternalId": "0koaj0000003kUXAAY",
+            "FlexcardName": "childCard",
+            "VersionNumber": 1,
+            "VersionCount": 1,
+            "Author": "Developer",
+            "IsChildCard": true,
+            "IsFileBased": false,
+            "LastModifiedDate": "2025-10-31T12:33:24.000+0000",
+            "IsManagedUsingStdDesigner": true
+        }
+    ]
+}

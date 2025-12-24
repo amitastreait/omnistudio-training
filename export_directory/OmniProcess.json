@@ -1,0 +1,513 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef1"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "teamFetchAccountById",
+            "OmniProcessKey": "team_FetchAccountById",
+            "Language": "Procedure",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "FetchAccountById",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"accountId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef2"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Save Account Details",
+            "OmniProcessKey": "team_saveAccountDetails",
+            "Language": "Procedure",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "saveAccountDetails",
+            "IsOmniScriptEmbeddable": false,
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef3"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Country API Data AS",
+            "OmniProcessKey": "team_getCountryAPI",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "getCountryAPI",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"accountId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef4"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Description": "Team Get Account Details",
+            "Name": "Team Get Account Details",
+            "OmniProcessKey": "team_GetAccountDetails",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "GetAccountDetails",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef5"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Save Account Details - PS",
+            "OmniProcessKey": "team_saveAccountDetails",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "saveAccountDetails",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordId\":\"\",\"accType\":\"\",\"Contact\":{},\"Account\":{\"Name\":\"PantherSchools Inc.\",\"Type\":\"Customer\",\"Industry\":\"Education\",\"Phone\":\"+1-777-0123\",\"Fax\":\"+1-777-0124\",\"Website\":\"https://www.PantherSchools.com\",\"BillingStreet\":\"123 Technology Drive, Suite 500\",\"BillingCity\":\"San Francisco\",\"BillingState\":\"CA\",\"BillingPostalCode\":\"94105\",\"BillingCountry\":\"United States\",\"ShippingStreet\":\"123 Technology Drive, Suite 500\",\"ShippingCity\":\"San Francisco\",\"ShippingState\":\"CA\",\"ShippingPostalCode\":\"94105\",\"ShippingCountry\":\"United States\",\"NumberOfEmployees\":250,\"AnnualRevenue\":15000000,\"Rating\":\"Hot\",\"AccountSource\":\"Web\",\"TickerSymbol\":\"EDU\",\"ExternalId\":\"788973438234\",\"Description\":\"Leading software development company specializing in enterprise solutions\"}}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef6"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Description": "Team Get Account Details",
+            "Name": "Team Get Account Details",
+            "OmniProcessKey": "team_GetAccountDetails",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "GetAccountDetails",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 2,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef7"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Save Account Details - PS",
+            "OmniProcessKey": "team_saveAccountDetails",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "saveAccountDetails",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordId\":\"\",\"accType\":\"\",\"Contact\":{},\"Account\":{\"Name\":\"PantherSchools Inc.\",\"Type\":\"Customer\",\"Industry\":\"Education\",\"Phone\":\"+1-777-0123\",\"Fax\":\"+1-777-0124\",\"Website\":\"https://www.PantherSchools.com\",\"BillingStreet\":\"123 Technology Drive, Suite 500\",\"BillingCity\":\"San Francisco\",\"BillingState\":\"CA\",\"BillingPostalCode\":\"94105\",\"BillingCountry\":\"United States\",\"ShippingStreet\":\"123 Technology Drive, Suite 500\",\"ShippingCity\":\"San Francisco\",\"ShippingState\":\"CA\",\"ShippingPostalCode\":\"94105\",\"ShippingCountry\":\"United States\",\"NumberOfEmployees\":250,\"AnnualRevenue\":15000000,\"Rating\":\"Hot\",\"AccountSource\":\"Web\",\"TickerSymbol\":\"EDU\",\"ExternalId\":\"788973438234\",\"Description\":\"Leading software development company specializing in enterprise solutions\"}}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 2,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef8"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Get Account Classification",
+            "OmniProcessKey": "team_GetAccountClassification",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "GetAccountClassification",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"accId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef9"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Save Case Record",
+            "OmniProcessKey": "team_saveCaseRecord",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "saveCaseRecord",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"omniscriptId\":\"0jNaj000000ArUTEA0\",\"language\":\"English\",\"type\":\"team\",\"subType\":\"createCaseRecord\",\"sId\":\"0jNaj000000ArUTEA0\",\"runMode\":\"preview\",\"theme\":\"lightning\",\"ContextId\":\"001aj000017N13yAAC\",\"LanguageCode\":\"en_US\",\"userProfile\":\"System Administrator\",\"timeStamp\":\"2025-12-10T14:35:41.517Z\",\"userTimeZoneName\":\"America/Los_Angeles\",\"userTimeZone\":\"-480\",\"userCurrencyCode\":\"USD\",\"userName\":\"amitasinghsfdc@gmail.com.rlm\",\"userId\":\"005aj00000GmOoPAAV\",\"omniProcessId\":\"0jNaj000000ArUTEA0\",\"localTimeZoneName\":\"Asia/Calcutta\",\"AccountName\":\"Any Partner Inc\",\"AccountId\":\"001aj000017N13yAAC\",\"Account\":{\"Id\":\"001aj000017N13yAAC\",\"BlkAccount\":{\"Name\":\"Any Partner Inc\",\"AnnualRevenue\":565655555556566},\"BlkCase\":{\"TAContact-Block\":{\"TAContact\":\"Avi Green\",\"ContactName\":\"Avi Green\",\"ContactId\":\"003aj00000KDQeRAAX\"},\"Priority\":\"Medium\",\"Origin\":\"Phone\",\"Type\":\"Electronic\",\"Subject\":\"This is a test Case\",\"Description\":\"This is a test Case \"}}}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef10"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Description": "Team Get Account Details",
+            "Name": "Team Get Account Details",
+            "OmniProcessKey": "team_GetAccountDetails",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "GetAccountDetails",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 3,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef11"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Description": "Team Get Account Details",
+            "Name": "Team Get Account Details",
+            "OmniProcessKey": "team_GetAccountDetails",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "GetAccountDetails",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 4,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef12"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Calculate Discount for Customers",
+            "OmniProcessKey": "team_discountCalculation",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "discountCalculation",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"isPremiumCustomer\":true,\"baseAmount\":1500,\"recordId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef13"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Save Account Details with reusable Data Mapper",
+            "OmniProcessKey": "team_saveAccountDetailsRDM",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "saveAccountDetailsRDM",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"StepAccount\":{\"Name\":\"PantherSchools Inc.\",\"Type\":\"Customer\",\"Industry\":\"Education\",\"Phone\":\"+1-777-0123\",\"Fax\":\"+1-777-0124\",\"Website\":\"https://www.PantherSchools.com\",\"BillingStreet\":\"123 Technology Drive, Suite 500\",\"BillingCity\":\"San Francisco\",\"BillingState\":\"CA\",\"BillingPostalCode\":\"94105\",\"BillingCountry\":\"United States\",\"ShippingStreet\":\"123 Technology Drive, Suite 500\",\"ShippingCity\":\"San Francisco\",\"ShippingState\":\"CA\",\"ShippingPostalCode\":\"94105\",\"ShippingCountry\":\"United States\",\"NumberOfEmployees\":250,\"AnnualRevenue\":15000000,\"Rating\":\"Hot\",\"AccountSource\":\"Web\",\"TickerSymbol\":\"EDU\",\"ExternalId\":\"788973438234\",\"Description\":\"Leading software development company specializing in enterprise solutions\"}}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef14"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Get Customer Credit Score",
+            "OmniProcessKey": "team_getCustomerCreditScore",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "getCustomerCreditScore",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"Body\":{\"phone_number\":\"+14155552671\"}}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef15"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Create External Account & Contact",
+            "OmniProcessKey": "team_createExternalAccountContact",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "createExternalAccountContact",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"requestData\":{\"contacts\":[{\"email\":\"asingh@gmail.com\",\"department\":\"Executive\",\"title\":\"Chief Executive Officer\",\"contactPhone\":\"8555555555\",\"mobilePhone\":\"8558895555\",\"lastName\":\"Singh\",\"firstName\":\"Amit\"}],\"accountData\":{\"billingCity\":\"SF\",\"billingState\":\"CA\",\"industry\":\"Banking\",\"billingCountry\":\"United States\",\"billingPostalCode\":\"58644\",\"accountName\":\"Salesforce.com\",\"phone\":\"2128425500\",\"billingStreet\":\"124 Main Street\",\"website\":\"https://www.example.com\"}},\"omniScriptId\":\"0jNaj000000BEsTEAW\",\"elementName\":\"createExternalAccountContact\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef16"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Create External Account & Contact",
+            "OmniProcessKey": "team_createExternalAccountContact",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "createExternalAccountContact",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordIds\":[{\"Id\":\"001aj00001uDeepAAC\"},{\"Id\":\"001aj00001uDeepAAC\"}],\"requestData\":{\"contacts\":[{\"email\":\"asingh@gmail.com\",\"department\":\"Executive\",\"title\":\"Chief Executive Officer\",\"contactPhone\":\"8555555555\",\"mobilePhone\":\"8558895555\",\"lastName\":\"Singh\",\"firstName\":\"Amit\"}],\"accountData\":{\"billingCity\":\"SF\",\"billingState\":\"CA\",\"industry\":\"Banking\",\"billingCountry\":\"United States\",\"billingPostalCode\":\"58644\",\"accountName\":\"Salesforce.com\",\"phone\":\"2128425500\",\"billingStreet\":\"124 Main Street\",\"website\":\"https://www.example.com\"}},\"omniScriptId\":\"0jNaj000000BEsTEAW\",\"elementName\":\"createExternalAccountContact\",\"accountId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 2,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef17"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Loop Block Demo",
+            "OmniProcessKey": "team_loopBlockDemo",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "loopBlockDemo",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordId\":\"001aj000017N13yAAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef18"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Loop Block Demo",
+            "OmniProcessKey": "team_loopBlockDemo",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "loopBlockDemo",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordId\":\"001aj000017N13yAAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 2,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef19"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Loop Block Demo",
+            "OmniProcessKey": "team_loopBlockDemo",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "loopBlockDemo",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"recordId\":\"001aj000017N13yAAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 3,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef20"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Try Catch Example",
+            "OmniProcessKey": "team_tryCatchDemo",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"chainableQueriesLimit\":1,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false},\"requiredPermission\":\"SystemAdmin\"}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "tryCatchDemo",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"Account\":{\"Name\":\"\",\"Rating\":\"Hot\",\"Industry\":\"Education\"},\"Contact\":{\"FirstName\":\"Amit\",\"LastName\":\"Singh\",\"Email\":\"jacob@gmail.com\"}}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "RequiredPermission": "SystemAdmin",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef21"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Test - Try Catch Demo",
+            "OmniProcessKey": "team_test",
+            "Language": "Procedure",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"chainableActualTimeLimit\":null,\"additionalChainableResponse\":{},\"queueableChainableQueriesLimit\":120,\"queueableChainableCpuLimit\":40000,\"queueableChainableHeapSizeLimit\":6,\"ttlMinutes\":5,\"mockResponseMap\":{}}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "test",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef22"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Try Catch Example",
+            "OmniProcessKey": "team_tryCatchDemo",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":true,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"chainableQueriesLimit\":50,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false},\"rollbackOnError\":true}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "tryCatchDemo",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"Account\":{\"Name\":\"\",\"Rating\":\"Hot\",\"Industry\":\"Education\"},\"Contact\":{\"FirstName\":\"Ankit\",\"LastName\":\"Singh\",\"Email\":\"ankit.singh@gmail.com\"},\"ContactID\":\"003aj00000ptn17AAA\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 2,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef23"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Try Catch Example",
+            "OmniProcessKey": "team_tryCatchDemo",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":[],\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"chainableQueriesLimit\":1,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":null,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":[],\"chainableActualTimeLimit\":null,\"transientValues\":{\"activateOrDeactivateConsent\":false},\"requiredPermission\":\"PermSet:Internal_Admin_Permission_Set\"}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "tryCatchDemo",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{\"Account\":{\"Name\":\"\",\"Rating\":\"Hot\",\"Industry\":\"Education\"},\"Contact\":{\"FirstName\":\"Amit\",\"LastName\":\"Singh\",\"Email\":\"jacob@gmail.com\"},\"recordId\":\"001aj000017N145AAC\"}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 3,
+            "Type": "team",
+            "RequiredPermission": "PermSet:Internal_Admin_Permission_Set",
+            "IsWebCompEnabled": false
+        },
+        {
+            "attributes": {
+                "type": "OmniProcess",
+                "referenceId": "OmniProcessRef24"
+            },
+            "IsMetadataCacheDisabled": false,
+            "IsTestProcedure": false,
+            "Name": "Team Long Running Test",
+            "OmniProcessKey": "team_longRunningTest",
+            "Language": "English",
+            "PropertySetConfig": "{\"linkToExternalObject\":\"\",\"trackingCustomData\":{},\"includeAllActionsInResponse\":false,\"columnsPropertyMap\":[],\"relationshipFieldsMap\":[],\"labelSingular\":\"\",\"labelPlural\":\"\",\"description\":\"\",\"nameColumn\":\"\",\"rollbackOnError\":false,\"chainableQueriesLimit\":75,\"chainableDMLStatementsLimit\":null,\"chainableCpuLimit\":2000,\"chainableHeapSizeLimit\":5,\"chainableDMLRowsLimit\":null,\"chainableQueryRowsLimit\":null,\"chainableSoslQueriesLimit\":null,\"additionalChainableResponse\":{},\"chainableActualTimeLimit\":null}",
+            "OmniProcessType": "Integration Procedure",
+            "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "SubType": "longRunningTest",
+            "IsOmniScriptEmbeddable": false,
+            "CustomJavaScript": "{}",
+            "IsIntegrationProcedure": true,
+            "VersionNumber": 1,
+            "Type": "team",
+            "IsWebCompEnabled": false
+        }
+    ]
+}

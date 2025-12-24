@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-m-around_small">
+        {message}
+    </div>
+    <div class="slds-m-around_small">
+        {stepName} - {omniScriptDataJSON.type}
+    </div>
+    <div class="slds-m-around_small">
+        <lightning-input type="text" label="First Name" onchange={handleChange} value={data.firstName} ></lightning-input>
+        <lightning-input type="text" label="Last Name" onchange={handleLastNameChange} value={data.lastName} ></lightning-input>
+    </div>
+    <div class="slds-m-around_small">
+        <lightning-button variant="brand" label="Navigate to Next" onclick={handleClick} ></lightning-button>
+    </div>
+</template>

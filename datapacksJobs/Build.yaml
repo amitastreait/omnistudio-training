@@ -1,0 +1,24 @@
+projectPath: ./example_vlocity_build
+# expansionPath: vlocity_build
+
+queries:
+  - DataRaptor # DataMapper
+  - FlexCard
+  - OmniScript
+  - IntegrationProcedure
+
+# queries:
+  - VlocityDataPackType: DataRaptor
+    query: Select Id from %vlocity_namespace%__DRBundle__c WHERE Name = 'DMEContactRecords' LIMIT 100
+  #- VlocityDataPackType: VlocityCard
+  #  query: SELECT Id, Name FROM %vlocity_namespace%__VlocityCard__c WHERE Name LIKE 'getAccountClassification%' AND %vlocity_namespace%__Active__c = true
+  - VlocityDataPackType: OmniScript
+    query: Select Id, %vlocity_namespace%__Type__c,  %vlocity_namespace%__SubType__c, %vlocity_namespace%__Language__c from %vlocity_namespace%__OmniScript__c WHERE %vlocity_namespace%__IsActive__c = true AND %vlocity_namespace%__IsProcedure__c = false
+  - VlocityDataPackType: IntegrationProcedure
+    query: Select Id, %vlocity_namespace%__Type__c,  %vlocity_namespace%__SubType__c, %vlocity_namespace%__Language__c from %vlocity_namespace%__OmniScript__c WHERE %vlocity_namespace%__IsActive__c = true AND %vlocity_namespace%__IsProcedure__c = true
+
+# vlocity packExport -job datapacksJobs/Build.yaml -sfdx.username omnistudio-training
+
+# vlocity validateLocalData -job datapacksJobs/Build.yaml -sfdx.username amitsingh@pantherschools.com.org2
+
+# vlocity packDeploy -job datapacksJobs/Build.yaml -sfdx.username amitsingh@pantherschools.com.org2

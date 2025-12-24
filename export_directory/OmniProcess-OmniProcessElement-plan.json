@@ -1,0 +1,14 @@
+[
+    {
+        "sobject": "OmniProcess",
+        "files": [
+            "OmniProcess.json"
+        ]
+    },
+    {
+        "sobject": "OmniProcessElement",
+        "files": [
+            "OmniProcessElement.json"
+        ]
+    }
+]

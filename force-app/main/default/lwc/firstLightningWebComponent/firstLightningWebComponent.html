@@ -1,0 +1,47 @@
+<template>
+    <div class="component-container">
+        <!-- Main Content -->
+        <div class="content-section">
+            <div class="slds-p-around_small">
+                <div class="message-box">
+                    Message is - {message}
+                </div>
+            </div>
+            <div class="slds-p-around_small">
+                <lightning-input
+                    type="text"
+                    value={firstName}
+                    variant="standard"
+                    onchange={handleChange}
+                    name="Name"
+                    label="Name"
+                    required>
+                </lightning-input>
+            </div>
+        </div>
+
+        <!-- Footer with Prev and Next Buttons -->
+        <footer class="component-footer">
+            <div class="button-container">
+                <!-- <lightning-button
+                    variant="neutral"
+                    label="Previous"
+                    title="Go to Previous Step"
+                    onclick={handlePrevious}
+                    icon-name="utility:chevronleft"
+                    class="footer-button prev-button">
+                </lightning-button> -->
+
+                <lightning-button
+                    variant="brand"
+                    label="Next"
+                    title="Go to Next Step"
+                    onclick={handleNext}
+                    icon-name="utility:chevronright"
+                    icon-position="right"
+                    class="footer-button next-button">
+                </lightning-button>
+            </div>
+        </footer>
+    </div>
+</template>

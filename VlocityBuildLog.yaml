@@ -1,0 +1,126 @@
+Org: omnistudio-training
+Version: 1.17.20
+Node: v22.13.1
+PackageVersion: !<tag:yaml.org,2002:js/undefined> ''
+Namespace: omnistudio
+Job: VDX
+Action: Export
+ProjectPath: ./example_vlocity_build
+TotalTime: 0m 13s
+Count:
+  Success:
+    OmniScript: 14
+    DataRaptor: 52
+    FlexCard: 20
+    IntegrationProcedure: 10
+  Error: {}
+Errors:
+  - 53ec1e4010e268d636be1ca004aed079 references IntegrationProcedure/DataService_GetAccountClassification which was not found.
+Status:
+  Success:
+    OmniScript:
+      - GuidedProductSelling_ComputerChoice_English
+      - ProductGuidedSelection_Integration_English
+      - pantherSchools_SampleOmni_English
+      - team_EditAccount_English
+      - team_ProductList_English
+      - team_UpdatePrimaryContact_English
+      - team_createAccount_English
+      - team_createCaseRecord_English
+      - team_viewAccount_English
+      - test_EditAccount_English
+      - test_InvolcableApex_English
+      - test_OmniScript_English
+      - test_reportProblem_English
+      - view_WeatherInformation_English
+    DataRaptor:
+      - DMEAccountExtract
+      - DMEAccountWithOpportunities
+      - DMEAccountWithOpportunitiesV1
+      - DMEContactRecords
+      - DMEDocGenExample
+      - DMEDocGenExampleV1
+      - DMEExtractAssetRelatedToAccount
+      - DMEExtractAssetsEditBlock
+      - DMEExtractContactInformation
+      - DMEExtractContacts
+      - DMEGETAccountDetails
+      - DMEGetAccountsWithContacts
+      - DMEOpportunityRecord
+      - DMESearchContactByNameAndAccount
+      - DMETESTLOADACCOUNT
+      - DMETurboExtract
+      - DMExtractAccountData
+      - DMLAccountDemo
+      - DMLAccountRecord
+      - DMLCreateCaseRecord
+      - DMLCreateContact
+      - DMLoadAccountRecord
+      - DMLoadAccountsWithContacts
+      - DMLoadContactsWithAccount
+      - DMSaveAccountDetails
+      - DMSearchAccountByName
+      - DMTAccountsWithOpportunitiesDocGenExample
+      - DMTAccountsWithOpportunitiesDocGenExampleV1
+      - DMTDocGenExample
+      - DMTDocGenExampleV1
+      - DMTEGetOpenCaseRecords
+      - DMTESTJSONTOXML
+      - DMTFinalExternalAccountJSON
+      - DMTPrepareForExternalSFAPI
+      - DMTRCaseRecord
+      - DMTRGetLeadsWithCampaignInformation
+      - DMTTransformPolicies
+      - DMTransforceTransactonData
+      - DMTransformAssetToPolicy
+      - DMTransformExternalDataToUnifiedCustomer
+      - DMTransformFulfilmentOrderJSONToXML
+      - DMTransformWeatherInformation
+      - DMUpdatePrimaryContactOnAccount
+      - DMXformResponses
+      - DRExtractDocGenExample
+      - TESTDMCreateNewCase
+      - TestExpense
+      - TestTransform
+      - saveAccountDetails
+      - teamChangePriContactTA
+      - teamGetAssetAccountDataAS
+      - testCreateNewCaseNoFile
+    FlexCard:
+      - Account
+      - NewFlexCard
+      - accountRelatedContacts
+      - childCard
+      - childOpportunityHistory
+      - getAccountClassification
+      - opportunityHistoryChildComponent
+      - pantherschoolsSelectedLists
+      - primaryContactCard
+      - productList
+      - relatedOpporrtunityRecords
+      - relatedOpportunitiesFlexCard
+      - simpleFlexCardContactDetails
+      - teamAccountInformationCard
+      - teamAssetList
+      - testCountryDetails
+      - testSelectedCards
+      - testSelectedCardsChild
+      - testWeatherCard
+      - weatherInformationCard
+    IntegrationProcedure:
+      - team_FetchAccountById
+      - team_GetAccountClassification
+      - team_GetAccountDetails
+      - team_createExternalAccountContact
+      - team_getCountryAPI
+      - team_saveAccountDetails
+      - team_saveAccountDetailsRDM
+      - team_saveCaseRecord
+      - team_tryCatchDemo
+      - test_CreateNewCase
+  Error: {}
+StatusCount:
+  Remaining: 0
+  Success: 122
+  Error: 1
+id: !<tag:yaml.org,2002:js/undefined> ''

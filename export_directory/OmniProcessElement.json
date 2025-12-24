@@ -1,0 +1,1332 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef1"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEAccountExtract",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"recordId\",\"element\":\"accountId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEAccountExtract\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef2"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":true,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"Account\":\"%DMEAccountExtract:Account%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef1"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef3"
+            },
+            "Description": "Data Mapper Post Action",
+            "Name": "saveAccountDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"saveAccountDetails\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef2"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef4"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMExtractAccountData",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"recordId\",\"element\":\"accountId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMExtractAccountData\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef3"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef5"
+            },
+            "Description": "Http Action",
+            "Name": "HTTPGetCountryData",
+            "IsActive": true,
+            "Type": "Rest Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"namedCredential\":\"\",\"postActionLogging\":\"\",\"restMethod\":\"GET\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"restPath\":\"https://restnations-1f553028b8fc.herokuapp.com/name/%DMExtractAccountData:Country%\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef3"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef6"
+            },
+            "Description": "Data Mapper Transform Action",
+            "Name": "DMXformResponses",
+            "IsActive": true,
+            "Type": "DataRaptor Transform Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":true,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":\"\",\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"additionalOutput\":{},\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"failureResponse\":{},\"id\":\"\",\"additionalInput\":{\"AccountData\":\"%DMExtractAccountData%\",\"CountryAPI\":\"%HTTPGetCountryData%\"},\"restOptions\":{},\"bundle\":\"DMXformResponses\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef3"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef7"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":true,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"DMXformResponses\":\"%DMXformResponses%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef3"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef8"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEGETAccountDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEGETAccountDetails\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef4"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef9"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":true,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"AccountId\":\"%DMEGETAccountDetails:Account:Id%\",\"AccountName\":\"%DMEGETAccountDetails:Account:Name%\",\"Account\":\"%DMEGETAccountDetails:Account%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef4"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef10"
+            },
+            "Description": "Data Mapper Post Action",
+            "Name": "DMETESTLOADACCOUNT",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":\"\",\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMETESTLOADACCOUNT\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef5"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef11"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"accountId\":\"%DMETESTLOADACCOUNT:Account_1:Id%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef5"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef12"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEGETAccountDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEGETAccountDetails\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef6"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef13"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":true,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"AccountId\":\"%DMEGETAccountDetails:Account:Id%\",\"AccountName\":\"%DMEGETAccountDetails:Account:Name%\",\"Account\":\"%DMEGETAccountDetails:Account%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef6"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef14"
+            },
+            "Description": "Data Mapper Post Action",
+            "Name": "DMETESTLOADACCOUNT",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":\"\",\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMETESTLOADACCOUNT\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef7"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef15"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"accountId\":\"%DMETESTLOADACCOUNT:Account_1:Id%\",\"errorMessage\":\"%DMETESTLOADACCOUNT:error%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef7"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef16"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEGETAccountDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"accId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEGETAccountDetails\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef8"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef17"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":true,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"AccountClassification\":\"=IF(\\n    %DMEGETAccountDetails:Account:AnnualRevenue% > 50000000000, \\\"Enterprise\\\",\\n    IF(\\n        %DMEGETAccountDetails:Account:AnnualRevenue% > 10000000000, \\\"Upper Mid Market\\\",\\n        IF(\\n            %DMEGETAccountDetails:Account:AnnualRevenue% > 2000000000, \\\"Mid Market\\\",\\n            IF(\\n                %DMEGETAccountDetails:Account:AnnualRevenue% > 100000000, \\\"SMB\\\",\\n                \\\"Startup\\\"\\n            )\\n        )\\n    )\\n)\",\"AnnualRevenue\":\"%DMEGETAccountDetails:Account:AnnualRevenue%\",\"accountId\":\"%accId%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef8"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef18"
+            },
+            "Description": "Data Mapper Post Action",
+            "Name": "DMLCreateCaseRecord",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMLCreateCaseRecord\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef9"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef19"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":true,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"caseId\":\"%DMLCreateCaseRecord:Case_1:Id%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef9"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef20"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEGETAccountDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEGETAccountDetails\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef10"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef21"
+            },
+            "Description": "Http Action",
+            "Name": "HTTP",
+            "IsActive": true,
+            "Type": "Rest Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"isActive\":true,\"restMethod\":\"\",\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"actionMessage\":\"\",\"additionalOutput\":{},\"failureConditionalFormula\":\"\",\"failureResponse\":{},\"id\":\"\",\"additionalInput\":{},\"sendJSONNode\":\"\",\"returnOnlyAdditionalOutput\":false,\"internalNotes\":\"\",\"namedCredential\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"restPath\":\"\",\"sendJSONPath\":\"\",\"restOptions\":{\"sendBody\":true,\"headers\":{},\"params\":{}}}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef10"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef22"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":true,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"Account\":\"%DMEGETAccountDetails:Account%\",\"AccountId\":\"%DMEGETAccountDetails:Account:Id%\",\"AccountName\":\"%DMEGETAccountDetails:Account:Name%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef10"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef23"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEGETAccountDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEGETAccountDetails\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef11"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef24"
+            },
+            "Description": "Remote Action",
+            "Name": "DiscountEligibilityApex",
+            "IsActive": true,
+            "Type": "Remote Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"remoteOptions\":{},\"remoteMethod\":\"calculateDiscount\",\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":true,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"remoteClass\":\"DiscountEligibilityApex\",\"actionMessage\":\"\",\"additionalOutput\":{},\"sendJSONPath\":\"DMEGETAccountDetails:Account\",\"failureConditionalFormula\":\"\",\"failureResponse\":{},\"id\":\"\",\"additionalInput\":{\"isPremiumCustomer\":true,\"baseAmount\":1500},\"restOptions\":{},\"sendJSONNode\":\"NewAccount\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef11"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef25"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":true,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"Account\":\"%DMEGETAccountDetails:Account%\",\"AccountId\":\"%DMEGETAccountDetails:Account:Id%\",\"AccountName\":\"%DMEGETAccountDetails:Account:Name%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef11"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef26"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEGETAccountDetails",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEGETAccountDetails\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef12"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef27"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEGETAccount",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEGETAccountDetails\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef12"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef28"
+            },
+            "Description": "Remote Action",
+            "Name": "DiscountEligibilityApex",
+            "IsActive": true,
+            "Type": "Remote Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"remoteMethod\":\"calculateDiscount\",\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"discountedPrice\",\"executionConditionalFormula\":\"\",\"remoteClass\":\"DiscountEligibilityApex\",\"actionMessage\":\"\",\"additionalOutput\":{},\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"failureResponse\":{},\"id\":\"\",\"additionalInput\":{\"isPremiumCustomer\":\"%isPremiumCustomer%\",\"baseAmount\":\"%baseAmount%\"},\"restOptions\":{},\"sendJSONNode\":\"AccountInformation\"}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef12"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef29"
+            },
+            "Description": "Data Mapper Post Action",
+            "Name": "DMLAccount",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":\"\",\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"StepAccount\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMLAccountDemo\",\"sendJSONNode\":\"Account\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef13"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef30"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":true,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"accountId\":\"%DMLAccount:Account_1:Id%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef13"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef31"
+            },
+            "Description": "Http Action",
+            "Name": "VerifyPhone",
+            "IsActive": true,
+            "Type": "Rest Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"namedCredential\":\"didit\",\"postActionLogging\":\"\",\"restMethod\":\"POST\",\"preActionLogging\":\"%endpoint% %body%\",\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"Result\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"restPath\":\"/v2/phone/send/\",\"sendJSONPath\":\"Body\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{\"headers\":{\"x-api-key\":\"p2FGpS7ZtRbn4xnxfAXnAjDess_7F9TXZDBXh8PrF8o\",\"content-type\":\"application/json\",\"accept\":\"application/json\"},\"sendBody\":true,\"params\":{}},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef14"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef32"
+            },
+            "Description": "Http Action",
+            "Name": "CreateAccountContact",
+            "IsActive": true,
+            "Type": "Rest Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"namedCredential\":\"PantherSchools_SF\",\"postActionLogging\":\"\",\"restMethod\":\"POST\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"restPath\":\"/services/apexrest/api/accountcontact/\",\"sendJSONPath\":\"requestData\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{\"headers\":{\"Accept\":\"application/json\",\"Content-Type\":\"application/json\"},\"sendBody\":true,\"params\":{},\"timeout\":\"120000\"},\"sendJSONNode\":\"requestData\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef15"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef33"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"sendJSONPath\":\"CreateAccountContact\",\"elementValueMap\":{},\"responseFormat\":\"\",\"id\":\"\",\"isActive\":true,\"restOptions\":{},\"sendJSONNode\":\"Result\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef15"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef34"
+            },
+            "Description": "Loop Block",
+            "Name": "LBContacts",
+            "IsActive": false,
+            "Type": "Loop Block",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":false,\"returnOnlyFailureResponse\":false,\"advancedMergeMap\":[{\"listKey\":\"requestData:contacts\",\"matchingPath\":\"email\",\"normalizeKey\":\"1\"}],\"responseJSONPath\":\"\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"advancedMerge\":false,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":false,\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"loopList\":\"requestData:contacts\",\"internalNotes\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"dynamicOutputFields\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":false,\"sendJSONPath\":\"\",\"restOptions\":{},\"loopOutput\":{\"requestData\":\"%requestData%\"}}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef16"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef35"
+            },
+            "Description": "Set Values Action",
+            "Name": "SV_LB",
+            "IsActive": false,
+            "Type": "Set Values",
+            "ParentElementId": "@OmniProcessElementRef34",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{\"phone\":\"%requestData:contacts:contactPhone%\"},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":false,\"returnOnlyFailureResponse\":false,\"advancedMergeMap\":[{\"listKey\":\"requestData:contacts\",\"matchingPath\":\"email\",\"normalizeKey\":\"1\"},{\"listKey\":\"LB_Records\",\"matchingPath\":\"contactEmail\",\"normalizeKey\":\"1\"}],\"responseJSONPath\":\"phone\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"advancedMerge\":false,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":false,\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"internalNotes\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"dynamicOutputFields\":\"\",\"responseJSONNode\":\"requestData:contacts:phone\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":false,\"sendJSONPath\":\"\",\"restOptions\":{}}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef16"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef36"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEExtractContacts",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"accountId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEExtractContacts\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef16"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef37"
+            },
+            "Description": "Loop Block",
+            "Name": "LoopBlock",
+            "IsActive": true,
+            "Type": "Loop Block",
+            "PropertySetConfig": "{\"executionConditionalFormula\":\"LISTSIZE(DMEExtractContacts:Contacts) > 0\",\"elementValueMap\":{},\"loopList\":\"DMEExtractContacts:Contacts\",\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{},\"loopOutput\":{\"DMEExtractContacts\":\"%DMEExtractContactInformation%\"}}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef16"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef38"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEExtractContactInformation",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "ParentElementId": "@OmniProcessElementRef37",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"contactId\",\"element\":\"DMEExtractContacts:Contacts:Id\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEExtractContactInformation\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef16"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef39"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "ExtractContactInformation",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"contactId\",\"element\":\"DMEExtractContacts:Contacts:Id\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"LISTSIZE(DMEExtractContacts:Contacts) == 0\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEExtractContactInformation\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef16"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef40"
+            },
+            "Description": "List Action",
+            "Name": "ListAction",
+            "IsActive": true,
+            "Type": "List Merge Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":true,\"returnOnlyFailureResponse\":false,\"mergeListsOrder\":[\"DMEExtractContacts:Contacts\",\"LoopBlock:DMEExtractContacts\"],\"advancedMergeMap\":[{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Id\",\"normalizeKey\":\"1\"},{\"listKey\":\"LoopBlock:DMEExtractContacts\",\"matchingPath\":\"ContactId\",\"normalizeKey\":\"1\"}],\"responseJSONPath\":\"\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"sortBy\":[\"Id\"],\"id\":\"\",\"advancedMerge\":true,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":false,\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"loopList\":\"DMEExtractContacts:Contacts\",\"internalNotes\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"dynamicOutputFields\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":false,\"sendJSONPath\":\"\",\"restOptions\":{},\"loopOutput\":{\"DMEExtractContacts\":\"%DMEExtractContacts%\"}}",
+            "SequenceNumber": 5,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef16"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef41"
+            },
+            "Description": "Set Values Action",
+            "Name": "AssembleOutput",
+            "IsActive": false,
+            "Type": "Set Values",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{\"requestData:contacts\":\"%LBContacts:requestData:contacts%\",\"requestData:accountData\":\"%requestData:accountData%\"},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":false,\"returnOnlyFailureResponse\":false,\"advancedMergeMap\":[{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Id\",\"normalizeKey\":\"1\"},{\"listKey\":\"LoopBlock:DMEExtractContacts\",\"matchingPath\":\"ContactId\",\"normalizeKey\":\"1\"}],\"responseJSONPath\":\"\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"advancedMerge\":false,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":false,\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"loopList\":\"\",\"internalNotes\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"dynamicOutputFields\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":false,\"sendJSONPath\":\"\",\"restOptions\":{}}",
+            "SequenceNumber": 6,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef16"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef42"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{},\"sendJSONPath\":\"ListAction\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 7,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef16"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef43"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEExtractContacts",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEExtractContacts\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef17"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef44"
+            },
+            "Description": "Loop Block",
+            "Name": "LoopBlock",
+            "IsActive": true,
+            "Type": "Loop Block",
+            "PropertySetConfig": "{\"executionConditionalFormula\":\"\",\"elementValueMap\":{},\"loopList\":\"DMEExtractContacts:Contacts\",\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{},\"loopOutput\":{\"PersonId\":\"%SetValues:PersonId%\",\"DMEExtractContacts\":\"%DMEExtractContacts%\",\"ContactInformation\":\"%ExtractContactInformation%\"}}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef17"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef45"
+            },
+            "Description": "Set Values Action",
+            "Name": "SetValues",
+            "IsActive": true,
+            "Type": "Set Values",
+            "ParentElementId": "@OmniProcessElementRef44",
+            "PropertySetConfig": "{\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"elementValueMap\":{\"PersonId\":\"%DMEExtractContacts:Contacts:Id%\"},\"failureConditionalFormula\":\"\",\"failOnStepError\":false,\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{},\"chainOnStep\":false}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef17"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef46"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "ExtractContactInformation",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "ParentElementId": "@OmniProcessElementRef44",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":true,\"returnOnlyFailureResponse\":false,\"advancedMergeMap\":[{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Id\",\"normalizeKey\":\"1\"},{\"listKey\":\"LoopBlock:ContactInformation\",\"matchingPath\":\"ContactId\",\"normalizeKey\":\"1\"}],\"responseJSONPath\":\"\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"bundle\":\"DMEExtractContactInformation\",\"advancedMerge\":false,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"contactId\",\"element\":\"SetValues:PersonId\"}],\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"internalNotes\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"ignoreCache\":false,\"dynamicOutputFields\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":false,\"sendJSONPath\":\"\",\"restOptions\":{}}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef17"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef47"
+            },
+            "Description": "Set Values Action",
+            "Name": "SV_Fields",
+            "IsActive": true,
+            "Type": "Set Values",
+            "PropertySetConfig": "{\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"elementValueMap\":{\"Fields\":\"Id,AccountId,Email\"},\"failureConditionalFormula\":\"\",\"failOnStepError\":false,\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{},\"chainOnStep\":false}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef17"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef48"
+            },
+            "Description": "List Action",
+            "Name": "ListAction",
+            "IsActive": true,
+            "Type": "List Merge Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":true,\"returnOnlyFailureResponse\":false,\"mergeListsOrder\":[\"DMEExtractContacts:Contacts\",\"LoopBlock:ContactInformation\"],\"advancedMergeMap\":[{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Id\",\"normalizeKey\":\"1\"},{\"listKey\":\"LoopBlock:ContactInformation\",\"matchingPath\":\"ContactId\",\"normalizeKey\":\"1\"},{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Email\",\"normalizeKey\":\"2\"},{\"listKey\":\"LoopBlock:ContactInformation\",\"matchingPath\":\"Email\",\"normalizeKey\":\"2\"}],\"responseJSONPath\":\"\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"updateFieldValue\":{\"FullName\":\"Hello\"},\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"sortBy\":[\"FirstName\",\"Email\",\"Id\"],\"id\":\"\",\"advancedMerge\":true,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":true,\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"loopList\":\"DMEExtractContacts:Contacts\",\"internalNotes\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"dynamicOutputFields\":\"SV_Fields:Fields\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":true,\"sendJSONPath\":\"\",\"restOptions\":{},\"loopOutput\":{\"ContactId\":\"%SetValues:PersonId%\",\"ContactInformation\":\"%ExtractContactInformation%\"}}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef17"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef49"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"Contacts\":\"%ListAction%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 5,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef17"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef50"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEExtractContacts",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEExtractContacts\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef51"
+            },
+            "Description": "Try-Catch Block",
+            "Name": "Try-CatchBlock",
+            "IsActive": true,
+            "Type": "Try Catch Block",
+            "PropertySetConfig": "{\"failOnBlockError\":true,\"executionConditionalFormula\":\"\",\"remoteClass\":\"\",\"remoteMethod\":\"\",\"elementValueMap\":{},\"failureResponse\":{},\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{}}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef52"
+            },
+            "Description": "Data Mapper Turbo Action",
+            "Name": "DataMapperTurbo",
+            "IsActive": true,
+            "Type": "DataRaptor Turbo Action",
+            "ParentElementId": "@OmniProcessElementRef51",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":\"\",\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMTRCaseRecord\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef53"
+            },
+            "Description": "Loop Block",
+            "Name": "LoopBlock",
+            "IsActive": true,
+            "Type": "Loop Block",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":true,\"returnOnlyFailureResponse\":false,\"advancedMergeMap\":[{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Id\",\"normalizeKey\":\"1\"},{\"listKey\":\"LoopBlock:ContactInformation\",\"matchingPath\":\"ContactId\",\"normalizeKey\":\"1\"},{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Email\",\"normalizeKey\":\"2\"},{\"listKey\":\"LoopBlock:ContactInformation\",\"matchingPath\":\"Email\",\"normalizeKey\":\"2\"}],\"responseJSONPath\":\"\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"advancedMerge\":false,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":false,\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"loopList\":\"DMEExtractContacts:Contacts\",\"internalNotes\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"dynamicOutputFields\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":false,\"sendJSONPath\":\"\",\"restOptions\":{},\"loopOutput\":{\"DMEExtractContacts\":\"%DMEExtractContacts%\",\"ContactInformation\":\"%ExtractContactInformation%\"}}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef54"
+            },
+            "Description": "Set the contact full name",
+            "Name": "SV_FullName",
+            "IsActive": true,
+            "Type": "Set Values",
+            "ParentElementId": "@OmniProcessElementRef53",
+            "PropertySetConfig": "{\"responseJSONPath\":\"ContactFullName\",\"responseJSONNode\":\"DMEExtractContacts:Contacts:FullName\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"elementValueMap\":{\"ContactFullName\":\"=CONCAT(%DMEExtractContacts:Contacts:FirstName%,\\\" \\\", %DMEExtractContacts:Contacts:LastName%)\"},\"failureConditionalFormula\":\"\",\"failOnStepError\":false,\"id\":\"\",\"isActive\":true,\"restOptions\":{},\"chainOnStep\":false}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef55"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "ExtractContactInformation",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "ParentElementId": "@OmniProcessElementRef53",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":true,\"returnOnlyFailureResponse\":false,\"advancedMergeMap\":[{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Id\",\"normalizeKey\":\"1\"},{\"listKey\":\"LoopBlock:ContactInformation\",\"matchingPath\":\"ContactId\",\"normalizeKey\":\"1\"}],\"responseJSONPath\":\"\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"bundle\":\"DMEExtractContactInformation\",\"advancedMerge\":false,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"contactId\",\"element\":\"DMEExtractContacts:Contacts:Id\"}],\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"internalNotes\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"ignoreCache\":false,\"dynamicOutputFields\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":false,\"sendJSONPath\":\"\",\"restOptions\":{}}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef56"
+            },
+            "Description": "Set contact birthdate",
+            "Name": "SV_Birthdate",
+            "IsActive": true,
+            "Type": "Set Values",
+            "ParentElementId": "@OmniProcessElementRef53",
+            "PropertySetConfig": "{\"responseJSONPath\":\"Birthdate\",\"responseJSONNode\":\"DMEExtractContacts:Contacts:Birthdate\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"elementValueMap\":{\"Birthdate\":\"%ExtractContactInformation:Birthdate%\"},\"failureConditionalFormula\":\"\",\"failOnStepError\":false,\"id\":\"\",\"isActive\":true,\"restOptions\":{},\"chainOnStep\":false}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef57"
+            },
+            "Description": "Set Values Action",
+            "Name": "AssembleOutput",
+            "IsActive": true,
+            "Type": "Set Values",
+            "PropertySetConfig": "{\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"elementValueMap\":{\"Contacts\":\"%LoopBlock:DMEExtractContacts:Contacts%\"},\"failureConditionalFormula\":\"\",\"failOnStepError\":false,\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{},\"chainOnStep\":false}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef58"
+            },
+            "Description": "List Action",
+            "Name": "ListAction",
+            "IsActive": true,
+            "Type": "List Merge Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":true,\"returnOnlyFailureResponse\":false,\"mergeListsOrder\":[\"DMEExtractContacts:Contacts\",\"LoopBlock:ContactInformation\"],\"advancedMergeMap\":[{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Id\",\"normalizeKey\":\"1\"},{\"listKey\":\"LoopBlock:ContactInformation\",\"matchingPath\":\"ContactId\",\"normalizeKey\":\"1\"},{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Email\",\"normalizeKey\":\"2\"},{\"listKey\":\"LoopBlock:ContactInformation\",\"matchingPath\":\"Email\",\"normalizeKey\":\"2\"}],\"responseJSONPath\":\"\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"updateFieldValue\":{},\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"sortBy\":[\"FirstName\",\"Email\"],\"id\":\"\",\"advancedMerge\":true,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":true,\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"loopList\":\"DMEExtractContacts:Contacts\",\"internalNotes\":\"\",\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"dynamicOutputFields\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":false,\"sendJSONPath\":\"\",\"restOptions\":{},\"loopOutput\":{\"ContactId\":\"%SetValues:PersonId%\",\"ContactInformation\":\"%ExtractContactInformation%\"}}",
+            "SequenceNumber": 5,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef59"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"Contacts\":\"%ListAction%\",\"AssembleOutput\":\"%AssembleOutput%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 6,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef18"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef60"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "DMEExtractContacts",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"accountId\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEExtractContacts\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef19"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef61"
+            },
+            "Description": "Loop Block",
+            "Name": "LoopBlock",
+            "IsActive": true,
+            "Type": "Loop Block",
+            "PropertySetConfig": "{\"executionConditionalFormula\":\"\",\"elementValueMap\":{},\"loopList\":\"DMEExtractContacts:Contacts\",\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{},\"loopOutput\":{\"LoopContacts\":\"%DMEExtractContacts%\"}}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef19"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef62"
+            },
+            "Description": "Set Values Action",
+            "Name": "SV_FullName",
+            "IsActive": true,
+            "Type": "Set Values",
+            "ParentElementId": "@OmniProcessElementRef61",
+            "PropertySetConfig": "{\"responseJSONPath\":\"FullName\",\"responseJSONNode\":\"DMEExtractContacts:Contacts:FullName\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"elementValueMap\":{\"FullName\":\"=CONCAT(%DMEExtractContacts:Contacts:FirstName%,\\\" \\\", %DMEExtractContacts:Contacts:LastName%)\"},\"failureConditionalFormula\":\"\",\"failOnStepError\":false,\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{},\"chainOnStep\":false}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef19"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef63"
+            },
+            "Description": "Extract Contact Information based on record Id",
+            "Name": "ExtractContactInformation",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "ParentElementId": "@OmniProcessElementRef61",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"preventIntraListMerge\":false,\"isActive\":true,\"returnOnlyFailureResponse\":false,\"advancedMergeMap\":[{\"listKey\":\"DMEExtractContacts:Contacts\",\"matchingPath\":\"Id\",\"normalizeKey\":\"1\"},{\"listKey\":\"LoopBlock:ContactInformation\",\"matchingPath\":\"ContactId\",\"normalizeKey\":\"1\"}],\"responseJSONPath\":\"\",\"filterListFormula\":\"\",\"primaryListKey\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"bundle\":\"DMEExtractContactInformation\",\"advancedMerge\":false,\"sendJSONNode\":\"\",\"sortInDescendingOrder\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"contactId\",\"element\":\"DMEExtractContacts:Contacts:Id\"}],\"returnOnlyAdditionalOutput\":false,\"hasPrimary\":false,\"postActionLogging\":\"\",\"preActionLogging\":\"\",\"chainOnStep\":false,\"ignoreCache\":false,\"dynamicOutputFields\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"allowMergeNulls\":false,\"sendJSONPath\":\"\",\"restOptions\":{}}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef19"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef64"
+            },
+            "Description": "Set Contact BirthDate",
+            "Name": "SV_BirthDate",
+            "IsActive": true,
+            "Type": "Set Values",
+            "ParentElementId": "@OmniProcessElementRef61",
+            "PropertySetConfig": "{\"responseJSONPath\":\"BirthDate\",\"responseJSONNode\":\"DMEExtractContacts:Contacts:BirthDate\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"elementValueMap\":{\"BirthDate\":\"%ExtractContactInformation:Birthdate%\"},\"failureConditionalFormula\":\"\",\"failOnStepError\":false,\"id\":\"\",\"isActive\":true,\"restOptions\":{},\"chainOnStep\":false}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef19"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef65"
+            },
+            "Description": "Set Values Action",
+            "Name": "AssembleOutput",
+            "IsActive": false,
+            "Type": "Set Values",
+            "PropertySetConfig": "{\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"elementValueMap\":{\"Contacts\":\"%LoopBlock:LoopContacts:Contacts%\"},\"failureConditionalFormula\":\"\",\"failOnStepError\":false,\"id\":\"\",\"internalNotes\":\"\",\"isActive\":false,\"restOptions\":{},\"chainOnStep\":false}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef19"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef66"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"FinalContacts\":\"%LoopBlock:LoopContacts:Contacts%\"},\"sendJSONPath\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef19"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef67"
+            },
+            "Description": "Try-Catch Block",
+            "Name": "TryCatchBlock",
+            "IsActive": true,
+            "Type": "Try Catch Block",
+            "PropertySetConfig": "{\"failOnBlockError\":true,\"executionConditionalFormula\":\"\",\"remoteClass\":\"\",\"remoteMethod\":\"\",\"elementValueMap\":{},\"failureResponse\":{\"Details\":\"%CreateAccount:errors%\",\"ErrorTitle\":\"There was an error while Creating the Account Record\",\"Code\":\"0001\",\"Detail\":\"%CreateAccount:error%\"},\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{}}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef20"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef68"
+            },
+            "Description": "Data Mapper Post Action",
+            "Name": "CreateAccount",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "ParentElementId": "@OmniProcessElementRef67",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":true,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMLAccountRecord\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef20"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef69"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "AccountWithOpportunities",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEAccountWithOpportunities\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef20"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef70"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "Copy 1 of AccountWithOpportunities",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEAccountWithOpportunities\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef20"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef71"
+            },
+            "Description": "Delete Action",
+            "Name": "Delete",
+            "IsActive": false,
+            "Type": "Delete Action",
+            "PropertySetConfig": "{\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":false,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"deleteSObject\":[{\"Type\":\"Contact\",\"AllOrNone\":false,\"Id\":\"%DataMapperPost:Contact_1:Id%\",\"rowId\":1}],\"id\":\"\",\"restOptions\":{}}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef20"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef72"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"AccountId\":\"%CreateAccount:Account_1:Id%\"},\"sendJSONPath\":\"TryCatchBlock:result\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 5,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef20"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef73"
+            },
+            "Name": "DRPostAction",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "ParentElementId": "@OmniProcessElementRef75",
+            "PropertySetConfig": "{\"executionConditionalFormula\":\"\",\"failureConditionalFormula\":\"\",\"failOnStepError\":true,\"useFormulas\":true,\"additionalInput\":{},\"additionalOutput\":{},\"failureResponse\":{},\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"sendJSONPath\":\"\",\"sendJSONNode\":\"\",\"bundle\":\"DMLAccountDemo\",\"chainOnStep\":false,\"actionMessage\":\"\",\"show\":null,\"label\":\"DataMapperPostAction1\",\"disOnTplt\":false}",
+            "SequenceNumber": 1,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef21"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef74"
+            },
+            "Name": "ResponseAction1",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"executionConditionalFormula\":\"\",\"useFormulas\":true,\"additionalOutput\":{},\"returnOnlyAdditionalOutput\":false,\"returnFullDataJSON\":false,\"responseFormat\":\"JSON\",\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"sendJSONPath\":\"result\",\"sendJSONNode\":\"\",\"responseDefaultData\":{},\"vlcResponseHeaders\":{},\"show\":null,\"label\":\"ResponseAction1\",\"disOnTplt\":false}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef21"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef75"
+            },
+            "Name": "TryCatchBlock1",
+            "IsActive": true,
+            "Type": "Try Catch Block",
+            "PropertySetConfig": "{\"failureResponse\":{\"Code\":\"0001\",\"ErrorMessage\":\"There was an error while creating Account Record\",\"Details\":\"%DRPostAction:errors%\"},\"remoteClass\":\"\",\"remoteMethod\":\"\",\"executionConditionalFormula\":\"\",\"failOnBlockError\":true,\"show\":null,\"label\":\"TryCatchBlock1\",\"disOnTplt\":false}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef21"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef76"
+            },
+            "Name": "DataMapperExtractAction1",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"executionConditionalFormula\":\"\",\"failureConditionalFormula\":\"\",\"failOnStepError\":true,\"useFormulas\":true,\"additionalInput\":{},\"additionalOutput\":{},\"failureResponse\":{},\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"sendJSONPath\":\"\",\"sendJSONNode\":\"\",\"bundle\":\"DMEAccountExtract\",\"dataRaptor Input Parameters\":[],\"chainOnStep\":false,\"actionMessage\":\"\",\"ignoreCache\":false,\"show\":null,\"label\":\"DataMapperExtractAction1\",\"disOnTplt\":false}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef21"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef77"
+            },
+            "Description": "Data Mapper Post Action",
+            "Name": "CreateContact",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMLCreateContact\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef22"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef78"
+            },
+            "Description": "Try-Catch Block",
+            "Name": "TCB_TryCatchBlock",
+            "IsActive": true,
+            "Type": "Try Catch Block",
+            "PropertySetConfig": "{\"failOnBlockError\":true,\"executionConditionalFormula\":\"\",\"remoteClass\":\"\",\"remoteMethod\":\"\",\"elementValueMap\":{},\"failureResponse\":{\"Message\":\"Description is not populated\"},\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{}}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef22"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef79"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "Contact",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "ParentElementId": "@OmniProcessElementRef78",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"contactId\",\"element\":\"ContactID\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":true,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"ISBLANK(%Description%)\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEExtractContactInformation\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef22"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef80"
+            },
+            "Description": "Try-Catch Block",
+            "Name": "TryCatchBlock",
+            "IsActive": true,
+            "Type": "Try Catch Block",
+            "PropertySetConfig": "{\"failOnBlockError\":true,\"executionConditionalFormula\":\"\",\"remoteClass\":\"\",\"remoteMethod\":\"\",\"elementValueMap\":{},\"failureResponse\":{\"Details\":\"%CreateAccount:errors%\",\"ErrorTitle\":\"There was an error while Creating the Account Record\",\"Code\":\"0001\",\"Detail\":\"%CreateAccount:error%\"},\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{}}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef22"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef81"
+            },
+            "Description": "Data Mapper Post Action",
+            "Name": "CreateAccount",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "ParentElementId": "@OmniProcessElementRef80",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMLAccountRecord\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef22"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef82"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "AccountWithOpportunities",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEAccountWithOpportunities\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef22"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef83"
+            },
+            "Description": "Delete Action",
+            "Name": "Delete",
+            "IsActive": true,
+            "Type": "Delete Action",
+            "PropertySetConfig": "{\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"deleteSObject\":[{\"Type\":\"Contact\",\"AllOrNone\":false,\"Id\":\"%DataMapperPost:Contact_1:Id%\",\"rowId\":1}],\"id\":\"\",\"restOptions\":{}}",
+            "SequenceNumber": 5,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef22"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef84"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"AccountId\":\"%CreateAccount:Account_1:Id%\"},\"sendJSONPath\":\"TryCatchBlock:result\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 6,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef22"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef85"
+            },
+            "Description": "Try-Catch Block",
+            "Name": "TryCatchBlock",
+            "IsActive": true,
+            "Type": "Try Catch Block",
+            "PropertySetConfig": "{\"failOnBlockError\":true,\"executionConditionalFormula\":\"\",\"remoteClass\":\"\",\"remoteMethod\":\"\",\"elementValueMap\":{},\"failureResponse\":{\"Details\":\"%CreateAccount:errors%\",\"ErrorTitle\":\"There was an error while Creating the Account Record\",\"Code\":\"0001\",\"Detail\":\"%CreateAccount:error%\"},\"id\":\"\",\"internalNotes\":\"\",\"isActive\":true,\"restOptions\":{}}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef23"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef86"
+            },
+            "Description": "Data Mapper Post Action",
+            "Name": "CreateAccount",
+            "IsActive": true,
+            "Type": "DataRaptor Post Action",
+            "ParentElementId": "@OmniProcessElementRef85",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMLAccountRecord\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 1,
+            "OmniProcessId": "@OmniProcessRef23"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef87"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "Opportunities",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"Id\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEAccountWithOpportunities\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef23"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef88"
+            },
+            "Description": "Data Mapper Extract Action",
+            "Name": "WithOpportunities",
+            "IsActive": true,
+            "Type": "DataRaptor Extract Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"dataRaptor Input Parameters\":[{\"inputParam\":\"Id\",\"element\":\"recordId\"}],\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"ignoreCache\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"bundle\":\"DMEAccountWithOpportunities\",\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef23"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef89"
+            },
+            "Description": "Delete Action",
+            "Name": "Delete",
+            "IsActive": false,
+            "Type": "Delete Action",
+            "PropertySetConfig": "{\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":true,\"internalNotes\":\"\",\"isActive\":false,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"actionMessage\":\"\",\"failureConditionalFormula\":\"\",\"deleteSObject\":[{\"Type\":\"Contact\",\"AllOrNone\":false,\"Id\":\"%DataMapperPost:Contact_1:Id%\",\"rowId\":1}],\"id\":\"\",\"restOptions\":{}}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef23"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef90"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"returnFullDataJSON\":false,\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"responseFormat\":\"\",\"isActive\":true,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"additionalOutput\":{\"AccountId\":\"%CreateAccount:Account_1:Id%\"},\"sendJSONPath\":\"TryCatchBlock:result\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 5,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef23"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef91"
+            },
+            "Description": "Remote Action",
+            "Name": "Action1",
+            "IsActive": true,
+            "Type": "Remote Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"remoteMethod\":\"action1\",\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"remoteClass\":\"SOQLInvocable\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"additionalChainableResponse\":{\"0\":{\"index\":0,\"value\":\"Running in Async\",\"key\":\"Message\"}},\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 1,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef24"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef92"
+            },
+            "Description": "Remote Action",
+            "Name": "Action2",
+            "IsActive": true,
+            "Type": "Remote Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"remoteMethod\":\"action2\",\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"remoteClass\":\"SOQLInvocable\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 2,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef24"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef93"
+            },
+            "Description": "Remote Action",
+            "Name": "OfAction2",
+            "IsActive": true,
+            "Type": "Remote Action",
+            "PropertySetConfig": "{\"sendOnlyAdditionalInput\":false,\"remoteMethod\":\"action2\",\"returnOnlyAdditionalOutput\":false,\"elementValueMap\":{},\"failOnStepError\":false,\"internalNotes\":\"\",\"isActive\":true,\"chainOnStep\":false,\"returnOnlyFailureResponse\":false,\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"remoteClass\":\"SOQLInvocable\",\"actionMessage\":\"\",\"sendJSONPath\":\"\",\"failureConditionalFormula\":\"\",\"id\":\"\",\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 3,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef24"
+        },
+        {
+            "attributes": {
+                "type": "OmniProcessElement",
+                "referenceId": "OmniProcessElementRef94"
+            },
+            "Description": "Response Action",
+            "Name": "Response",
+            "IsActive": true,
+            "Type": "Response Action",
+            "PropertySetConfig": "{\"responseJSONPath\":\"\",\"responseJSONNode\":\"\",\"executionConditionalFormula\":\"\",\"returnFullDataJSON\":true,\"returnOnlyAdditionalOutput\":false,\"sendJSONPath\":\"\",\"elementValueMap\":{},\"responseFormat\":\"\",\"id\":\"\",\"isActive\":true,\"restOptions\":{},\"sendJSONNode\":\"\"}",
+            "SequenceNumber": 4,
+            "Level": 0,
+            "OmniProcessId": "@OmniProcessRef24"
+        }
+    ]
+}
