@@ -25,12 +25,12 @@ delete: true
 activate: true
 compileOnBuild: true
 maxDepth: -1
-# continueAfterError: true
-# defaultMaxParallel: 100
-# exportPacksMaxSize: 10
-# useAllRelationships: false
-# supportHeadersOnly: true
-# supportForceDeploy: true
+continueAfterError: true
+defaultMaxParallel: 100
+exportPacksMaxSize: 10
+useAllRelationships: false
+supportHeadersOnly: true
+supportForceDeploy: true
 
 ## Source Org
 ## vlocity -sfdx.username omnistudio-training -job build/VlocityComponents.yaml packExport

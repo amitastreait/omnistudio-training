@@ -1,5 +1,5 @@
 projectPath: ./example_vlocity_build
-# expansionPath: vlocity_build
+expansionPath: vlocity_build
 
 queries:
   - DataRaptor # DataMapper
@@ -17,8 +17,12 @@ queries:
   - VlocityDataPackType: IntegrationProcedure
     query: Select Id, %vlocity_namespace%__Type__c,  %vlocity_namespace%__SubType__c, %vlocity_namespace%__Language__c from %vlocity_namespace%__OmniScript__c WHERE %vlocity_namespace%__IsActive__c = true AND %vlocity_namespace%__IsProcedure__c = true
 
-# vlocity packExport -job datapacksJobs/Build.yaml -sfdx.username omnistudio-training
+## Source Org
+### Export Changes
+#### vlocity -sfdx.username omnistudio-training -job build/VlocityComponents.yaml packExport
+#### vlocity -sfdx.username omnistudio-training  -job build/VlocityComponents.yaml packExport -key DataRaptor
 
-# vlocity validateLocalData -job datapacksJobs/Build.yaml -sfdx.username amitsingh@pantherschools.com.org2
-
-# vlocity packDeploy -job datapacksJobs/Build.yaml -sfdx.username amitsingh@pantherschools.com.org2
+## Target org
+### Validate the changes
+#### vlocity -sfdx.username omnistudio-target-org -job build/VlocityComponents.yaml validateLocalData
+#### vlocity -sfdx.username omnistudio-training -job build/VlocityComponents.yaml packDeploy

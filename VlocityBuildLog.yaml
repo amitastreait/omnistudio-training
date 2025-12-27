@@ -6,18 +6,26 @@ Namespace: omnistudio
 Job: VDX
 Action: Export
 ProjectPath: ./example_vlocity_build
-TotalTime: 0m 13s
+TotalTime: 0m 12s
 Count:
   Success:
-    OmniScript: 14
-    DataRaptor: 52
-    FlexCard: 20
     IntegrationProcedure: 10
-  Error: {}
-Errors:
-  - 53ec1e4010e268d636be1ca004aed079 references IntegrationProcedure/DataService_GetAccountClassification which was not found.
+    OmniScript: 14
+    DataRaptor: 30
+Errors: []
 Status:
   Success:
+    IntegrationProcedure:
+      - team_FetchAccountById
+      - team_GetAccountClassification
+      - team_GetAccountDetails
+      - team_createExternalAccountContact
+      - team_getCountryAPI
+      - team_saveAccountDetails
+      - team_saveAccountDetailsRDM
+      - team_saveCaseRecord
+      - team_tryCatchDemo
+      - test_CreateNewCase
     OmniScript:
       - GuidedProductSelling_ComputerChoice_English
       - ProductGuidedSelection_Integration_English
@@ -55,72 +63,17 @@ Status:
       - DMLAccountRecord
       - DMLCreateCaseRecord
       - DMLCreateContact
-      - DMLoadAccountRecord
-      - DMLoadAccountsWithContacts
-      - DMLoadContactsWithAccount
       - DMSaveAccountDetails
       - DMSearchAccountByName
-      - DMTAccountsWithOpportunitiesDocGenExample
-      - DMTAccountsWithOpportunitiesDocGenExampleV1
-      - DMTDocGenExample
-      - DMTDocGenExampleV1
-      - DMTEGetOpenCaseRecords
-      - DMTESTJSONTOXML
-      - DMTFinalExternalAccountJSON
-      - DMTPrepareForExternalSFAPI
-      - DMTRCaseRecord
-      - DMTRGetLeadsWithCampaignInformation
-      - DMTTransformPolicies
-      - DMTransforceTransactonData
-      - DMTransformAssetToPolicy
-      - DMTransformExternalDataToUnifiedCustomer
-      - DMTransformFulfilmentOrderJSONToXML
-      - DMTransformWeatherInformation
       - DMUpdatePrimaryContactOnAccount
       - DMXformResponses
-      - DRExtractDocGenExample
       - TESTDMCreateNewCase
-      - TestExpense
-      - TestTransform
       - saveAccountDetails
       - teamChangePriContactTA
       - teamGetAssetAccountDataAS
       - testCreateNewCaseNoFile
-    FlexCard:
-      - Account
-      - NewFlexCard
-      - accountRelatedContacts
-      - childCard
-      - childOpportunityHistory
-      - getAccountClassification
-      - opportunityHistoryChildComponent
-      - pantherschoolsSelectedLists
-      - primaryContactCard
-      - productList
-      - relatedOpporrtunityRecords
-      - relatedOpportunitiesFlexCard
-      - simpleFlexCardContactDetails
-      - teamAccountInformationCard
-      - teamAssetList
-      - testCountryDetails
-      - testSelectedCards
-      - testSelectedCardsChild
-      - testWeatherCard
-      - weatherInformationCard
-    IntegrationProcedure:
-      - team_FetchAccountById
-      - team_GetAccountClassification
-      - team_GetAccountDetails
-      - team_createExternalAccountContact
-      - team_getCountryAPI
-      - team_saveAccountDetails
-      - team_saveAccountDetailsRDM
-      - team_saveCaseRecord
-      - team_tryCatchDemo
-      - test_CreateNewCase
-  Error: {}
 StatusCount:
   Remaining: 0
-  Success: 122
-  Error: 1
+  Success: 65
+  Error: 0
 id: !<tag:yaml.org,2002:js/undefined> ''
