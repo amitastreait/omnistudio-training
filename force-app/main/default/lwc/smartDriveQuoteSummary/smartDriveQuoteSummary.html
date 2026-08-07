@@ -1,0 +1,202 @@
+<template>
+    <div class="qs-wrap">
+        <aside class="qs-sidebar">
+            <h2 class="qs-side-title">YOUR QUOTE OVERVIEW</h2>
+
+            <div class="qs-side-item">
+                <span class="qs-chip qs-blue"><lightning-icon icon-name="utility:user" size="x-small" variant="inverse"></lightning-icon></span>
+                <div>
+                    <p class="qs-side-label">Customer</p>
+                    <p class="qs-side-value">{customerName}</p>
+                    <p class="qs-side-sub">{customerAge}</p>
+                    <p class="qs-side-sub">{dateOfBirth}</p>
+                </div>
+            </div>
+
+            <div class="qs-divider"></div>
+            <div class="qs-side-item">
+                <span class="qs-chip qs-purple"><lightning-icon icon-name="utility:location" size="x-small" variant="inverse"></lightning-icon></span>
+                <div>
+                    <p class="qs-side-label">Location</p>
+                    <p class="qs-side-value">{state}</p>
+                </div>
+            </div>
+
+            <div class="qs-divider"></div>
+            <div class="qs-side-item">
+                <span class="qs-chip qs-teal"><lightning-icon icon-name="utility:product_transfer" size="x-small" variant="inverse"></lightning-icon></span>
+                <div>
+                    <p class="qs-side-label">Vehicle</p>
+                    <p class="qs-side-value">{vehicle}</p>
+                    <p class="qs-side-sub">{vehicleAge}</p>
+                    <p class="qs-side-sub">{vehicleUsage}</p>
+                    <template lwc:if={vehicleNumber}>
+                        <p class="qs-side-sub">{vehicleNumber}</p>
+                    </template>
+                </div>
+            </div>
+
+            <div class="qs-divider"></div>
+            <div class="qs-side-item">
+                <span class="qs-chip qs-green"><lightning-icon icon-name="utility:shield" size="x-small" variant="inverse"></lightning-icon></span>
+                <div>
+                    <p class="qs-side-label">Coverage</p>
+                    <p class="qs-side-value">{coverageType}</p>
+                </div>
+            </div>
+
+            <div class="qs-divider"></div>
+            <div class="qs-side-item">
+                <span class="qs-chip qs-red-bg"><lightning-icon icon-name="utility:warning" size="x-small" variant="inverse"></lightning-icon></span>
+                <div>
+                    <p class="qs-side-label">Driving History</p>
+                    <p class="qs-side-value">{drivingSummary}</p>
+                    <p class="qs-side-sub">{drivingExperience}</p>
+                </div>
+            </div>
+
+            <div class="qs-divider"></div>
+            <div class="qs-side-item">
+                <span class="qs-chip qs-amber"><lightning-icon icon-name="utility:ribbon" size="x-small" variant="inverse"></lightning-icon></span>
+                <div>
+                    <p class="qs-side-label">Loyalty</p>
+                    <p class="qs-side-value">{loyaltyYears}</p>
+                    <p class="qs-side-sub">Loyalty discount {loyaltyDiscPct}</p>
+                </div>
+            </div>
+        </aside>
+        <section class="qs-main">
+            <div class="qs-heading">
+                <div>
+                    <h1 class="qs-title">QUOTE SUMMARY</h1>
+                    <p class="qs-subtitle">Here is your personalized insurance quote based on the information you provided.</p>
+                </div>
+                <template lwc:if={quoteStatus}>
+                    <span class={statusClass}>{quoteStatus}</span>
+                </template>
+            </div>
+
+            <div class="qs-cards">
+
+                <!-- Card 1: Premium Breakdown -->
+                <div class="qs-card">
+                    <h3 class="qs-card-title">PREMIUM BREAKDOWN</h3>
+
+                    <div class="qs-line">
+                        <span class="qs-chip qs-blue"><lightning-icon icon-name="utility:clipboard" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text"><p class="qs-line-label">Base Amount</p><p class="qs-line-sub">Determined from Decision Matrix</p></div>
+                        <span class="qs-amt">{baseAmount}</span>
+                    </div>
+
+                    <div class="qs-line">
+                        <span class="qs-chip qs-purple"><lightning-icon icon-name="utility:trending" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text"><p class="qs-line-label">Risk Adjustment</p><p class="qs-line-sub">From Decision Table ({riskAdjPct})</p></div>
+                        <span class="qs-amt qs-red">{riskAmount}</span>
+                    </div>
+
+                    <div class="qs-line">
+                        <span class="qs-chip qs-teal"><lightning-icon icon-name="utility:umbrella" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text"><p class="qs-line-label">Coverage Charges</p><p class="qs-line-sub">{coverageType} coverage</p></div>
+                        <span class="qs-amt qs-red">{coverageAmount}</span>
+                    </div>
+
+                    <div class="qs-line">
+                        <span class="qs-chip qs-red-bg"><lightning-icon icon-name="utility:warning" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text"><p class="qs-line-label">Surcharge</p><p class="qs-line-sub">{surchargeSub}</p></div>
+                        <span class="qs-amt qs-red">{surchargeAmount}</span>
+                    </div>
+
+                    <div class="qs-line">
+                        <span class="qs-chip qs-green"><lightning-icon icon-name="utility:discounts" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text"><p class="qs-line-label">Discounts</p><p class="qs-line-sub">{discountSub}</p></div>
+                        <span class="qs-amt qs-greentxt">{discountAmount}</span>
+                    </div>
+
+                    <div class="qs-total">
+                        <span class="qs-total-label">TOTAL PREMIUM</span>
+                        <span class="qs-total-amt">{finalPremium}</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: How We Calculated -->
+                <div class="qs-card">
+                    <h3 class="qs-card-title">HOW WE CALCULATED YOUR PREMIUM</h3>
+
+                    <div class="qs-calc-row">
+                        <span class="qs-chip qs-blue"><lightning-icon icon-name="utility:clipboard" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text"><p class="qs-line-label">1. Base Amount</p><p class="qs-line-sub">Retrieved from Decision Matrix</p></div>
+                        <span class="qs-amt">{baseAmount}</span>
+                    </div>
+
+                    <div class="qs-calc-row">
+                        <span class="qs-chip qs-purple"><lightning-icon icon-name="utility:trending" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text">
+                            <p class="qs-line-label">2. Risk Adjustment</p>
+                            <p class="qs-line-sub">{riskAdjSub}</p>
+                        </div>
+                        <div class="qs-amt-stack">
+                            <span class="qs-amt qs-red">{riskAmount}</span>
+                            <span class="qs-subtotal">Adjusted base: {adjBase}</span>
+                        </div>
+                    </div>
+
+                    <div class="qs-calc-row">
+                        <span class="qs-chip qs-teal"><lightning-icon icon-name="utility:umbrella" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text">
+                            <p class="qs-line-label">3. Coverage Charges</p>
+                            <p class="qs-line-sub">Added for {coverageType} coverage</p>
+                        </div>
+                        <div class="qs-amt-stack">
+                            <span class="qs-amt qs-red">{coverageAmount}</span>
+                            <span class="qs-subtotal">Subtotal: {subTotal}</span>
+                        </div>
+                    </div>
+
+                    <div class="qs-calc-row">
+                        <span class="qs-chip qs-red-bg"><lightning-icon icon-name="utility:warning" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text">
+                            <p class="qs-line-label">4. Surcharge</p>
+                            <p class="qs-line-sub">{surchargeSub}</p>
+                        </div>
+                        <div class="qs-amt-stack">
+                            <span class="qs-amt qs-red">{surchargeAmount}</span>
+                            <span class="qs-subtotal">Subtotal: {afterSurcharge}</span>
+                        </div>
+                    </div>
+
+                    <div class="qs-calc-row">
+                        <span class="qs-chip qs-green"><lightning-icon icon-name="utility:discounts" size="x-small" variant="inverse"></lightning-icon></span>
+                        <div class="qs-line-text">
+                            <p class="qs-line-label">5. Discounts</p>
+                            <p class="qs-line-sub">{discountSub}</p>
+                        </div>
+                        <span class="qs-amt qs-greentxt">{discountAmount}</span>
+                    </div>
+
+                    <div class="qs-final">
+                        <span class="qs-final-label">Final Premium</span>
+                        <span class="qs-total-amt">{finalPremium}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner -->
+            <div class={bannerClass}>
+                <span class="qs-chip qs-green qs-chip-lg"><lightning-icon icon-name={bannerIcon} size="small" variant="inverse"></lightning-icon></span>
+                <div>
+                    <p class="qs-banner-title">{bannerTitle}</p>
+                    <p class="qs-banner-sub">{bannerSub}</p>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="qs-actions">
+                <button class="qs-btn qs-btn-outline" onclick={handlePrevious}>&larr;&nbsp; Previous</button>
+                <div class="qs-actions-right">
+                    <button class="qs-btn qs-btn-outline" onclick={handleDownload}>Download Quote</button>
+                    <button class="qs-btn qs-btn-primary" onclick={handleSubmit}>Submit Application &nbsp;&rarr;</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</template>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Usage__c</fullName>
+    <label>Usage</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Personal</fullName>
+                <default>false</default>
+                <label>Personal</label>
+            </value>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

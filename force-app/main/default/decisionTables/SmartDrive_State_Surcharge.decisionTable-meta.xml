@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DecisionTable xmlns="http://soap.sforce.com/2006/04/metadata">
+    <collectOperator>None</collectOperator>
+    <conditionCriteria>1 AND 2 AND 3</conditionCriteria>
+    <conditionType>All</conditionType>
+    <dataSourceType>SingleSobject</dataSourceType>
+    <decisionTableParameters>
+        <dataType>String</dataType>
+        <fieldName>Usage__c</fieldName>
+        <fieldPath>Usage__c</fieldPath>
+        <isGroupByField>false</isGroupByField>
+        <isRequired>true</isRequired>
+        <operator>Equals</operator>
+        <sequence>2</sequence>
+        <usage>INPUT</usage>
+    </decisionTableParameters>
+    <decisionTableParameters>
+        <dataType>String</dataType>
+        <fieldName>Coverage_Type__c</fieldName>
+        <fieldPath>Coverage_Type__c</fieldPath>
+        <isGroupByField>false</isGroupByField>
+        <isRequired>true</isRequired>
+        <operator>Equals</operator>
+        <sequence>1</sequence>
+        <usage>INPUT</usage>
+    </decisionTableParameters>
+    <decisionTableParameters>
+        <dataType>String</dataType>
+        <fieldName>Surcharge_Percent__c</fieldName>
+        <fieldPath>Surcharge_Percent__c</fieldPath>
+        <isGroupByField>false</isGroupByField>
+        <isRequired>false</isRequired>
+        <sortType>AscNullFirst</sortType>
+        <usage>OUTPUT</usage>
+    </decisionTableParameters>
+    <decisionTableParameters>
+        <dataType>String</dataType>
+        <fieldName>State__c</fieldName>
+        <fieldPath>State__c</fieldPath>
+        <isGroupByField>false</isGroupByField>
+        <isRequired>true</isRequired>
+        <operator>Equals</operator>
+        <sequence>3</sequence>
+        <usage>INPUT</usage>
+    </decisionTableParameters>
+    <doesConsiderNullValue>true</doesConsiderNullValue>
+    <dtRowLevelOverrideType>None</dtRowLevelOverrideType>
+    <filterResultBy>OutputOrder</filterResultBy>
+    <hasIncrementalSyncFailed>false</hasIncrementalSyncFailed>
+    <isIncrementalSyncEnabled>false</isIncrementalSyncEnabled>
+    <isVersioned>false</isVersioned>
+    <setupName>SmartDrive State Surcharge</setupName>
+    <sourceObject>State_Surcharge_Rule__c</sourceObject>
+    <status>Active</status>
+    <type>LowVolume</type>
+</DecisionTable>

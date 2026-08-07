@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DecisionMatrixDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>SmartDrive Experience Discount</label>
+    <processType>Bre</processType>
+    <type>Standard</type>
+    <versions>
+        <fullName>SmartDrive_Experience_Discount_V1</fullName>
+        <columns>
+            <columnType>Input</columnType>
+            <dataType>NumberRange</dataType>
+            <displaySequence>1</displaySequence>
+            <isWildcardColumn>false</isWildcardColumn>
+            <name>YearsofDrivingExperience</name>
+            <rangeValue>0,2,6,11</rangeValue>
+        </columns>
+        <columns>
+            <columnType>Input</columnType>
+            <dataType>NumberRange</dataType>
+            <displaySequence>2</displaySequence>
+            <isWildcardColumn>false</isWildcardColumn>
+            <name>Accidents</name>
+            <rangeValue>0,1,2</rangeValue>
+        </columns>
+        <columns>
+            <columnType>Output</columnType>
+            <dataType>Percent</dataType>
+            <displaySequence>3</displaySequence>
+            <isWildcardColumn>false</isWildcardColumn>
+            <name>DiscountPercentage</name>
+        </columns>
+        <decisionMatrixDefinition>SmartDrive_Experience_Discount</decisionMatrixDefinition>
+        <label>SmartDrive Experience Discount V1</label>
+        <rank>1</rank>
+        <startDate>2026-08-03T18:20:10.000Z</startDate>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </versions>
+</DecisionMatrixDefinition>

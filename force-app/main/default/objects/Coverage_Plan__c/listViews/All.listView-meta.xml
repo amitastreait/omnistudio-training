@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>State__c</columns>
+    <columns>Vehicle_Type__c</columns>
+    <columns>Tier__c</columns>
+    <columns>Coverage_Limit__c</columns>
+    <columns>Deductible__c</columns>
+    <columns>Monthly_Rate__c</columns>
+    <columns>Annual_Rate__c</columns>
+    <columns>Perk__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

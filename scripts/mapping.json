@@ -1,0 +1,33 @@
+{
+    "InsuranceInput": {
+        "VehicleType": "SUV",
+        "Coverage_Type__c": "Comprehensive",
+        "YearsWithCompany": "4",
+        "MaxAge__c": "35.00",
+        "YearsofDrivingExperience": "12.00",
+        "MinAge__c": "35.00",
+        "Usage__c": "Personal",
+        "VehicleAge": "5.00",
+        "VehicleType__c": "SUV",
+        "TrafficViolations": "0.00",
+        "CoverageType": "Comprehensive",
+        "Age": "28.00",
+        "State__c": "California",
+        "Accidents": "1.00"
+    }
+}
+
+VehicleType              => %VehicleInformation:VehicleType%
+Coverage_Type__c         => %VehicleInformation:CoverageType%
+YearsWithCompany         => %CustomerInformation:YearsWithCompany%
+MaxAge__c                => %CustomerInformation:Age%
+YearsofDrivingExperience => %CustomerInformation:YearsOfDrivingExperience%
+MinAge__c                => %CustomerInformation:Age%
+Usage__c                 => %VehicleInformation:Usage%
+VehicleAge               => %VehicleInformation:VehicleAge%
+VehicleType__c           => %VehicleInformation:VehicleType%
+TrafficViolations        => %DrivingHistory:TrafficViolations%
+CoverageType             => %VehicleInformation:CoverageType%
+Age                      => %CustomerInformation:Age%
+State__c                 => %CustomerInformation:State%
+Accidents                => %DrivingHistory:NumberOfAccidents%

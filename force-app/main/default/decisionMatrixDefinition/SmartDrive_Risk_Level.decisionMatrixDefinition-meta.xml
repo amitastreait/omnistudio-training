@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DecisionMatrixDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>SmartDrive Risk Level</label>
+    <processType>Bre</processType>
+    <type>Standard</type>
+    <versions>
+        <fullName>SmartDrive_Risk_Level_V1</fullName>
+        <columns>
+            <columnType>Input</columnType>
+            <dataType>NumberRange</dataType>
+            <displaySequence>1</displaySequence>
+            <isWildcardColumn>false</isWildcardColumn>
+            <name>Age</name>
+            <rangeValue>0,25,61</rangeValue>
+        </columns>
+        <columns>
+            <columnType>Input</columnType>
+            <dataType>NumberRange</dataType>
+            <displaySequence>2</displaySequence>
+            <isWildcardColumn>false</isWildcardColumn>
+            <name>Accidents</name>
+            <rangeValue>0,1,2</rangeValue>
+        </columns>
+        <columns>
+            <columnType>Input</columnType>
+            <dataType>NumberRange</dataType>
+            <displaySequence>3</displaySequence>
+            <isWildcardColumn>false</isWildcardColumn>
+            <name>TrafficViolations</name>
+            <rangeValue>0,1,2</rangeValue>
+        </columns>
+        <columns>
+            <columnType>Output</columnType>
+            <dataType>Text</dataType>
+            <displaySequence>4</displaySequence>
+            <isWildcardColumn>false</isWildcardColumn>
+            <name>RiskLevel</name>
+        </columns>
+        <decisionMatrixDefinition>SmartDrive_Risk_Level</decisionMatrixDefinition>
+        <label>SmartDrive Risk Level V1</label>
+        <rank>1</rank>
+        <startDate>2026-08-02T08:16:38.000Z</startDate>
+        <status>Active</status>
+        <versionNumber>1</versionNumber>
+    </versions>
+</DecisionMatrixDefinition>
