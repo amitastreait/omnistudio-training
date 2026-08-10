@@ -37,6 +37,12 @@
 		<name>Layout</name>
 	</types>
 	<types>
+		<members>callDataMapper</members>
+		<members>callDataMapperFromLWC</members>
+		<members>callIntegrationProcedure</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<types>
 		<members>DMEAccountExtract_1</members>
 		<members>DMEAccountWithOpportunitiesV1_1</members>
 		<members>DMEAccountWithOpportunities_1</members>
@@ -82,6 +88,7 @@
 		<name>OmniIntegrationProcedure</name>
 	</types>
 	<types>
+		<members>Vehicle_Insurance_English_1</members>
 		<members>Vehicle_Premium_English_1</members>
 		<members>quote_motor_English_1</members>
 		<members>view_WeatherInformation_English_1</members>

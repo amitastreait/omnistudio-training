@@ -1,0 +1,12 @@
+<template>
+    <lightning-card icon-name="custom:custom34" variant="base">
+        <lightning-spinner alternative-text="Loading" size="small" variant="base"
+            lwc:if={isLoading}></lightning-spinner>
+        <div slot="title">
+            Call IP from the Lightning Web Component
+        </div>
+        <div class="slds-p-around_small">
+            <lightning-button variant="brand" label="Call IP" onclick={handleInvokeIP}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

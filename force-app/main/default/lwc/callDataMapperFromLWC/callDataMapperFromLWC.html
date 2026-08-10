@@ -1,0 +1,42 @@
+<template>
+    <lightning-card icon-name="standard:contact" title="Create Contact" variant="base">
+        <lightning-spinner alternative-text="Loading" size="small" variant="brand"
+            lwc:if={isLoading}></lightning-spinner>
+        <div class="slds-p-around_large">
+            <!-- Header -->
+            <div class="slds-m-bottom_large">
+                <h1 class="slds-text-heading_large slds-text-title_bold">User Information</h1>
+                <div class="slds-text-color_weak slds-m-top_x-small">
+                    Please provide your basic information below.
+                </div>
+            </div>
+            <!-- Form -->
+            <div class="slds-grid slds-wrap slds-gutters">
+                <!-- First Name -->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input type="text" label="First Name" name="FirstName" placeholder="Enter your first name"
+                        onchange={handleChange} required>
+                    </lightning-input>
+                </div>
+                <!-- Last Name -->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input type="text" label="Last Name" name="LastName" placeholder="Enter your last name"
+                        onchange={handleChange} required>
+                    </lightning-input>
+                </div>
+                <!-- Email -->
+                <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                    <lightning-input type="email" label="Email Address" name="Email" placeholder="name@example.com"
+                        onchange={handleChange} required>
+                    </lightning-input>
+                </div>
+            </div>
+            <!-- Button -->
+            <div class="slds-m-top_large slds-align_absolute-center">
+                <lightning-button variant="brand" label="Create Contact Record" title="Submit User Information"
+                    onclick={handleSubmit}>
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

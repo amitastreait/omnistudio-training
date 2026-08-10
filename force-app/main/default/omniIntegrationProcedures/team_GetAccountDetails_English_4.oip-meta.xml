@@ -3,7 +3,7 @@
     <customJavaScript>{&quot;recordId&quot;:&quot;001aj000017N145AAC&quot;}</customJavaScript>
     <description>Team Get Account Details</description>
     <elementTypeComponentMapping>{&quot;ElementTypeToHTMLTemplateList&quot;:[]}</elementTypeComponentMapping>
-    <isActive>false</isActive>
+    <isActive>true</isActive>
     <isIntegProcdSignatureAvl>false</isIntegProcdSignatureAvl>
     <isIntegrationProcedure>true</isIntegrationProcedure>
     <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
