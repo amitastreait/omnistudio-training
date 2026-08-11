@@ -1,0 +1,10 @@
+Vehicle Type,Vehicle Age,Base Premium
+Sedan,0,800
+Sedan,6,950
+Sedan,11,1200
+SUV,0,1000
+SUV,6,1200
+SUV,11,1500
+Sports,0,1800
+Sports,6,2200
+Sports,11,2700

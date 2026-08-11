@@ -1,0 +1,541 @@
+Name,State__c,Vehicle_Type__c,Tier__c,Coverage_Limit__c,Deductible__c,Monthly_Rate__c,Annual_Rate__c,Perk__c
+Basic,California,Sedan,Basic,25000,1000,69,828,
+Standard,California,Sedan,Standard,50000,750,115,1380,Roadside
+Premium,California,Sedan,Premium,100000,500,184,2208,Roadside + Rental
+Elite,California,Sedan,Elite,250000,250,265,3180,Full concierge
+Ultra,California,Sedan,Ultra,500000,0,368,4416,Full concierge + Zero deductible
+Basic,California,Hatchback,Basic,25000,1000,66,792,
+Standard,California,Hatchback,Standard,50000,750,109,1308,Roadside
+Premium,California,Hatchback,Premium,100000,500,175,2100,Roadside + Rental
+Elite,California,Hatchback,Elite,250000,250,251,3012,Full concierge
+Ultra,California,Hatchback,Ultra,500000,0,350,4200,Full concierge + Zero deductible
+Basic,California,Van,Basic,25000,1000,72,864,
+Standard,California,Van,Standard,50000,750,121,1452,Roadside
+Premium,California,Van,Premium,100000,500,193,2316,Roadside + Rental
+Elite,California,Van,Elite,250000,250,278,3336,Full concierge
+Ultra,California,Van,Ultra,500000,0,386,4632,Full concierge + Zero deductible
+Basic,California,SUV,Basic,25000,1000,79,948,
+Standard,California,SUV,Standard,50000,750,132,1584,Roadside
+Premium,California,SUV,Premium,100000,500,212,2544,Roadside + Rental
+Elite,California,SUV,Elite,250000,250,304,3648,Full concierge
+Ultra,California,SUV,Ultra,500000,0,423,5076,Full concierge + Zero deductible
+Basic,California,Coupe,Basic,25000,1000,83,996,
+Standard,California,Coupe,Standard,50000,750,138,1656,Roadside
+Premium,California,Coupe,Premium,100000,500,221,2652,Roadside + Rental
+Elite,California,Coupe,Elite,250000,250,317,3804,Full concierge
+Ultra,California,Coupe,Ultra,500000,0,442,5304,Full concierge + Zero deductible
+Basic,California,Truck,Basic,25000,1000,86,1032,
+Standard,California,Truck,Standard,50000,750,144,1728,Roadside
+Premium,California,Truck,Premium,100000,500,230,2760,Roadside + Rental
+Elite,California,Truck,Elite,250000,250,331,3972,Full concierge
+Ultra,California,Truck,Ultra,500000,0,460,5520,Full concierge + Zero deductible
+Basic,California,Hybrid,Basic,25000,1000,76,912,
+Standard,California,Hybrid,Standard,50000,750,127,1524,Roadside
+Premium,California,Hybrid,Premium,100000,500,202,2424,Roadside + Rental
+Elite,California,Hybrid,Elite,250000,250,291,3492,Full concierge
+Ultra,California,Hybrid,Ultra,500000,0,405,4860,Full concierge + Zero deductible
+Basic,California,Electric,Basic,25000,1000,83,996,
+Standard,California,Electric,Standard,50000,750,138,1656,Roadside
+Premium,California,Electric,Premium,100000,500,221,2652,Roadside + Rental
+Elite,California,Electric,Elite,250000,250,317,3804,Full concierge
+Ultra,California,Electric,Ultra,500000,0,442,5304,Full concierge + Zero deductible
+Basic,California,Luxury,Basic,25000,1000,103,1236,
+Standard,California,Luxury,Standard,50000,750,173,2076,Roadside
+Premium,California,Luxury,Premium,100000,500,276,3312,Roadside + Rental
+Elite,California,Luxury,Elite,250000,250,397,4764,Full concierge
+Ultra,California,Luxury,Ultra,500000,0,552,6624,Full concierge + Zero deductible
+Basic,California,Convertible,Basic,25000,1000,97,1164,
+Standard,California,Convertible,Standard,50000,750,161,1932,Roadside
+Premium,California,Convertible,Premium,100000,500,258,3096,Roadside + Rental
+Elite,California,Convertible,Elite,250000,250,370,4440,Full concierge
+Ultra,California,Convertible,Ultra,500000,0,515,6180,Full concierge + Zero deductible
+Basic,California,Sports,Basic,25000,1000,110,1320,
+Standard,California,Sports,Standard,50000,750,184,2208,Roadside
+Premium,California,Sports,Premium,100000,500,294,3528,Roadside + Rental
+Elite,California,Sports,Elite,250000,250,423,5076,Full concierge
+Ultra,California,Sports,Ultra,500000,0,589,7068,Full concierge + Zero deductible
+Basic,California,Motorcycle,Basic,25000,1000,90,1080,
+Standard,California,Motorcycle,Standard,50000,750,150,1800,Roadside
+Premium,California,Motorcycle,Premium,100000,500,239,2868,Roadside + Rental
+Elite,California,Motorcycle,Elite,250000,250,344,4128,Full concierge
+Ultra,California,Motorcycle,Ultra,500000,0,478,5736,Full concierge + Zero deductible
+Basic,New York,Sedan,Basic,25000,1000,72,864,
+Standard,New York,Sedan,Standard,50000,750,120,1440,Roadside
+Premium,New York,Sedan,Premium,100000,500,192,2304,Roadside + Rental
+Elite,New York,Sedan,Elite,250000,250,276,3312,Full concierge
+Ultra,New York,Sedan,Ultra,500000,0,384,4608,Full concierge + Zero deductible
+Basic,New York,Hatchback,Basic,25000,1000,68,816,
+Standard,New York,Hatchback,Standard,50000,750,114,1368,Roadside
+Premium,New York,Hatchback,Premium,100000,500,182,2184,Roadside + Rental
+Elite,New York,Hatchback,Elite,250000,250,262,3144,Full concierge
+Ultra,New York,Hatchback,Ultra,500000,0,365,4380,Full concierge + Zero deductible
+Basic,New York,Van,Basic,25000,1000,76,912,
+Standard,New York,Van,Standard,50000,750,126,1512,Roadside
+Premium,New York,Van,Premium,100000,500,202,2424,Roadside + Rental
+Elite,New York,Van,Elite,250000,250,290,3480,Full concierge
+Ultra,New York,Van,Ultra,500000,0,403,4836,Full concierge + Zero deductible
+Basic,New York,SUV,Basic,25000,1000,83,996,
+Standard,New York,SUV,Standard,50000,750,138,1656,Roadside
+Premium,New York,SUV,Premium,100000,500,221,2652,Roadside + Rental
+Elite,New York,SUV,Elite,250000,250,317,3804,Full concierge
+Ultra,New York,SUV,Ultra,500000,0,442,5304,Full concierge + Zero deductible
+Basic,New York,Coupe,Basic,25000,1000,86,1032,
+Standard,New York,Coupe,Standard,50000,750,144,1728,Roadside
+Premium,New York,Coupe,Premium,100000,500,230,2760,Roadside + Rental
+Elite,New York,Coupe,Elite,250000,250,331,3972,Full concierge
+Ultra,New York,Coupe,Ultra,500000,0,461,5532,Full concierge + Zero deductible
+Basic,New York,Truck,Basic,25000,1000,90,1080,
+Standard,New York,Truck,Standard,50000,750,150,1800,Roadside
+Premium,New York,Truck,Premium,100000,500,240,2880,Roadside + Rental
+Elite,New York,Truck,Elite,250000,250,345,4140,Full concierge
+Ultra,New York,Truck,Ultra,500000,0,480,5760,Full concierge + Zero deductible
+Basic,New York,Hybrid,Basic,25000,1000,79,948,
+Standard,New York,Hybrid,Standard,50000,750,132,1584,Roadside
+Premium,New York,Hybrid,Premium,100000,500,211,2532,Roadside + Rental
+Elite,New York,Hybrid,Elite,250000,250,304,3648,Full concierge
+Ultra,New York,Hybrid,Ultra,500000,0,422,5064,Full concierge + Zero deductible
+Basic,New York,Electric,Basic,25000,1000,86,1032,
+Standard,New York,Electric,Standard,50000,750,144,1728,Roadside
+Premium,New York,Electric,Premium,100000,500,230,2760,Roadside + Rental
+Elite,New York,Electric,Elite,250000,250,331,3972,Full concierge
+Ultra,New York,Electric,Ultra,500000,0,461,5532,Full concierge + Zero deductible
+Basic,New York,Luxury,Basic,25000,1000,108,1296,
+Standard,New York,Luxury,Standard,50000,750,180,2160,Roadside
+Premium,New York,Luxury,Premium,100000,500,288,3456,Roadside + Rental
+Elite,New York,Luxury,Elite,250000,250,414,4968,Full concierge
+Ultra,New York,Luxury,Ultra,500000,0,576,6912,Full concierge + Zero deductible
+Basic,New York,Convertible,Basic,25000,1000,101,1212,
+Standard,New York,Convertible,Standard,50000,750,168,2016,Roadside
+Premium,New York,Convertible,Premium,100000,500,269,3228,Roadside + Rental
+Elite,New York,Convertible,Elite,250000,250,386,4632,Full concierge
+Ultra,New York,Convertible,Ultra,500000,0,538,6456,Full concierge + Zero deductible
+Basic,New York,Sports,Basic,25000,1000,115,1380,
+Standard,New York,Sports,Standard,50000,750,192,2304,Roadside
+Premium,New York,Sports,Premium,100000,500,307,3684,Roadside + Rental
+Elite,New York,Sports,Elite,250000,250,442,5304,Full concierge
+Ultra,New York,Sports,Ultra,500000,0,614,7368,Full concierge + Zero deductible
+Basic,New York,Motorcycle,Basic,25000,1000,94,1128,
+Standard,New York,Motorcycle,Standard,50000,750,156,1872,Roadside
+Premium,New York,Motorcycle,Premium,100000,500,250,3000,Roadside + Rental
+Elite,New York,Motorcycle,Elite,250000,250,359,4308,Full concierge
+Ultra,New York,Motorcycle,Ultra,500000,0,499,5988,Full concierge + Zero deductible
+Basic,Florida,Sedan,Basic,25000,1000,66,792,
+Standard,Florida,Sedan,Standard,50000,750,110,1320,Roadside
+Premium,Florida,Sedan,Premium,100000,500,176,2112,Roadside + Rental
+Elite,Florida,Sedan,Elite,250000,250,253,3036,Full concierge
+Ultra,Florida,Sedan,Ultra,500000,0,352,4224,Full concierge + Zero deductible
+Basic,Florida,Hatchback,Basic,25000,1000,63,756,
+Standard,Florida,Hatchback,Standard,50000,750,105,1260,Roadside
+Premium,Florida,Hatchback,Premium,100000,500,167,2004,Roadside + Rental
+Elite,Florida,Hatchback,Elite,250000,250,240,2880,Full concierge
+Ultra,Florida,Hatchback,Ultra,500000,0,334,4008,Full concierge + Zero deductible
+Basic,Florida,Van,Basic,25000,1000,69,828,
+Standard,Florida,Van,Standard,50000,750,116,1392,Roadside
+Premium,Florida,Van,Premium,100000,500,185,2220,Roadside + Rental
+Elite,Florida,Van,Elite,250000,250,266,3192,Full concierge
+Ultra,Florida,Van,Ultra,500000,0,370,4440,Full concierge + Zero deductible
+Basic,Florida,SUV,Basic,25000,1000,76,912,
+Standard,Florida,SUV,Standard,50000,750,127,1524,Roadside
+Premium,Florida,SUV,Premium,100000,500,202,2424,Roadside + Rental
+Elite,Florida,SUV,Elite,250000,250,291,3492,Full concierge
+Ultra,Florida,SUV,Ultra,500000,0,405,4860,Full concierge + Zero deductible
+Basic,Florida,Coupe,Basic,25000,1000,79,948,
+Standard,Florida,Coupe,Standard,50000,750,132,1584,Roadside
+Premium,Florida,Coupe,Premium,100000,500,211,2532,Roadside + Rental
+Elite,Florida,Coupe,Elite,250000,250,304,3648,Full concierge
+Ultra,Florida,Coupe,Ultra,500000,0,422,5064,Full concierge + Zero deductible
+Basic,Florida,Truck,Basic,25000,1000,83,996,
+Standard,Florida,Truck,Standard,50000,750,138,1656,Roadside
+Premium,Florida,Truck,Premium,100000,500,220,2640,Roadside + Rental
+Elite,Florida,Truck,Elite,250000,250,316,3792,Full concierge
+Ultra,Florida,Truck,Ultra,500000,0,440,5280,Full concierge + Zero deductible
+Basic,Florida,Hybrid,Basic,25000,1000,73,876,
+Standard,Florida,Hybrid,Standard,50000,750,121,1452,Roadside
+Premium,Florida,Hybrid,Premium,100000,500,194,2328,Roadside + Rental
+Elite,Florida,Hybrid,Elite,250000,250,278,3336,Full concierge
+Ultra,Florida,Hybrid,Ultra,500000,0,387,4644,Full concierge + Zero deductible
+Basic,Florida,Electric,Basic,25000,1000,79,948,
+Standard,Florida,Electric,Standard,50000,750,132,1584,Roadside
+Premium,Florida,Electric,Premium,100000,500,211,2532,Roadside + Rental
+Elite,Florida,Electric,Elite,250000,250,304,3648,Full concierge
+Ultra,Florida,Electric,Ultra,500000,0,422,5064,Full concierge + Zero deductible
+Basic,Florida,Luxury,Basic,25000,1000,99,1188,
+Standard,Florida,Luxury,Standard,50000,750,165,1980,Roadside
+Premium,Florida,Luxury,Premium,100000,500,264,3168,Roadside + Rental
+Elite,Florida,Luxury,Elite,250000,250,380,4560,Full concierge
+Ultra,Florida,Luxury,Ultra,500000,0,528,6336,Full concierge + Zero deductible
+Basic,Florida,Convertible,Basic,25000,1000,92,1104,
+Standard,Florida,Convertible,Standard,50000,750,154,1848,Roadside
+Premium,Florida,Convertible,Premium,100000,500,246,2952,Roadside + Rental
+Elite,Florida,Convertible,Elite,250000,250,354,4248,Full concierge
+Ultra,Florida,Convertible,Ultra,500000,0,493,5916,Full concierge + Zero deductible
+Basic,Florida,Sports,Basic,25000,1000,106,1272,
+Standard,Florida,Sports,Standard,50000,750,176,2112,Roadside
+Premium,Florida,Sports,Premium,100000,500,282,3384,Roadside + Rental
+Elite,Florida,Sports,Elite,250000,250,405,4860,Full concierge
+Ultra,Florida,Sports,Ultra,500000,0,563,6756,Full concierge + Zero deductible
+Basic,Florida,Motorcycle,Basic,25000,1000,86,1032,
+Standard,Florida,Motorcycle,Standard,50000,750,143,1716,Roadside
+Premium,Florida,Motorcycle,Premium,100000,500,229,2748,Roadside + Rental
+Elite,Florida,Motorcycle,Elite,250000,250,329,3948,Full concierge
+Ultra,Florida,Motorcycle,Ultra,500000,0,458,5496,Full concierge + Zero deductible
+Basic,Texas,Sedan,Basic,25000,1000,60,720,
+Standard,Texas,Sedan,Standard,50000,750,100,1200,Roadside
+Premium,Texas,Sedan,Premium,100000,500,160,1920,Roadside + Rental
+Elite,Texas,Sedan,Elite,250000,250,230,2760,Full concierge
+Ultra,Texas,Sedan,Ultra,500000,0,320,3840,Full concierge + Zero deductible
+Basic,Texas,Hatchback,Basic,25000,1000,57,684,
+Standard,Texas,Hatchback,Standard,50000,750,95,1140,Roadside
+Premium,Texas,Hatchback,Premium,100000,500,152,1824,Roadside + Rental
+Elite,Texas,Hatchback,Elite,250000,250,219,2628,Full concierge
+Ultra,Texas,Hatchback,Ultra,500000,0,304,3648,Full concierge + Zero deductible
+Basic,Texas,Van,Basic,25000,1000,63,756,
+Standard,Texas,Van,Standard,50000,750,105,1260,Roadside
+Premium,Texas,Van,Premium,100000,500,168,2016,Roadside + Rental
+Elite,Texas,Van,Elite,250000,250,242,2904,Full concierge
+Ultra,Texas,Van,Ultra,500000,0,336,4032,Full concierge + Zero deductible
+Basic,Texas,SUV,Basic,25000,1000,69,828,
+Standard,Texas,SUV,Standard,50000,750,115,1380,Roadside
+Premium,Texas,SUV,Premium,100000,500,184,2208,Roadside + Rental
+Elite,Texas,SUV,Elite,250000,250,265,3180,Full concierge
+Ultra,Texas,SUV,Ultra,500000,0,368,4416,Full concierge + Zero deductible
+Basic,Texas,Coupe,Basic,25000,1000,72,864,
+Standard,Texas,Coupe,Standard,50000,750,120,1440,Roadside
+Premium,Texas,Coupe,Premium,100000,500,192,2304,Roadside + Rental
+Elite,Texas,Coupe,Elite,250000,250,276,3312,Full concierge
+Ultra,Texas,Coupe,Ultra,500000,0,384,4608,Full concierge + Zero deductible
+Basic,Texas,Truck,Basic,25000,1000,75,900,
+Standard,Texas,Truck,Standard,50000,750,125,1500,Roadside
+Premium,Texas,Truck,Premium,100000,500,200,2400,Roadside + Rental
+Elite,Texas,Truck,Elite,250000,250,288,3456,Full concierge
+Ultra,Texas,Truck,Ultra,500000,0,400,4800,Full concierge + Zero deductible
+Basic,Texas,Hybrid,Basic,25000,1000,66,792,
+Standard,Texas,Hybrid,Standard,50000,750,110,1320,Roadside
+Premium,Texas,Hybrid,Premium,100000,500,176,2112,Roadside + Rental
+Elite,Texas,Hybrid,Elite,250000,250,253,3036,Full concierge
+Ultra,Texas,Hybrid,Ultra,500000,0,352,4224,Full concierge + Zero deductible
+Basic,Texas,Electric,Basic,25000,1000,72,864,
+Standard,Texas,Electric,Standard,50000,750,120,1440,Roadside
+Premium,Texas,Electric,Premium,100000,500,192,2304,Roadside + Rental
+Elite,Texas,Electric,Elite,250000,250,276,3312,Full concierge
+Ultra,Texas,Electric,Ultra,500000,0,384,4608,Full concierge + Zero deductible
+Basic,Texas,Luxury,Basic,25000,1000,90,1080,
+Standard,Texas,Luxury,Standard,50000,750,150,1800,Roadside
+Premium,Texas,Luxury,Premium,100000,500,240,2880,Roadside + Rental
+Elite,Texas,Luxury,Elite,250000,250,345,4140,Full concierge
+Ultra,Texas,Luxury,Ultra,500000,0,480,5760,Full concierge + Zero deductible
+Basic,Texas,Convertible,Basic,25000,1000,84,1008,
+Standard,Texas,Convertible,Standard,50000,750,140,1680,Roadside
+Premium,Texas,Convertible,Premium,100000,500,224,2688,Roadside + Rental
+Elite,Texas,Convertible,Elite,250000,250,322,3864,Full concierge
+Ultra,Texas,Convertible,Ultra,500000,0,448,5376,Full concierge + Zero deductible
+Basic,Texas,Sports,Basic,25000,1000,96,1152,
+Standard,Texas,Sports,Standard,50000,750,160,1920,Roadside
+Premium,Texas,Sports,Premium,100000,500,256,3072,Roadside + Rental
+Elite,Texas,Sports,Elite,250000,250,368,4416,Full concierge
+Ultra,Texas,Sports,Ultra,500000,0,512,6144,Full concierge + Zero deductible
+Basic,Texas,Motorcycle,Basic,25000,1000,78,936,
+Standard,Texas,Motorcycle,Standard,50000,750,130,1560,Roadside
+Premium,Texas,Motorcycle,Premium,100000,500,208,2496,Roadside + Rental
+Elite,Texas,Motorcycle,Elite,250000,250,299,3588,Full concierge
+Ultra,Texas,Motorcycle,Ultra,500000,0,416,4992,Full concierge + Zero deductible
+Basic,Illinois,Sedan,Basic,25000,1000,63,756,
+Standard,Illinois,Sedan,Standard,50000,750,105,1260,Roadside
+Premium,Illinois,Sedan,Premium,100000,500,168,2016,Roadside + Rental
+Elite,Illinois,Sedan,Elite,250000,250,242,2904,Full concierge
+Ultra,Illinois,Sedan,Ultra,500000,0,336,4032,Full concierge + Zero deductible
+Basic,Illinois,Hatchback,Basic,25000,1000,60,720,
+Standard,Illinois,Hatchback,Standard,50000,750,100,1200,Roadside
+Premium,Illinois,Hatchback,Premium,100000,500,160,1920,Roadside + Rental
+Elite,Illinois,Hatchback,Elite,250000,250,229,2748,Full concierge
+Ultra,Illinois,Hatchback,Ultra,500000,0,319,3828,Full concierge + Zero deductible
+Basic,Illinois,Van,Basic,25000,1000,66,792,
+Standard,Illinois,Van,Standard,50000,750,110,1320,Roadside
+Premium,Illinois,Van,Premium,100000,500,176,2112,Roadside + Rental
+Elite,Illinois,Van,Elite,250000,250,254,3048,Full concierge
+Ultra,Illinois,Van,Ultra,500000,0,353,4236,Full concierge + Zero deductible
+Basic,Illinois,SUV,Basic,25000,1000,72,864,
+Standard,Illinois,SUV,Standard,50000,750,121,1452,Roadside
+Premium,Illinois,SUV,Premium,100000,500,193,2316,Roadside + Rental
+Elite,Illinois,SUV,Elite,250000,250,278,3336,Full concierge
+Ultra,Illinois,SUV,Ultra,500000,0,386,4632,Full concierge + Zero deductible
+Basic,Illinois,Coupe,Basic,25000,1000,76,912,
+Standard,Illinois,Coupe,Standard,50000,750,126,1512,Roadside
+Premium,Illinois,Coupe,Premium,100000,500,202,2424,Roadside + Rental
+Elite,Illinois,Coupe,Elite,250000,250,290,3480,Full concierge
+Ultra,Illinois,Coupe,Ultra,500000,0,403,4836,Full concierge + Zero deductible
+Basic,Illinois,Truck,Basic,25000,1000,79,948,
+Standard,Illinois,Truck,Standard,50000,750,131,1572,Roadside
+Premium,Illinois,Truck,Premium,100000,500,210,2520,Roadside + Rental
+Elite,Illinois,Truck,Elite,250000,250,302,3624,Full concierge
+Ultra,Illinois,Truck,Ultra,500000,0,420,5040,Full concierge + Zero deductible
+Basic,Illinois,Hybrid,Basic,25000,1000,69,828,
+Standard,Illinois,Hybrid,Standard,50000,750,116,1392,Roadside
+Premium,Illinois,Hybrid,Premium,100000,500,185,2220,Roadside + Rental
+Elite,Illinois,Hybrid,Elite,250000,250,266,3192,Full concierge
+Ultra,Illinois,Hybrid,Ultra,500000,0,370,4440,Full concierge + Zero deductible
+Basic,Illinois,Electric,Basic,25000,1000,76,912,
+Standard,Illinois,Electric,Standard,50000,750,126,1512,Roadside
+Premium,Illinois,Electric,Premium,100000,500,202,2424,Roadside + Rental
+Elite,Illinois,Electric,Elite,250000,250,290,3480,Full concierge
+Ultra,Illinois,Electric,Ultra,500000,0,403,4836,Full concierge + Zero deductible
+Basic,Illinois,Luxury,Basic,25000,1000,95,1140,
+Standard,Illinois,Luxury,Standard,50000,750,158,1896,Roadside
+Premium,Illinois,Luxury,Premium,100000,500,252,3024,Roadside + Rental
+Elite,Illinois,Luxury,Elite,250000,250,362,4344,Full concierge
+Ultra,Illinois,Luxury,Ultra,500000,0,504,6048,Full concierge + Zero deductible
+Basic,Illinois,Convertible,Basic,25000,1000,88,1056,
+Standard,Illinois,Convertible,Standard,50000,750,147,1764,Roadside
+Premium,Illinois,Convertible,Premium,100000,500,235,2820,Roadside + Rental
+Elite,Illinois,Convertible,Elite,250000,250,338,4056,Full concierge
+Ultra,Illinois,Convertible,Ultra,500000,0,470,5640,Full concierge + Zero deductible
+Basic,Illinois,Sports,Basic,25000,1000,101,1212,
+Standard,Illinois,Sports,Standard,50000,750,168,2016,Roadside
+Premium,Illinois,Sports,Premium,100000,500,269,3228,Roadside + Rental
+Elite,Illinois,Sports,Elite,250000,250,386,4632,Full concierge
+Ultra,Illinois,Sports,Ultra,500000,0,538,6456,Full concierge + Zero deductible
+Basic,Illinois,Motorcycle,Basic,25000,1000,82,984,
+Standard,Illinois,Motorcycle,Standard,50000,750,137,1644,Roadside
+Premium,Illinois,Motorcycle,Premium,100000,500,218,2616,Roadside + Rental
+Elite,Illinois,Motorcycle,Elite,250000,250,314,3768,Full concierge
+Ultra,Illinois,Motorcycle,Ultra,500000,0,437,5244,Full concierge + Zero deductible
+Basic,Georgia,Sedan,Basic,25000,1000,61,732,
+Standard,Georgia,Sedan,Standard,50000,750,102,1224,Roadside
+Premium,Georgia,Sedan,Premium,100000,500,163,1956,Roadside + Rental
+Elite,Georgia,Sedan,Elite,250000,250,235,2820,Full concierge
+Ultra,Georgia,Sedan,Ultra,500000,0,326,3912,Full concierge + Zero deductible
+Basic,Georgia,Hatchback,Basic,25000,1000,58,696,
+Standard,Georgia,Hatchback,Standard,50000,750,97,1164,Roadside
+Premium,Georgia,Hatchback,Premium,100000,500,155,1860,Roadside + Rental
+Elite,Georgia,Hatchback,Elite,250000,250,223,2676,Full concierge
+Ultra,Georgia,Hatchback,Ultra,500000,0,310,3720,Full concierge + Zero deductible
+Basic,Georgia,Van,Basic,25000,1000,64,768,
+Standard,Georgia,Van,Standard,50000,750,107,1284,Roadside
+Premium,Georgia,Van,Premium,100000,500,171,2052,Roadside + Rental
+Elite,Georgia,Van,Elite,250000,250,246,2952,Full concierge
+Ultra,Georgia,Van,Ultra,500000,0,343,4116,Full concierge + Zero deductible
+Basic,Georgia,SUV,Basic,25000,1000,70,840,
+Standard,Georgia,SUV,Standard,50000,750,117,1404,Roadside
+Premium,Georgia,SUV,Premium,100000,500,188,2256,Roadside + Rental
+Elite,Georgia,SUV,Elite,250000,250,270,3240,Full concierge
+Ultra,Georgia,SUV,Ultra,500000,0,375,4500,Full concierge + Zero deductible
+Basic,Georgia,Coupe,Basic,25000,1000,73,876,
+Standard,Georgia,Coupe,Standard,50000,750,122,1464,Roadside
+Premium,Georgia,Coupe,Premium,100000,500,196,2352,Roadside + Rental
+Elite,Georgia,Coupe,Elite,250000,250,282,3384,Full concierge
+Ultra,Georgia,Coupe,Ultra,500000,0,392,4704,Full concierge + Zero deductible
+Basic,Georgia,Truck,Basic,25000,1000,77,924,
+Standard,Georgia,Truck,Standard,50000,750,128,1536,Roadside
+Premium,Georgia,Truck,Premium,100000,500,204,2448,Roadside + Rental
+Elite,Georgia,Truck,Elite,250000,250,293,3516,Full concierge
+Ultra,Georgia,Truck,Ultra,500000,0,408,4896,Full concierge + Zero deductible
+Basic,Georgia,Hybrid,Basic,25000,1000,67,804,
+Standard,Georgia,Hybrid,Standard,50000,750,112,1344,Roadside
+Premium,Georgia,Hybrid,Premium,100000,500,180,2160,Roadside + Rental
+Elite,Georgia,Hybrid,Elite,250000,250,258,3096,Full concierge
+Ultra,Georgia,Hybrid,Ultra,500000,0,359,4308,Full concierge + Zero deductible
+Basic,Georgia,Electric,Basic,25000,1000,73,876,
+Standard,Georgia,Electric,Standard,50000,750,122,1464,Roadside
+Premium,Georgia,Electric,Premium,100000,500,196,2352,Roadside + Rental
+Elite,Georgia,Electric,Elite,250000,250,282,3384,Full concierge
+Ultra,Georgia,Electric,Ultra,500000,0,392,4704,Full concierge + Zero deductible
+Basic,Georgia,Luxury,Basic,25000,1000,92,1104,
+Standard,Georgia,Luxury,Standard,50000,750,153,1836,Roadside
+Premium,Georgia,Luxury,Premium,100000,500,245,2940,Roadside + Rental
+Elite,Georgia,Luxury,Elite,250000,250,352,4224,Full concierge
+Ultra,Georgia,Luxury,Ultra,500000,0,490,5880,Full concierge + Zero deductible
+Basic,Georgia,Convertible,Basic,25000,1000,86,1032,
+Standard,Georgia,Convertible,Standard,50000,750,143,1716,Roadside
+Premium,Georgia,Convertible,Premium,100000,500,228,2736,Roadside + Rental
+Elite,Georgia,Convertible,Elite,250000,250,328,3936,Full concierge
+Ultra,Georgia,Convertible,Ultra,500000,0,457,5484,Full concierge + Zero deductible
+Basic,Georgia,Sports,Basic,25000,1000,98,1176,
+Standard,Georgia,Sports,Standard,50000,750,163,1956,Roadside
+Premium,Georgia,Sports,Premium,100000,500,261,3132,Roadside + Rental
+Elite,Georgia,Sports,Elite,250000,250,375,4500,Full concierge
+Ultra,Georgia,Sports,Ultra,500000,0,522,6264,Full concierge + Zero deductible
+Basic,Georgia,Motorcycle,Basic,25000,1000,80,960,
+Standard,Georgia,Motorcycle,Standard,50000,750,133,1596,Roadside
+Premium,Georgia,Motorcycle,Premium,100000,500,212,2544,Roadside + Rental
+Elite,Georgia,Motorcycle,Elite,250000,250,305,3660,Full concierge
+Ultra,Georgia,Motorcycle,Ultra,500000,0,424,5088,Full concierge + Zero deductible
+Basic,Arizona,Sedan,Basic,25000,1000,62,744,
+Standard,Arizona,Sedan,Standard,50000,750,103,1236,Roadside
+Premium,Arizona,Sedan,Premium,100000,500,165,1980,Roadside + Rental
+Elite,Arizona,Sedan,Elite,250000,250,237,2844,Full concierge
+Ultra,Arizona,Sedan,Ultra,500000,0,330,3960,Full concierge + Zero deductible
+Basic,Arizona,Hatchback,Basic,25000,1000,59,708,
+Standard,Arizona,Hatchback,Standard,50000,750,98,1176,Roadside
+Premium,Arizona,Hatchback,Premium,100000,500,157,1884,Roadside + Rental
+Elite,Arizona,Hatchback,Elite,250000,250,225,2700,Full concierge
+Ultra,Arizona,Hatchback,Ultra,500000,0,313,3756,Full concierge + Zero deductible
+Basic,Arizona,Van,Basic,25000,1000,65,780,
+Standard,Arizona,Van,Standard,50000,750,108,1296,Roadside
+Premium,Arizona,Van,Premium,100000,500,173,2076,Roadside + Rental
+Elite,Arizona,Van,Elite,250000,250,249,2988,Full concierge
+Ultra,Arizona,Van,Ultra,500000,0,346,4152,Full concierge + Zero deductible
+Basic,Arizona,SUV,Basic,25000,1000,71,852,
+Standard,Arizona,SUV,Standard,50000,750,118,1416,Roadside
+Premium,Arizona,SUV,Premium,100000,500,190,2280,Roadside + Rental
+Elite,Arizona,SUV,Elite,250000,250,272,3264,Full concierge
+Ultra,Arizona,SUV,Ultra,500000,0,379,4548,Full concierge + Zero deductible
+Basic,Arizona,Coupe,Basic,25000,1000,74,888,
+Standard,Arizona,Coupe,Standard,50000,750,124,1488,Roadside
+Premium,Arizona,Coupe,Premium,100000,500,198,2376,Roadside + Rental
+Elite,Arizona,Coupe,Elite,250000,250,284,3408,Full concierge
+Ultra,Arizona,Coupe,Ultra,500000,0,396,4752,Full concierge + Zero deductible
+Basic,Arizona,Truck,Basic,25000,1000,77,924,
+Standard,Arizona,Truck,Standard,50000,750,129,1548,Roadside
+Premium,Arizona,Truck,Premium,100000,500,206,2472,Roadside + Rental
+Elite,Arizona,Truck,Elite,250000,250,296,3552,Full concierge
+Ultra,Arizona,Truck,Ultra,500000,0,412,4944,Full concierge + Zero deductible
+Basic,Arizona,Hybrid,Basic,25000,1000,68,816,
+Standard,Arizona,Hybrid,Standard,50000,750,113,1356,Roadside
+Premium,Arizona,Hybrid,Premium,100000,500,181,2172,Roadside + Rental
+Elite,Arizona,Hybrid,Elite,250000,250,261,3132,Full concierge
+Ultra,Arizona,Hybrid,Ultra,500000,0,363,4356,Full concierge + Zero deductible
+Basic,Arizona,Electric,Basic,25000,1000,74,888,
+Standard,Arizona,Electric,Standard,50000,750,124,1488,Roadside
+Premium,Arizona,Electric,Premium,100000,500,198,2376,Roadside + Rental
+Elite,Arizona,Electric,Elite,250000,250,284,3408,Full concierge
+Ultra,Arizona,Electric,Ultra,500000,0,396,4752,Full concierge + Zero deductible
+Basic,Arizona,Luxury,Basic,25000,1000,93,1116,
+Standard,Arizona,Luxury,Standard,50000,750,155,1860,Roadside
+Premium,Arizona,Luxury,Premium,100000,500,247,2964,Roadside + Rental
+Elite,Arizona,Luxury,Elite,250000,250,355,4260,Full concierge
+Ultra,Arizona,Luxury,Ultra,500000,0,494,5928,Full concierge + Zero deductible
+Basic,Arizona,Convertible,Basic,25000,1000,87,1044,
+Standard,Arizona,Convertible,Standard,50000,750,144,1728,Roadside
+Premium,Arizona,Convertible,Premium,100000,500,231,2772,Roadside + Rental
+Elite,Arizona,Convertible,Elite,250000,250,332,3984,Full concierge
+Ultra,Arizona,Convertible,Ultra,500000,0,461,5532,Full concierge + Zero deductible
+Basic,Arizona,Sports,Basic,25000,1000,99,1188,
+Standard,Arizona,Sports,Standard,50000,750,165,1980,Roadside
+Premium,Arizona,Sports,Premium,100000,500,264,3168,Roadside + Rental
+Elite,Arizona,Sports,Elite,250000,250,379,4548,Full concierge
+Ultra,Arizona,Sports,Ultra,500000,0,527,6324,Full concierge + Zero deductible
+Basic,Arizona,Motorcycle,Basic,25000,1000,80,960,
+Standard,Arizona,Motorcycle,Standard,50000,750,134,1608,Roadside
+Premium,Arizona,Motorcycle,Premium,100000,500,214,2568,Roadside + Rental
+Elite,Arizona,Motorcycle,Elite,250000,250,308,3696,Full concierge
+Ultra,Arizona,Motorcycle,Ultra,500000,0,428,5136,Full concierge + Zero deductible
+Basic,Washington,Sedan,Basic,25000,1000,62,744,
+Standard,Washington,Sedan,Standard,50000,750,104,1248,Roadside
+Premium,Washington,Sedan,Premium,100000,500,166,1992,Roadside + Rental
+Elite,Washington,Sedan,Elite,250000,250,239,2868,Full concierge
+Ultra,Washington,Sedan,Ultra,500000,0,333,3996,Full concierge + Zero deductible
+Basic,Washington,Hatchback,Basic,25000,1000,59,708,
+Standard,Washington,Hatchback,Standard,50000,750,99,1188,Roadside
+Premium,Washington,Hatchback,Premium,100000,500,158,1896,Roadside + Rental
+Elite,Washington,Hatchback,Elite,250000,250,227,2724,Full concierge
+Ultra,Washington,Hatchback,Ultra,500000,0,316,3792,Full concierge + Zero deductible
+Basic,Washington,Van,Basic,25000,1000,66,792,
+Standard,Washington,Van,Standard,50000,750,109,1308,Roadside
+Premium,Washington,Van,Premium,100000,500,175,2100,Roadside + Rental
+Elite,Washington,Van,Elite,250000,250,251,3012,Full concierge
+Ultra,Washington,Van,Ultra,500000,0,349,4188,Full concierge + Zero deductible
+Basic,Washington,SUV,Basic,25000,1000,72,864,
+Standard,Washington,SUV,Standard,50000,750,120,1440,Roadside
+Premium,Washington,SUV,Premium,100000,500,191,2292,Roadside + Rental
+Elite,Washington,SUV,Elite,250000,250,275,3300,Full concierge
+Ultra,Washington,SUV,Ultra,500000,0,383,4596,Full concierge + Zero deductible
+Basic,Washington,Coupe,Basic,25000,1000,75,900,
+Standard,Washington,Coupe,Standard,50000,750,125,1500,Roadside
+Premium,Washington,Coupe,Premium,100000,500,200,2400,Roadside + Rental
+Elite,Washington,Coupe,Elite,250000,250,287,3444,Full concierge
+Ultra,Washington,Coupe,Ultra,500000,0,399,4788,Full concierge + Zero deductible
+Basic,Washington,Truck,Basic,25000,1000,78,936,
+Standard,Washington,Truck,Standard,50000,750,130,1560,Roadside
+Premium,Washington,Truck,Premium,100000,500,208,2496,Roadside + Rental
+Elite,Washington,Truck,Elite,250000,250,299,3588,Full concierge
+Ultra,Washington,Truck,Ultra,500000,0,416,4992,Full concierge + Zero deductible
+Basic,Washington,Hybrid,Basic,25000,1000,69,828,
+Standard,Washington,Hybrid,Standard,50000,750,114,1368,Roadside
+Premium,Washington,Hybrid,Premium,100000,500,183,2196,Roadside + Rental
+Elite,Washington,Hybrid,Elite,250000,250,263,3156,Full concierge
+Ultra,Washington,Hybrid,Ultra,500000,0,366,4392,Full concierge + Zero deductible
+Basic,Washington,Electric,Basic,25000,1000,75,900,
+Standard,Washington,Electric,Standard,50000,750,125,1500,Roadside
+Premium,Washington,Electric,Premium,100000,500,200,2400,Roadside + Rental
+Elite,Washington,Electric,Elite,250000,250,287,3444,Full concierge
+Ultra,Washington,Electric,Ultra,500000,0,399,4788,Full concierge + Zero deductible
+Basic,Washington,Luxury,Basic,25000,1000,94,1128,
+Standard,Washington,Luxury,Standard,50000,750,156,1872,Roadside
+Premium,Washington,Luxury,Premium,100000,500,250,3000,Roadside + Rental
+Elite,Washington,Luxury,Elite,250000,250,359,4308,Full concierge
+Ultra,Washington,Luxury,Ultra,500000,0,499,5988,Full concierge + Zero deductible
+Basic,Washington,Convertible,Basic,25000,1000,87,1044,
+Standard,Washington,Convertible,Standard,50000,750,146,1752,Roadside
+Premium,Washington,Convertible,Premium,100000,500,233,2796,Roadside + Rental
+Elite,Washington,Convertible,Elite,250000,250,335,4020,Full concierge
+Ultra,Washington,Convertible,Ultra,500000,0,466,5592,Full concierge + Zero deductible
+Basic,Washington,Sports,Basic,25000,1000,100,1200,
+Standard,Washington,Sports,Standard,50000,750,166,1992,Roadside
+Premium,Washington,Sports,Premium,100000,500,266,3192,Roadside + Rental
+Elite,Washington,Sports,Elite,250000,250,383,4596,Full concierge
+Ultra,Washington,Sports,Ultra,500000,0,532,6384,Full concierge + Zero deductible
+Basic,Washington,Motorcycle,Basic,25000,1000,81,972,
+Standard,Washington,Motorcycle,Standard,50000,750,135,1620,Roadside
+Premium,Washington,Motorcycle,Premium,100000,500,216,2592,Roadside + Rental
+Elite,Washington,Motorcycle,Elite,250000,250,311,3732,Full concierge
+Ultra,Washington,Motorcycle,Ultra,500000,0,433,5196,Full concierge + Zero deductible
+Basic,Ohio,Sedan,Basic,25000,1000,60,720,
+Standard,Ohio,Sedan,Standard,50000,750,100,1200,Roadside
+Premium,Ohio,Sedan,Premium,100000,500,160,1920,Roadside + Rental
+Elite,Ohio,Sedan,Elite,250000,250,230,2760,Full concierge
+Ultra,Ohio,Sedan,Ultra,500000,0,320,3840,Full concierge + Zero deductible
+Basic,Ohio,Hatchback,Basic,25000,1000,57,684,
+Standard,Ohio,Hatchback,Standard,50000,750,95,1140,Roadside
+Premium,Ohio,Hatchback,Premium,100000,500,152,1824,Roadside + Rental
+Elite,Ohio,Hatchback,Elite,250000,250,219,2628,Full concierge
+Ultra,Ohio,Hatchback,Ultra,500000,0,304,3648,Full concierge + Zero deductible
+Basic,Ohio,Van,Basic,25000,1000,63,756,
+Standard,Ohio,Van,Standard,50000,750,105,1260,Roadside
+Premium,Ohio,Van,Premium,100000,500,168,2016,Roadside + Rental
+Elite,Ohio,Van,Elite,250000,250,242,2904,Full concierge
+Ultra,Ohio,Van,Ultra,500000,0,336,4032,Full concierge + Zero deductible
+Basic,Ohio,SUV,Basic,25000,1000,69,828,
+Standard,Ohio,SUV,Standard,50000,750,115,1380,Roadside
+Premium,Ohio,SUV,Premium,100000,500,184,2208,Roadside + Rental
+Elite,Ohio,SUV,Elite,250000,250,265,3180,Full concierge
+Ultra,Ohio,SUV,Ultra,500000,0,368,4416,Full concierge + Zero deductible
+Basic,Ohio,Coupe,Basic,25000,1000,72,864,
+Standard,Ohio,Coupe,Standard,50000,750,120,1440,Roadside
+Premium,Ohio,Coupe,Premium,100000,500,192,2304,Roadside + Rental
+Elite,Ohio,Coupe,Elite,250000,250,276,3312,Full concierge
+Ultra,Ohio,Coupe,Ultra,500000,0,384,4608,Full concierge + Zero deductible
+Basic,Ohio,Truck,Basic,25000,1000,75,900,
+Standard,Ohio,Truck,Standard,50000,750,125,1500,Roadside
+Premium,Ohio,Truck,Premium,100000,500,200,2400,Roadside + Rental
+Elite,Ohio,Truck,Elite,250000,250,288,3456,Full concierge
+Ultra,Ohio,Truck,Ultra,500000,0,400,4800,Full concierge + Zero deductible
+Basic,Ohio,Hybrid,Basic,25000,1000,66,792,
+Standard,Ohio,Hybrid,Standard,50000,750,110,1320,Roadside
+Premium,Ohio,Hybrid,Premium,100000,500,176,2112,Roadside + Rental
+Elite,Ohio,Hybrid,Elite,250000,250,253,3036,Full concierge
+Ultra,Ohio,Hybrid,Ultra,500000,0,352,4224,Full concierge + Zero deductible
+Basic,Ohio,Electric,Basic,25000,1000,72,864,
+Standard,Ohio,Electric,Standard,50000,750,120,1440,Roadside
+Premium,Ohio,Electric,Premium,100000,500,192,2304,Roadside + Rental
+Elite,Ohio,Electric,Elite,250000,250,276,3312,Full concierge
+Ultra,Ohio,Electric,Ultra,500000,0,384,4608,Full concierge + Zero deductible
+Basic,Ohio,Luxury,Basic,25000,1000,90,1080,
+Standard,Ohio,Luxury,Standard,50000,750,150,1800,Roadside
+Premium,Ohio,Luxury,Premium,100000,500,240,2880,Roadside + Rental
+Elite,Ohio,Luxury,Elite,250000,250,345,4140,Full concierge
+Ultra,Ohio,Luxury,Ultra,500000,0,480,5760,Full concierge + Zero deductible
+Basic,Ohio,Convertible,Basic,25000,1000,84,1008,
+Standard,Ohio,Convertible,Standard,50000,750,140,1680,Roadside
+Premium,Ohio,Convertible,Premium,100000,500,224,2688,Roadside + Rental
+Elite,Ohio,Convertible,Elite,250000,250,322,3864,Full concierge
+Ultra,Ohio,Convertible,Ultra,500000,0,448,5376,Full concierge + Zero deductible
+Basic,Ohio,Sports,Basic,25000,1000,96,1152,
+Standard,Ohio,Sports,Standard,50000,750,160,1920,Roadside
+Premium,Ohio,Sports,Premium,100000,500,256,3072,Roadside + Rental
+Elite,Ohio,Sports,Elite,250000,250,368,4416,Full concierge
+Ultra,Ohio,Sports,Ultra,500000,0,512,6144,Full concierge + Zero deductible
+Basic,Ohio,Motorcycle,Basic,25000,1000,78,936,
+Standard,Ohio,Motorcycle,Standard,50000,750,130,1560,Roadside
+Premium,Ohio,Motorcycle,Premium,100000,500,208,2496,Roadside + Rental
+Elite,Ohio,Motorcycle,Elite,250000,250,299,3588,Full concierge
+Ultra,Ohio,Motorcycle,Ultra,500000,0,416,4992,Full concierge + Zero deductible
