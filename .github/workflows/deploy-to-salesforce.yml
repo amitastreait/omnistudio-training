@@ -42,7 +42,6 @@ jobs:
   # ---------------------------------------------------------------------------
   validate:
     name: Validate (check-only)
-    needs: quality
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     environment: sandbox
