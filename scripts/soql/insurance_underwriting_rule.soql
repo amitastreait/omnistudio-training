@@ -1,0 +1,46 @@
+// Insurance_Underwriting_Rule__c — source rows for the Insurance_Underwriting_Rule decision table.
+// Name is an AutoNumber (UR-{000000}); MinAge__c / MaxAge__c are Number(4,0).
+// Picklists: State__c (California|Texas|Florida), VehicleType__c (Sedan|SUV|Sports),
+//            Usage__c (Personal|Business), Outcome__c (Standard|Manual Review|High Risk).
+//
+// Execute in VS Code: select a single query and run
+//     SFDX: Execute SOQL Query with Currently Selected Text
+// Or from the CLI:
+//     sf data query --query "<paste query>" --target-org omnistudio-training
+
+// --- All records, all fields -------------------------------------------------
+SELECT Id, Name, State__c, VehicleType__c, Usage__c, MinAge__c, MaxAge__c, Outcome__c
+FROM Insurance_Underwriting_Rule__c
+ORDER BY State__c, VehicleType__c, Usage__c, MinAge__c
+
+// --- Matching rule for a specific applicant (decision-table lookup pattern) ---
+// Mirrors %CustomerInformation:Age% / %VehicleInformation:*% from scripts/mapping.json
+SELECT Id, Name, State__c, VehicleType__c, Usage__c, MinAge__c, MaxAge__c, Outcome__c
+FROM Insurance_Underwriting_Rule__c
+WHERE State__c = 'California'
+  AND VehicleType__c = 'Sports'
+  AND Usage__c = 'Personal'
+  AND MinAge__c <= 28
+  AND MaxAge__c >= 28
+
+// --- High-risk / manual-review rules only ------------------------------------
+SELECT Id, Name, State__c, VehicleType__c, Usage__c, MinAge__c, MaxAge__c, Outcome__c
+FROM Insurance_Underwriting_Rule__c
+WHERE Outcome__c IN ('High Risk', 'Manual Review')
+ORDER BY Outcome__c, State__c
+
+// --- Rules covering a given age band -----------------------------------------
+SELECT Id, Name, State__c, VehicleType__c, Usage__c, MinAge__c, MaxAge__c, Outcome__c
+FROM Insurance_Underwriting_Rule__c
+WHERE MinAge__c >= 18
+  AND MaxAge__c <= 35
+ORDER BY MinAge__c, MaxAge__c
+
+// --- Rule coverage summary (aggregate) ---------------------------------------
+SELECT State__c, VehicleType__c, Usage__c, Outcome__c, COUNT(Id) ruleCount
+FROM Insurance_Underwriting_Rule__c
+GROUP BY State__c, VehicleType__c, Usage__c, Outcome__c
+ORDER BY State__c, VehicleType__c
+
+// --- Row count ---------------------------------------------------------------
+SELECT COUNT() FROM Insurance_Underwriting_Rule__c

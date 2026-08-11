@@ -1,0 +1,49 @@
+// State_Surcharge_Rule__c — source rows for the SmartDrive_State_Surcharge decision table.
+// Seeded by scripts/apex/insert.apex. Name is an AutoNumber (SRR-{000000}).
+// Picklists: State__c (California|Texas|Florida), Coverage_Type__c (Comprehensive|Liability),
+//            Usage__c (Personal|Business|Commute). Surcharge_Percent__c is Percent(6,2).
+//
+// Execute in VS Code: select a single query and run
+//     SFDX: Execute SOQL Query with Currently Selected Text
+// Or from the CLI:
+//     sf data query --query "<paste query>" --target-org omnistudio-training
+
+// --- All records, all fields -------------------------------------------------
+SELECT Id, Name, State__c, Coverage_Type__c, Usage__c, Surcharge_Percent__c
+FROM State_Surcharge_Rule__c
+ORDER BY State__c, Coverage_Type__c, Usage__c
+
+// --- Surcharge for one combination (decision-table lookup pattern) -----------
+SELECT Id, Name, State__c, Coverage_Type__c, Usage__c, Surcharge_Percent__c
+FROM State_Surcharge_Rule__c
+WHERE State__c = 'California'
+  AND Coverage_Type__c = 'Comprehensive'
+  AND Usage__c = 'Personal'
+
+// --- All rules for one state -------------------------------------------------
+SELECT Id, Name, Coverage_Type__c, Usage__c, Surcharge_Percent__c
+FROM State_Surcharge_Rule__c
+WHERE State__c = 'Texas'
+ORDER BY Coverage_Type__c, Usage__c
+
+// --- Highest surcharges ------------------------------------------------------
+SELECT Id, Name, State__c, Coverage_Type__c, Usage__c, Surcharge_Percent__c
+FROM State_Surcharge_Rule__c
+WHERE Surcharge_Percent__c >= 8
+ORDER BY Surcharge_Percent__c DESC
+
+// --- Surcharge spread per state (aggregate) ----------------------------------
+SELECT State__c, Coverage_Type__c, MIN(Surcharge_Percent__c) minPct,
+       MAX(Surcharge_Percent__c) maxPct, AVG(Surcharge_Percent__c) avgPct, COUNT(Id) ruleCount
+FROM State_Surcharge_Rule__c
+GROUP BY State__c, Coverage_Type__c
+ORDER BY State__c
+
+// --- Verify the seed data from scripts/apex/insert.apex ----------------------
+SELECT State__c, Usage__c, COUNT(Id) ruleCount
+FROM State_Surcharge_Rule__c
+GROUP BY State__c, Usage__c
+ORDER BY State__c
+
+// --- Row count ---------------------------------------------------------------
+SELECT COUNT() FROM State_Surcharge_Rule__c

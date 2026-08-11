@@ -1,0 +1,42 @@
+// Coverage_Plan__c — plan catalog used by the SmartDrive premium engine.
+// Name is a Text name field; rates are Currency, State/Tier/Vehicle_Type are restricted picklists.
+//
+// Execute in VS Code: select a single query and run
+//     SFDX: Execute SOQL Query with Currently Selected Text
+// Or from the CLI:
+//     sf data query --query "<paste query>" --target-org omnistudio-training
+
+// --- All records, all fields -------------------------------------------------
+SELECT Id, Name, State__c, Vehicle_Type__c, Tier__c, Coverage_Limit__c,
+       Deductible__c, Monthly_Rate__c, Annual_Rate__c, Perk__c
+FROM Coverage_Plan__c
+ORDER BY State__c, Vehicle_Type__c, Tier__c
+
+
+SELECT Id, Name, Tier__c, Coverage_Limit__c, Deductible__c,
+       Monthly_Rate__c, Annual_Rate__c, Perk__c
+FROM Coverage_Plan__c
+WHERE State__c = 'California'
+  AND Vehicle_Type__c = 'SUV'
+ORDER BY Monthly_Rate__c
+
+
+SELECT Id, Name, State__c, Vehicle_Type__c, Tier__c, Monthly_Rate__c, Annual_Rate__c
+FROM Coverage_Plan__c
+WHERE Tier__c IN ('Premium', 'Elite', 'Ultra')
+ORDER BY Tier__c, Monthly_Rate__c DESC
+
+
+SELECT Id, Name, State__c, Vehicle_Type__c, Tier__c, Monthly_Rate__c, Coverage_Limit__c
+FROM Coverage_Plan__c
+WHERE Monthly_Rate__c <= 150
+  AND Coverage_Limit__c >= 50000
+ORDER BY Monthly_Rate__c
+
+
+SELECT State__c, Vehicle_Type__c, MIN(Monthly_Rate__c) minRate, MAX(Monthly_Rate__c) maxRate, COUNT(Id) planCount
+FROM Coverage_Plan__c
+GROUP BY State__c, Vehicle_Type__c
+ORDER BY State__c
+
+SELECT COUNT() FROM Coverage_Plan__c
