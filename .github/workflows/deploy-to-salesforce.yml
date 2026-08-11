@@ -1,0 +1,142 @@
+name: Deploy to Salesforce
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'force-app/**'
+      - '.github/workflows/deploy-to-salesforce.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'force-app/**'
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Which org to deploy to'
+        type: choice
+        options: [sandbox, production]
+        default: sandbox
+      test_level:
+        description: 'Apex test level'
+        type: choice
+        options: [NoTestRun, RunLocalTests, RunAllTestsInOrg]
+        default: RunLocalTests
+      check_only:
+        description: 'Validate only (do not commit the deployment)'
+        type: boolean
+        default: false
+
+# One deployment at a time per branch; never cancel a running deploy mid-flight.
+concurrency:
+  group: sf-deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  SOURCE_DIR: force-app
+
+jobs:
+
+  # ---------------------------------------------------------------------------
+  # PR: validate against the sandbox without committing the deployment.
+  # ---------------------------------------------------------------------------
+  validate:
+    name: Validate (check-only)
+    needs: quality
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    environment: sandbox
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Salesforce CLI
+        run: |
+          npm install --global @salesforce/cli@latest
+          sf version
+
+      - name: Authenticate to org (SFDX auth URL)
+        env:
+          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL }}
+        run: |
+          if [ -z "$SFDX_AUTH_URL" ]; then
+            echo "::error::Secret SFDX_AUTH_URL is not set for this environment."
+            exit 1
+          fi
+          umask 077
+          printf '%s' "$SFDX_AUTH_URL" > sfdx-auth-url.txt
+          sf org login sfdx-url \
+            --sfdx-url-file sfdx-auth-url.txt \
+            --alias target-org \
+            --set-default
+          rm -f sfdx-auth-url.txt
+
+      - name: Validate deployment
+        run: |
+          sf project deploy validate \
+            --source-dir "$SOURCE_DIR" \
+            --target-org target-org \
+            --test-level NoTestRun \
+            --wait 60 \
+            --verbose
+
+      - name: Log out
+        if: always()
+        run: sf org logout --target-org target-org --no-prompt || true
+
+  # ---------------------------------------------------------------------------
+  # main / manual: real deployment.
+  # ---------------------------------------------------------------------------
+  deploy:
+    name: Deploy
+    needs: quality
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.target || 'sandbox' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Salesforce CLI
+        run: |
+          npm install --global @salesforce/cli@latest
+          sf version
+
+      - name: Authenticate to org (SFDX auth URL)
+        env:
+          SFDX_AUTH_URL: ${{ secrets.SFDX_AUTH_URL }}
+        run: |
+          if [ -z "$SFDX_AUTH_URL" ]; then
+            echo "::error::Secret SFDX_AUTH_URL is not set for this environment."
+            exit 1
+          fi
+          umask 077
+          printf '%s' "$SFDX_AUTH_URL" > sfdx-auth-url.txt
+          sf org login sfdx-url \
+            --sfdx-url-file sfdx-auth-url.txt \
+            --alias target-org \
+            --set-default
+          rm -f sfdx-auth-url.txt
+
+      - name: Deploy metadata
+        env:
+          TEST_LEVEL: ${{ github.event.inputs.test_level || 'NoTestRun' }}
+          CHECK_ONLY: ${{ github.event.inputs.check_only }}
+        run: |
+          FLAGS=""
+          if [ "$CHECK_ONLY" = "true" ]; then
+            FLAGS="--dry-run"
+          fi
+          sf project deploy start \
+            --source-dir "$SOURCE_DIR" \
+            --target-org target-org \
+            --test-level "$TEST_LEVEL" \
+            --wait 60 \
+            --verbose \
+            $FLAGS
+
+      - name: Report deployed components
+        if: always()
+        run: sf project deploy report --target-org target-org || true
+
+      - name: Log out
+        if: always()
+        run: sf org logout --target-org target-org --no-prompt || true
