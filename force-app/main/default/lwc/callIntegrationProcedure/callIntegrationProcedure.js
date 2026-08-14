@@ -2,7 +2,6 @@ import { LightningElement } from 'lwc';
 import { OmniscriptBaseMixin } from 'omnistudio/omniscriptBaseMixin';
 export default class CallIntegrationProcedure extends OmniscriptBaseMixin(LightningElement) {
     isLoading = false;
-
     handleInvokeIP() {
         this.isLoading = true;
         const params = {
@@ -11,7 +10,6 @@ export default class CallIntegrationProcedure extends OmniscriptBaseMixin(Lightn
             sMethodName: 'team_GetAccountDetails',
             options: JSON.stringify({})
         }
-
         this.omniRemoteCall(params, true)
             .then((response) => {
                 console.log('IP Success Response: \n ', JSON.stringify(response));

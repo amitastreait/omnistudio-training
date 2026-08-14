@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;Transactions&quot; : [ {
+    &quot;txn_id&quot; : &quot;TXN20240815001&quot;,
+    &quot;account_num&quot; : &quot;1234567890&quot;,
+    &quot;amount&quot; : -250.75,
+    &quot;txn_date&quot; : &quot;2024-08-15T14:30:00Z&quot;,
+    &quot;merchant_code&quot; : &quot;5411&quot;,
+    &quot;description&quot; : &quot;GROCERY STORE PURCHASE&quot;
+  } ]
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMTransforceTransactonData</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d5fa6c24-40d2-4510-a331-c0529981cc5e</globalKey>
+        <inputFieldName>Transactions:account_num</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6Bl</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6Bl</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ProcessedTransaction:AccountNumber</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>19f90dec-aa0d-4d14-933d-feba161483e5</globalKey>
+        <inputFieldName>Amount</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6DN</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6DN</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ProcessedTransaction:Amount</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>089b2cc5-8407-4a9b-b5b5-c1fc91597fb3</globalKey>
+        <inputFieldName>Flag</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6Wj</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6Wj</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ProcessedTransaction:RegulatoryFlag</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:Transactions:amount ABS</formulaConverted>
+        <formulaExpression>ABS(Transactions:amount)</formulaExpression>
+        <formulaResultPath>Amount</formulaResultPath>
+        <formulaSequence>4.0</formulaSequence>
+        <globalKey>2da08bb8-6dba-452c-ae54-53d7f2f378be</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6YL</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6YL</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2ca777c0-63c8-464a-8ac5-436a80cf423f</globalKey>
+        <inputFieldName>Amount</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6Ez</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6Ez</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Currency</outputFieldFormat>
+        <outputFieldName>ProcessedTransaction:FormattedAmount</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:
+	Transactions:merchant_code &quot;5411&quot; = &quot;Groceries&quot; | var:	Transactions:merchant_code &quot;5812&quot; = &quot;Restaurants&quot; &quot;Other&quot; IF IF</formulaConverted>
+        <formulaExpression>IF(
+	Transactions:merchant_code = &quot;5411&quot;, 
+    &quot;Groceries&quot;, 
+    IF(
+    	Transactions:merchant_code = &quot;5812&quot;, 
+        &quot;Restaurants&quot;, 
+        &quot;Other&quot;
+    )
+)</formulaExpression>
+        <formulaResultPath>Category</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>23f9ba01-9ce1-463c-ab1f-12ee81ea6e29</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6Of</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6Of</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>0e165c08-6cfc-4222-877c-7c9164f2009c</globalKey>
+        <inputFieldName>Category</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6QH</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6QH</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ProcessedTransaction:Category</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>30e5c4fa-85e8-4d1d-b32e-baf8bfb8d4cd</globalKey>
+        <inputFieldName>Transactions:txn_id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6A9</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6A9</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ProcessedTransaction:TransactionID</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6701a12a-934f-42ec-a810-179802564ab1</globalKey>
+        <inputFieldName>Transactions:txn_date</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6Gb</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6Gb</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Date(MM/dd/yyyy)</outputFieldFormat>
+        <outputFieldName>ProcessedTransaction:TransactionDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2d4a3cc4-753b-49fe-90a6-246e09375afc</globalKey>
+        <inputFieldName>Transactions:merchant_code</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6ID</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6ID</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ProcessedTransaction:MerchantCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| | var:Transactions:amount ABS 10000 &gt; &quot;HIGH_VALUE&quot; &quot;STANDARD&quot; IF</formulaConverted>
+        <formulaExpression>IF(ABS(Transactions:amount) &gt; 10000, &quot;HIGH_VALUE&quot;, &quot;STANDARD&quot;)</formulaExpression>
+        <formulaResultPath>Flag</formulaResultPath>
+        <formulaSequence>3.0</formulaSequence>
+        <globalKey>0058d88b-3824-40f8-801f-d97838966984</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6V7</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6V7</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>faf6afd8-e000-4138-bb9c-240d0e933351</globalKey>
+        <inputFieldName>TransactionType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6N3</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6N3</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ProcessedTransaction:TransactionType</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1cab391d-5957-4a98-80da-df65291656cf</globalKey>
+        <inputFieldName>Transactions:txn_date</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6Jp</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6Jp</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Date(MM/dd/yyyy)</outputFieldFormat>
+        <outputFieldName>ProcessedTransaction:SettlementDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:Transactions:amount 0 &lt; &quot;DEBIT&quot; &quot;CREDIT&quot; IF</formulaConverted>
+        <formulaExpression>IF(Transactions:amount &lt; 0, &quot;DEBIT&quot;, &quot;CREDIT&quot;)</formulaExpression>
+        <formulaResultPath>TransactionType</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>dff903de-974a-4a00-ae54-ad8601533e4b</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransforceTransactonData</name>
+        <omniDataTransformation>0kdaj000000B6LR</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6LR</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;Transactions&quot; : [ {
+    &quot;txn_id&quot; : &quot;TXN20240815001&quot;,
+    &quot;account_num&quot; : &quot;1234567890&quot;,
+    &quot;amount&quot; : -250.75,
+    &quot;txn_date&quot; : &quot;2024-08-15T14:30:00Z&quot;,
+    &quot;merchant_code&quot; : &quot;5411&quot;,
+    &quot;description&quot; : &quot;GROCERY STORE PURCHASE&quot;
+  } ]
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>DMTransforceTransactonData_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

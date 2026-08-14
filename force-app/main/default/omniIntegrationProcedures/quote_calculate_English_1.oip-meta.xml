@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniIntegrationProcedure xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customJavaScript>{&quot;omniscriptId&quot;:&quot;0jNaj000000UIifEAG&quot;,&quot;language&quot;:&quot;English&quot;,&quot;type&quot;:&quot;quote&quot;,&quot;subType&quot;:&quot;motor&quot;,&quot;sId&quot;:&quot;0jNaj000000UIifEAG&quot;,&quot;runMode&quot;:&quot;preview&quot;,&quot;theme&quot;:&quot;lightning&quot;,&quot;LanguageCode&quot;:&quot;en_US&quot;,&quot;timeStamp&quot;:&quot;2026-08-05T11:46:19.382360362Z&quot;,&quot;userTimeZoneName&quot;:&quot;America/Los_Angeles&quot;,&quot;userCurrencyCode&quot;:&quot;USD&quot;,&quot;userName&quot;:&quot;amitasinghsfdc@gmail.com.rlm&quot;,&quot;userId&quot;:&quot;005aj00000GmOoPAAV&quot;,&quot;userProfile&quot;:&quot;System Administrator&quot;,&quot;userTimeZone&quot;:&quot;-420&quot;,&quot;omniProcessId&quot;:&quot;0jNaj000000UIifEAG&quot;,&quot;localTimeZoneName&quot;:&quot;Asia/Calcutta&quot;,&quot;CustomerInformation&quot;:{&quot;Name&quot;:&quot;John Smith&quot;,&quot;YearsWithCompany&quot;:4,&quot;YearsOfDrivingExperience&quot;:12,&quot;DateOfBirth&quot;:&quot;1996-07-31&quot;,&quot;Age&quot;:26,&quot;State&quot;:&quot;California&quot;},&quot;VehicleInformation&quot;:{&quot;CoverageType&quot;:&quot;Comprehensive&quot;,&quot;Usage&quot;:&quot;Personal&quot;,&quot;VehicleType&quot;:&quot;Sports&quot;,&quot;VehicleAge&quot;:5,&quot;VehicleNumber&quot;:null},&quot;DrivingHistory&quot;:{&quot;NumberOfAccidents&quot;:0,&quot;TrafficViolations&quot;:0,&quot;LicenceNumber&quot;:&quot;89788989&quot;,&quot;DateOfIssue&quot;:&quot;2017-08-01&quot;,&quot;LicenceExpiryDate&quot;:&quot;2029-08-09&quot;}}</customJavaScript>
+    <description>Calculate Quote</description>
+    <elementTypeComponentMapping>{&quot;ElementTypeToHTMLTemplateList&quot;:[]}</elementTypeComponentMapping>
+    <isActive>true</isActive>
+    <isIntegProcdSignatureAvl>false</isIntegProcdSignatureAvl>
+    <isIntegrationProcedure>true</isIntegrationProcedure>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <isMetadataCacheDisabled>false</isMetadataCacheDisabled>
+    <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+    <isTestProcedure>false</isTestProcedure>
+    <isWebCompEnabled>false</isWebCompEnabled>
+    <language>English</language>
+    <name>Calculate Quote</name>
+    <omniProcessElements>
+        <description>Set Values Action</description>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>InsuranceInput</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;inputData&quot; : &quot;&quot;,
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;elementValueMap&quot; : {
+    &quot;VehicleType&quot; : &quot;%VehicleInformation:VehicleType%&quot;,
+    &quot;Coverage_Type__c&quot; : &quot;%VehicleInformation:CoverageType%&quot;,
+    &quot;YearsWithCompany&quot; : &quot;%CustomerInformation:YearsWithCompany%&quot;,
+    &quot;MaxAge__c&quot; : &quot;%CustomerInformation:Age%&quot;,
+    &quot;YearsofDrivingExperience&quot; : &quot;%CustomerInformation:YearsOfDrivingExperience%&quot;,
+    &quot;MinAge__c&quot; : &quot;%CustomerInformation:Age%&quot;,
+    &quot;Usage__c&quot; : &quot;%VehicleInformation:Usage%&quot;,
+    &quot;VehicleAge&quot; : &quot;%VehicleInformation:VehicleAge%&quot;,
+    &quot;VehicleType__c&quot; : &quot;%VehicleInformation:VehicleType%&quot;,
+    &quot;TrafficViolations&quot; : &quot;%DrivingHistory:TrafficViolations%&quot;,
+    &quot;CoverageType&quot; : &quot;%VehicleInformation:CoverageType%&quot;,
+    &quot;Age&quot; : &quot;%CustomerInformation:Age%&quot;,
+    &quot;State__c&quot; : &quot;%CustomerInformation:State%&quot;,
+    &quot;Accidents&quot; : &quot;%DrivingHistory:NumberOfAccidents%&quot;
+  },
+  &quot;failOnStepError&quot; : false,
+  &quot;internalNotes&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;chainOnStep&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;id&quot; : &quot;&quot;,
+  &quot;restOptions&quot; : { },
+  &quot;sendJSONNode&quot; : &quot;&quot;
+}</propertySetConfig>
+        <sequenceNumber>1.0</sequenceNumber>
+        <type>Set Values</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <description>Expression Set Action</description>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>InsurancePremium</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;inputData&quot; : &quot;&quot;,
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;remoteOptions&quot; : {
+    &quot;configurationName&quot; : &quot;SmartDrive Premium Engine&quot;
+  },
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;elementValueMap&quot; : {
+    &quot;VehicleType&quot; : &quot;%VehicleInformation:VehicleType%&quot;,
+    &quot;Coverage_Type__c&quot; : &quot;%VehicleInformation:CoverageType%&quot;,
+    &quot;YearsWithCompany&quot; : &quot;%CustomerInformation:YearsWithCompany%&quot;,
+    &quot;MaxAge__c&quot; : &quot;%CustomerInformation:Age%&quot;,
+    &quot;YearsofDrivingExperience&quot; : &quot;%CustomerInformation:YearsOfDrivingExperience%&quot;,
+    &quot;MinAge__c&quot; : &quot;%CustomerInformation:Age%&quot;,
+    &quot;Usage__c&quot; : &quot;%VehicleInformation:Usage%&quot;,
+    &quot;VehicleAge&quot; : &quot;%VehicleInformation:VehicleAge%&quot;,
+    &quot;VehicleType__c&quot; : &quot;%VehicleInformation:VehicleType%&quot;,
+    &quot;TrafficViolations&quot; : &quot;%DrivingHistory:TrafficViolations%&quot;,
+    &quot;CoverageType&quot; : &quot;%VehicleInformation:CoverageType%&quot;,
+    &quot;Age&quot; : &quot;%CustomerInformation:Age%&quot;,
+    &quot;State__c&quot; : &quot;%CustomerInformation:State%&quot;,
+    &quot;Accidents&quot; : &quot;%DrivingHistory:NumberOfAccidents%&quot;
+  },
+  &quot;failOnStepError&quot; : false,
+  &quot;internalNotes&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;chainOnStep&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;sendJSONPath&quot; : &quot;InsuranceInput&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;id&quot; : &quot;&quot;,
+  &quot;restOptions&quot; : { },
+  &quot;sendJSONNode&quot; : &quot;Insurance_Input&quot;
+}</propertySetConfig>
+        <sequenceNumber>2.0</sequenceNumber>
+        <type>Calculation Action</type>
+    </omniProcessElements>
+    <omniProcessElements>
+        <description>Response Action</description>
+        <isActive>true</isActive>
+        <isOmniScriptEmbeddable>false</isOmniScriptEmbeddable>
+        <level>0.0</level>
+        <name>Response</name>
+        <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
+        <propertySetConfig>{
+  &quot;inputData&quot; : &quot;&quot;,
+  &quot;sendOnlyAdditionalInput&quot; : false,
+  &quot;returnFullDataJSON&quot; : false,
+  &quot;returnOnlyAdditionalOutput&quot; : false,
+  &quot;elementValueMap&quot; : { },
+  &quot;failOnStepError&quot; : false,
+  &quot;responseFormat&quot; : &quot;&quot;,
+  &quot;internalNotes&quot; : &quot;&quot;,
+  &quot;isActive&quot; : true,
+  &quot;chainOnStep&quot; : false,
+  &quot;returnOnlyFailureResponse&quot; : false,
+  &quot;responseJSONPath&quot; : &quot;&quot;,
+  &quot;responseJSONNode&quot; : &quot;&quot;,
+  &quot;executionConditionalFormula&quot; : &quot;&quot;,
+  &quot;actionMessage&quot; : &quot;&quot;,
+  &quot;additionalOutput&quot; : {
+    &quot;Result&quot; : &quot;%InsurancePremium:output:calculationResults%&quot;
+  },
+  &quot;sendJSONPath&quot; : &quot;&quot;,
+  &quot;failureConditionalFormula&quot; : &quot;&quot;,
+  &quot;id&quot; : &quot;&quot;,
+  &quot;restOptions&quot; : { },
+  &quot;sendJSONNode&quot; : &quot;&quot;
+}</propertySetConfig>
+        <sequenceNumber>3.0</sequenceNumber>
+        <type>Response Action</type>
+    </omniProcessElements>
+    <omniProcessKey>quote_calculate</omniProcessKey>
+    <omniProcessType>Integration Procedure</omniProcessType>
+    <propertySetConfig>{
+  &quot;linkToExternalObject&quot; : &quot;&quot;,
+  &quot;trackingCustomData&quot; : { },
+  &quot;includeAllActionsInResponse&quot; : false,
+  &quot;columnsPropertyMap&quot; : [ ],
+  &quot;relationshipFieldsMap&quot; : [ ],
+  &quot;labelSingular&quot; : &quot;&quot;,
+  &quot;labelPlural&quot; : &quot;&quot;,
+  &quot;description&quot; : &quot;&quot;,
+  &quot;nameColumn&quot; : &quot;&quot;,
+  &quot;rollbackOnError&quot; : false,
+  &quot;chainableQueriesLimit&quot; : 50,
+  &quot;chainableDMLStatementsLimit&quot; : null,
+  &quot;chainableCpuLimit&quot; : 2000,
+  &quot;chainableHeapSizeLimit&quot; : null,
+  &quot;chainableDMLRowsLimit&quot; : null,
+  &quot;chainableQueryRowsLimit&quot; : null,
+  &quot;chainableSoslQueriesLimit&quot; : null,
+  &quot;additionalChainableResponse&quot; : { },
+  &quot;chainableActualTimeLimit&quot; : null,
+  &quot;transientValues&quot; : {
+    &quot;activateOrDeactivateConsent&quot; : false
+  }
+}</propertySetConfig>
+    <subType>calculate</subType>
+    <type>quote</type>
+    <uniqueName>quote_calculate_English_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+</OmniIntegrationProcedure>

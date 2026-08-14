@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;StepAccount&quot; : {
+    &quot;industry&quot; : &quot;Communications&quot;,
+    &quot;phone&quot; : &quot;4555455555&quot;,
+    &quot;accountName&quot; : &quot;Salesforce.com&quot;,
+    &quot;website&quot; : &quot;https://www.salesforce.uk&quot;
+  },
+  &quot;StepContact&quot; : {
+    &quot;BlkContact&quot; : {
+      &quot;firstName&quot; : &quot;Amit&quot;,
+      &quot;lastName&quot; : &quot;Singh&quot;,
+      &quot;email&quot; : &quot;asingh@gmail.com&quot;,
+      &quot;contactPhone&quot; : &quot;9658421305&quot;,
+      &quot;mobilePhone&quot; : &quot;8956471252&quot;
+    }
+  }
+}</expectedInputJson>
+    <expectedOutputJson>{
+  &quot;requestData&quot; : {
+    &quot;accountData&quot; : {
+      &quot;accountName&quot; : &quot;Acme Corporation&quot;,
+      &quot;phone&quot; : &quot;+14155552671&quot;,
+      &quot;website&quot; : &quot;www.acmecorp.com&quot;,
+      &quot;industry&quot; : &quot;Manufacturing&quot;,
+      &quot;billingStreet&quot; : &quot;100 Market Street&quot;,
+      &quot;billingCity&quot; : &quot;San Francisco&quot;,
+      &quot;billingState&quot; : &quot;California&quot;,
+      &quot;billingPostalCode&quot; : &quot;94105&quot;,
+      &quot;billingCountry&quot; : &quot;United States&quot;
+    },
+    &quot;contacts&quot; : [ {
+      &quot;firstName&quot; : &quot;John&quot;,
+      &quot;lastName&quot; : &quot;Doe&quot;,
+      &quot;email&quot; : &quot;john.doe@acmecorp.com&quot;,
+      &quot;phone&quot; : &quot;+14155552671&quot;,
+      &quot;title&quot; : &quot;Chief Executive Officer&quot;,
+      &quot;department&quot; : &quot;Executive&quot;,
+      &quot;mobilePhone&quot; : &quot;+14155552671&quot;,
+      &quot;isVerified&quot; : true
+    }, {
+      &quot;firstName&quot; : &quot;Jane&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;email&quot; : &quot;jane.smith@acmecorp.com&quot;,
+      &quot;phone&quot; : &quot;+14155552671&quot;,
+      &quot;title&quot; : &quot;Chief Technology Officer&quot;,
+      &quot;department&quot; : &quot;Technology&quot;,
+      &quot;mobilePhone&quot; : &quot;+14155552671&quot;,
+      &quot;isVerified&quot; : false
+    } ]
+  }
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>TestTransform</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>75ed2ab8-0231-46a9-b0b8-546e86d54ba0</globalKey>
+        <inputFieldName>StepAccount:phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FY4b</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FY4b</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:phone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>fb7f6d9c-27c2-417d-befd-5031729712bc</globalKey>
+        <inputFieldName>StepContact:BlkContact:contactPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FY6D</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FY6D</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:phone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>0f6b27fc-dc1a-446e-b354-363d4bf6f7fa</globalKey>
+        <inputFieldName>StepAccount:website</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FYFt</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYFt</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:website</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:StepContact:BlkContact LIST</formulaConverted>
+        <formulaExpression>LIST(StepContact:BlkContact)</formulaExpression>
+        <formulaResultPath>BlkContact</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>7bf846d1-35b2-4a08-816e-0eb2611f3234</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FYHV</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYHV</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>4b8ac212-971e-4195-a4b7-dd67a03bc386</globalKey>
+        <inputFieldName>BlkContact</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FYJ7</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYJ7</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BlkContact</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a1ecdd59-46cc-4d6d-86a1-a773b6c14f6e</globalKey>
+        <inputFieldName>StepContact:BlkContact:mobilePhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FYB3</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYB3</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:mobilePhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a78277ec-43f9-4abf-a717-d038652c4652</globalKey>
+        <inputFieldName>StepContact:BlkContact:firstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FXtJ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FXtJ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:firstName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>fc57dd49-737b-436c-a82b-61d047b08bc8</globalKey>
+        <inputFieldName>StepContact:BlkContact:lastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FYCf</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYCf</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:lastName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9bbc0805-78b8-4015-993d-a8d49cf79c78</globalKey>
+        <inputFieldName>StepAccount:industry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FYEH</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYEH</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:industry</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>200d12d6-386f-4a9f-a713-50475c0fa2e9</globalKey>
+        <inputFieldName>StepContact:BlkContact:email</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FY7p</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FY7p</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:email</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2df86cad-fb21-466d-b083-43097fc9cee6</globalKey>
+        <inputFieldName>StepAccount:accountName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>TestTransform</name>
+        <omniDataTransformation>0kdaj000000FY9R</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FY9R</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:accountName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;StepAccount&quot; : {
+    &quot;industry&quot; : &quot;Communications&quot;,
+    &quot;phone&quot; : &quot;4555455555&quot;,
+    &quot;accountName&quot; : &quot;Salesforce.com&quot;,
+    &quot;website&quot; : &quot;https://www.salesforce.uk&quot;
+  },
+  &quot;StepContact&quot; : {
+    &quot;BlkContact&quot; : [ {
+      &quot;firstName&quot; : &quot;Amit&quot;,
+      &quot;lastName&quot; : &quot;Singh&quot;,
+      &quot;email&quot; : &quot;asingh@gmail.com&quot;,
+      &quot;contactPhone&quot; : &quot;9658421305&quot;,
+      &quot;mobilePhone&quot; : &quot;8956471252&quot;
+    }, {
+      &quot;firstName&quot; : &quot;Amit&quot;,
+      &quot;lastName&quot; : &quot;Singh&quot;,
+      &quot;email&quot; : &quot;asingh@gmail.com&quot;,
+      &quot;contactPhone&quot; : &quot;9658421305&quot;,
+      &quot;mobilePhone&quot; : &quot;8956471252&quot;
+    } ]
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>TestTransform_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

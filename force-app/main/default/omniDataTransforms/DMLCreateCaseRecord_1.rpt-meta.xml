@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMLCreateCaseRecord</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>21fb144c-f7fc-4248-9427-ea58a392fb69</globalKey>
+        <inputFieldName>Account:Id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseRecord</name>
+        <omniDataTransformation>0kdaj000000FRj3</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FRj3</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>66a62597-ea0b-4ecd-8916-8c634514b8f2</globalKey>
+        <inputFieldName>Account:BlkCase:Subject</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseRecord</name>
+        <omniDataTransformation>0kdaj000000FRnt</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FRnt</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Subject</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>30730981-1930-42cd-a3a9-34b811e9e664</globalKey>
+        <inputFieldName>Account:BlkCase:Description</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseRecord</name>
+        <omniDataTransformation>0kdaj000000FRpV</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FRpV</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d12245c4-3792-4f49-8309-e604a49390b9</globalKey>
+        <inputFieldName>Account:BlkCase:Origin</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseRecord</name>
+        <omniDataTransformation>0kdaj000000FRkf</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FRkf</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Origin</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>7ffbb422-da76-4cda-a29f-b1f1c631a131</globalKey>
+        <inputFieldName>Account:BlkCase:Type</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseRecord</name>
+        <omniDataTransformation>0kdaj000000FRmH</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FRmH</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Type</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>61d57b56-494d-45fd-980d-e09ccdd7b751</globalKey>
+        <inputFieldName>Account:BlkCase:Priority</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseRecord</name>
+        <omniDataTransformation>0kdaj000000FRfp</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FRfp</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Priority</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>cdeadd55-717a-4786-a652-27757187a590</globalKey>
+        <inputFieldName>Account:BlkCase:TAContact-Block:ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseRecord</name>
+        <omniDataTransformation>0kdaj000000FRhR</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FRhR</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContactId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>ed0365e2-074f-447b-a6d0-998d548e4552</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DMLCreateCaseRecord</name>
+        <omniDataTransformation>0kdaj000000FReD</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FReD</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;Account&quot; : {
+    &quot;Id&quot; : &quot;001aj000017N13yAAC&quot;,
+    &quot;BlkAccount&quot; : {
+      &quot;Name&quot; : &quot;Any Partner Inc&quot;,
+      &quot;AnnualRevenue&quot; : 565655555556566
+    },
+    &quot;BlkCase&quot; : {
+      &quot;TAContact-Block&quot; : {
+        &quot;TAContact&quot; : &quot;Avi Green&quot;,
+        &quot;ContactName&quot; : &quot;Avi Green&quot;,
+        &quot;ContactId&quot; : &quot;003aj00000KDQeRAAX&quot;
+      },
+      &quot;Priority&quot; : &quot;Medium&quot;,
+      &quot;Origin&quot; : &quot;Phone&quot;,
+      &quot;Type&quot; : &quot;Electronic&quot;,
+      &quot;Subject&quot; : &quot;This is a test Case&quot;,
+      &quot;Description&quot; : &quot;This is a test Case &quot;
+    }
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DMLCreateCaseRecord_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

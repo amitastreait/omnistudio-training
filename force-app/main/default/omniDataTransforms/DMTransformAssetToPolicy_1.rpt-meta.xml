@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <description>The Data Mapper is used to transform the Asset JSON into the Policy Information</description>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;Asset&quot; : [ {
+    &quot;Id&quot; : &quot;02i5g000001XYZ1AAO&quot;,
+    &quot;Name&quot; : &quot;Auto Insurance Policy&quot;,
+    &quot;AnnualPremium__c&quot; : 1200.5,
+    &quot;PolicyNumber__c&quot; : &quot;POL-2024-001&quot;,
+    &quot;Status__c&quot; : &quot;ACTIVE&quot;,
+    &quot;Account&quot; : {
+      &quot;Name&quot; : &quot;John Smith&quot;
+    },
+    &quot;Contacts&quot; : [ {
+      &quot;Name&quot; : &quot;John Smith&quot;,
+      &quot;Role&quot; : &quot;PolicyHolder&quot;
+    }, {
+      &quot;Name&quot; : &quot;Jane Smith&quot;,
+      &quot;Role&quot; : &quot;Beneficiary&quot;
+    } ]
+  } ]
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMTransformAssetToPolicy</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:Asset|1:Contacts|1:Role &quot;PolicyHolder&quot; = var:Asset|1:Contacts|1:Name | var:Asset|1:Contacts|2:Role &quot;PolicyHolder&quot; = var:Asset|1:Contacts|2:Name &quot;No/\/\/PolicyHolder&quot; IF IF</formulaConverted>
+        <formulaExpression>IF(Asset|1:Contacts|1:Role = &quot;PolicyHolder&quot;, Asset|1:Contacts|1:Name, 
+   IF(Asset|1:Contacts|2:Role = &quot;PolicyHolder&quot;, Asset|1:Contacts|2:Name, &quot;No PolicyHolder&quot;))</formulaExpression>
+        <formulaResultPath>PolicyHolderName</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>ba456a58-c2f8-4f62-8692-1ff4b86226ca</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformAssetToPolicy</name>
+        <omniDataTransformation>0kdaj000000B5nZ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5nZ</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1490ff7e-bf9e-445b-9499-2fc97dda0820</globalKey>
+        <inputFieldName>PolicyHolderName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformAssetToPolicy</name>
+        <omniDataTransformation>0kdaj000000B5qn</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5qn</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Policy:PolicyHolderName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a9c0f1c3-6c5f-453e-8d13-55d703f32a79</globalKey>
+        <inputFieldName>BeneficiaryName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformAssetToPolicy</name>
+        <omniDataTransformation>0kdaj000000B5qo</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5qo</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Policy:BeneficiaryName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>c91d4dab-7850-4ccd-9ff4-7a8d273d4b03</globalKey>
+        <inputFieldName>Asset:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformAssetToPolicy</name>
+        <omniDataTransformation>0kdaj000000B5h7</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5h7</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Policy:Name</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>e7d9b461-60fb-47bb-a468-5f0144f7daab</globalKey>
+        <inputFieldName>Asset:AnnualPremium__c</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformAssetToPolicy</name>
+        <omniDataTransformation>0kdaj000000B5dt</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5dt</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Currency</outputFieldFormat>
+        <outputFieldName>Policy:AnnualPremium</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>010ae369-bba9-4777-8702-3d7d55f0d776</globalKey>
+        <inputFieldName>Asset:Status__c</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformAssetToPolicy</name>
+        <omniDataTransformation>0kdaj000000B5fV</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5fV</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Policy:PolicyStatus</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>4234d912-74c0-4035-9292-275b16a370c4</globalKey>
+        <inputFieldName>Asset:PolicyNumber__c</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformAssetToPolicy</name>
+        <omniDataTransformation>0kdaj000000B5ij</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5ij</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Policy:Number</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6fee9da1-c6cd-491c-bc3d-e0955927581c</globalKey>
+        <inputFieldName>Asset:Account:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformAssetToPolicy</name>
+        <omniDataTransformation>0kdaj000000B5kL</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5kL</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Policy:ConsumerName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:Asset|1:Contacts|1:Role &quot;Beneficiary&quot; = var:Asset|1:Contacts|1:Name | var:Asset|1:Contacts|2:Role &quot;Beneficiary&quot; = var:Asset|1:Contacts|2:Name &quot;No/\/\/Beneficiary&quot; IF IF</formulaConverted>
+        <formulaExpression>IF(Asset|1:Contacts|1:Role = &quot;Beneficiary&quot;, Asset|1:Contacts|1:Name, 
+   IF(Asset|1:Contacts|2:Role = &quot;Beneficiary&quot;, Asset|1:Contacts|2:Name, &quot;No Beneficiary&quot;))</formulaExpression>
+        <formulaResultPath>BeneficiaryName</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>9d797b9c-a3ca-41b1-a1e6-2e263f268c13</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformAssetToPolicy</name>
+        <omniDataTransformation>0kdaj000000B5pB</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5pB</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;Asset&quot; : [ {
+    &quot;Id&quot; : &quot;02i5g000001XYZ1AAO&quot;,
+    &quot;Name&quot; : &quot;Auto Insurance Policy&quot;,
+    &quot;AnnualPremium__c&quot; : 1200.5,
+    &quot;PolicyNumber__c&quot; : &quot;POL-2024-001&quot;,
+    &quot;Status__c&quot; : &quot;ACTIVE&quot;,
+    &quot;Account&quot; : {
+      &quot;Name&quot; : &quot;John Doe&quot;
+    },
+    &quot;Contacts&quot; : [ {
+      &quot;Name&quot; : &quot;Amit Singh&quot;,
+      &quot;Role&quot; : &quot;PolicyHolder&quot;
+    }, {
+      &quot;Name&quot; : &quot;Jane Smith&quot;,
+      &quot;Role&quot; : &quot;Beneficiary&quot;
+    } ]
+  } ]
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>DMTransformAssetToPolicy_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

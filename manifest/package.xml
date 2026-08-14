@@ -31,6 +31,12 @@
 		<name>ExpressionSetDefinition</name>
 	</types>
 	<types>
+		<members>AddressVerificationAPI</members>
+		<members>PostGrid</members>
+		<members>WeatherAPI</members>
+		<name>ExternalCredential</name>
+	</types>
+	<types>
 		<members>Coverage_Plan__c-Coverage Plan Layout</members>
 		<members>Insurance_Underwriting_Rule__c-Insurance Underwriting Rule Layout</members>
 		<members>State_Surcharge_Rule__c-State Surcharge Rule Layout</members>
@@ -43,10 +49,70 @@
 		<name>LightningComponentBundle</name>
 	</types>
 	<types>
+		<members>PantherSchools_SF</members>
+		<members>PostGridAPI</members>
+		<members>VerifyAddress</members>
+		<members>WeatherAPI</members>
+		<members>Weather_API</members>
+		<name>NamedCredential</name>
+	</types>
+	<types>
+		<members>ContactExtractTBE_1</members>
 		<members>DMEAccountExtract_1</members>
 		<members>DMEAccountWithOpportunitiesV1_1</members>
 		<members>DMEAccountWithOpportunities_1</members>
 		<members>DMEContactRecords_1</members>
+		<members>DMEDocGenExampleV1_1</members>
+		<members>DMEDocGenExample_1</members>
+		<members>DMEExtractAssetRecord_1</members>
+		<members>DMEExtractAssetRelatedToAccount_1</members>
+		<members>DMEExtractAssetsEditBlock_1</members>
+		<members>DMEExtractContactInformation_1</members>
+		<members>DMEExtractContacts_1</members>
+		<members>DMEGETAccountDetails_1</members>
+		<members>DMEGetAccountsWithContacts_1</members>
+		<members>DMEOpportunityRecord_1</members>
+		<members>DMESearchContactByNameAndAccount_1</members>
+		<members>DMETESTLOADACCOUNT_1</members>
+		<members>DMETurboExtract_1</members>
+		<members>DMExtractAccountData_1</members>
+		<members>DMLAccountDemo_1</members>
+		<members>DMLAccountRecord_1</members>
+		<members>DMLCreateCaseRecord_1</members>
+		<members>DMLCreateCaseWFile_1</members>
+		<members>DMLCreateCaseWOAttachment_1</members>
+		<members>DMLCreateContact_1</members>
+		<members>DMLoadAccountRecord_1</members>
+		<members>DMLoadAccountsWithContacts_1</members>
+		<members>DMLoadContactsWithAccount_1</members>
+		<members>DMSaveAccountDetails_1</members>
+		<members>DMSearchAccountByName_1</members>
+		<members>DMTAccountsWithOpportunitiesDocGenExampleV1_1</members>
+		<members>DMTAccountsWithOpportunitiesDocGenExample_1</members>
+		<members>DMTDocGenExampleV1_1</members>
+		<members>DMTDocGenExample_1</members>
+		<members>DMTEGetOpenCaseRecords_1</members>
+		<members>DMTESTJSONTOXML_1</members>
+		<members>DMTFinalExternalAccountJSON_1</members>
+		<members>DMTPrepareForExternalSFAPI_1</members>
+		<members>DMTRCaseRecord_1</members>
+		<members>DMTRGetLeadsWithCampaignInformation_1</members>
+		<members>DMTTransformPolicies_1</members>
+		<members>DMTransforceTransactonData_1</members>
+		<members>DMTransformAssetToPolicy_1</members>
+		<members>DMTransformExternalDataToUnifiedCustomer_1</members>
+		<members>DMTransformFulfilmentOrderJSONToXML_1</members>
+		<members>DMTransformWeatherInformation_1</members>
+		<members>DMUpdatePrimaryContactOnAccount_1</members>
+		<members>DMXformResponses_1</members>
+		<members>DRExtractDocGenExample_1</members>
+		<members>TESTDMCreateNewCase_1</members>
+		<members>TestExpense_1</members>
+		<members>TestTransform_1</members>
+		<members>saveAccountDetails_1</members>
+		<members>teamChangePriContactTA_1</members>
+		<members>teamGetAssetAccountDataAS_1</members>
+		<members>testCreateNewCaseNoFile_1</members>
 		<name>OmniDataTransform</name>
 	</types>
 	<types>
@@ -55,7 +121,9 @@
 		<members>PS_createAccountRecord_English_1</members>
 		<members>Vehicle_Discount_English_1</members>
 		<members>motor_BasePremimum_English_1</members>
+		<members>quote_calculate_English_1</members>
 		<members>sample_LoanApplication_English_2</members>
+		<members>team_AddressVerification_English_1</members>
 		<members>team_FetchAccountById_Procedure_1</members>
 		<members>team_GetAccountClassification_English_1</members>
 		<members>team_GetAccountDetails_English_1</members>

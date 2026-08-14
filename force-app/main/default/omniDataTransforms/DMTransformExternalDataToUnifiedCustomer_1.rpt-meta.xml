@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;SalesforceData&quot; : {
+    &quot;Account&quot; : {
+      &quot;Id&quot; : &quot;0015g00001ABCDEF&quot;,
+      &quot;Name&quot; : &quot;Global Tech Solutions&quot;,
+      &quot;Phone&quot; : &quot;555-1234&quot;,
+      &quot;BillingCity&quot; : &quot;San Francisco&quot;
+    }
+  },
+  &quot;ExternalCRM&quot; : {
+    &quot;customer_id&quot; : &quot;CRM-12345&quot;,
+    &quot;company_name&quot; : &quot;Global Tech Solutions&quot;,
+    &quot;primary_phone&quot; : &quot;+1-555-1234&quot;,
+    &quot;location&quot; : &quot;SF, CA&quot;
+  },
+  &quot;SocialMedia&quot; : {
+    &quot;twitter_handle&quot; : &quot;@globaltechsf&quot;,
+    &quot;linkedin_company&quot; : &quot;global-tech-solutions&quot;,
+    &quot;sentiment_score&quot; : 8.5
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMTransformExternalDataToUnifiedCustomer</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>70d237bf-a2d5-4e91-ad7b-e059a510db1a</globalKey>
+        <inputFieldName>ExternalCRM:customer_id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B5u1</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5u1</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:ExternalId</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>3a690ad1-c168-4d3b-9cd6-b8c2fa72e4bf</globalKey>
+        <inputFieldName>SalesforceData:Account:Id</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B5sP</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5sP</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:CustomerId</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>801d3c21-2ae5-4fb7-b19e-6cc7615d7f8e</globalKey>
+        <inputFieldName>CustomerScore</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B5u2</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5u2</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:EngagementMetrics:CustomerScore</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f2be30dd-533f-429c-9277-057d02aa21e8</globalKey>
+        <inputFieldName>ExternalCRM:primary_phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B5vd</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5vd</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:StandardizedPhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>61f69581-3d3c-40f0-80bc-594c449ced31</globalKey>
+        <inputFieldName>SalesforceData:Account:BillingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B5xF</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5xF</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:PrimaryLocation</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:CustomerScore 80 &gt;= &quot;High&quot; | var:CustomerScore 50 &gt;= &quot;Medium&quot; &quot;Low&quot; IF IF</formulaConverted>
+        <formulaExpression>IF( 
+    CustomerScore &gt;= 80, &quot;High&quot;, 
+    IF(
+      CustomerScore &gt;= 50, 
+      &quot;Medium&quot;, 
+      &quot;Low&quot;
+    )
+)</formulaExpression>
+        <formulaResultPath>EngagementLevel</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>f785a2d4-dd85-43b1-b454-cc789278201c</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B66v</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B66v</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>41dac18b-f376-46a0-9a2d-f78336a92fe3</globalKey>
+        <inputFieldName>EngagementLevel</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B68X</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B68X</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:EngagementMetrics:EngagementLevel</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>14591112-ab8f-4bd7-a599-e80e2cc627a0</globalKey>
+        <inputFieldName>SocialMedia:twitter_handle</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B5ik</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5ik</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:SocialPresence:Twitter</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>var:SocialMedia:sentiment_score 10 * | | var:SalesforceData:Account:Phone ISBLANK 0 20 IF +</formulaConverted>
+        <formulaExpression>(SocialMedia:sentiment_score * 10) + (IF(ISBLANK(SalesforceData:Account:Phone), 0, 20) )</formulaExpression>
+        <formulaResultPath>CustomerScore</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>02d4ec65-e8f8-4d34-a455-fe1f1807b6df</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B625</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B625</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9c72b36b-eafa-4dde-8178-c9dbc4835762</globalKey>
+        <inputFieldName>SocialMedia:sentiment_score</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B60T</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B60T</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:EngagementMetrics:SentimentScore</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>48147d2b-35ac-4baa-9716-fa43251695fa</globalKey>
+        <inputFieldName>SalesforceData:Account:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B65J</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B65J</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:CompanyName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ff8ddcbd-fc2e-45ae-a938-f69e4ca0f724</globalKey>
+        <inputFieldName>SocialMedia:linkedin_company</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformExternalDataToUnifiedCustomer</name>
+        <omniDataTransformation>0kdaj000000B5yr</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B5yr</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UnifiedCustomer:SocialPresence:LinkedIn</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;SalesforceData&quot; : {
+    &quot;Account&quot; : {
+      &quot;Id&quot; : &quot;0015g00001ABCDEF&quot;,
+      &quot;Name&quot; : &quot;Global Tech Solutions&quot;,
+      &quot;Phone&quot; : &quot;555-1234&quot;,
+      &quot;BillingCity&quot; : &quot;San Francisco&quot;
+    }
+  },
+  &quot;ExternalCRM&quot; : {
+    &quot;customer_id&quot; : &quot;CRM-12345&quot;,
+    &quot;company_name&quot; : &quot;Global Tech Solutions&quot;,
+    &quot;primary_phone&quot; : &quot;+1-555-1234&quot;,
+    &quot;location&quot; : &quot;SF, CA&quot;
+  },
+  &quot;SocialMedia&quot; : {
+    &quot;twitter_handle&quot; : &quot;@globaltechsf&quot;,
+    &quot;linkedin_company&quot; : &quot;global-tech-solutions&quot;,
+    &quot;sentiment_score&quot; : 5
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>DMTransformExternalDataToUnifiedCustomer_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

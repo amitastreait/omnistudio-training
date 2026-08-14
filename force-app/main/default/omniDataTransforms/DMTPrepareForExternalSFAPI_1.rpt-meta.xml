@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;StepContact&quot; : {
+    &quot;BlkContact&quot; : {
+      &quot;firstName&quot; : null,
+      &quot;lastName&quot; : null,
+      &quot;mobilePhone&quot; : null,
+      &quot;contactPhone&quot; : null,
+      &quot;title&quot; : null,
+      &quot;department&quot; : null,
+      &quot;email&quot; : null
+    }
+  },
+  &quot;StepAccount&quot; : {
+    &quot;website&quot; : null,
+    &quot;accountName&quot; : null,
+    &quot;phone&quot; : null,
+    &quot;billingStreet&quot; : null,
+    &quot;billingPostalCode&quot; : null,
+    &quot;billingCountry&quot; : null,
+    &quot;industry&quot; : null,
+    &quot;billingState&quot; : null,
+    &quot;billingCity&quot; : null
+  }
+}</expectedInputJson>
+    <expectedOutputJson>{
+  &quot;requestData&quot; : {
+    &quot;accountData&quot; : {
+      &quot;accountName&quot; : &quot;Acme Corporation&quot;,
+      &quot;phone&quot; : &quot;+14155552671&quot;,
+      &quot;website&quot; : &quot;www.acmecorp.com&quot;,
+      &quot;industry&quot; : &quot;Manufacturing&quot;,
+      &quot;billingStreet&quot; : &quot;100 Market Street&quot;,
+      &quot;billingCity&quot; : &quot;San Francisco&quot;,
+      &quot;billingState&quot; : &quot;California&quot;,
+      &quot;billingPostalCode&quot; : &quot;94105&quot;,
+      &quot;billingCountry&quot; : &quot;United States&quot;
+    },
+    &quot;contacts&quot; : [ {
+      &quot;firstName&quot; : &quot;Jane&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;email&quot; : &quot;jane.smith@acmecorp.com&quot;,
+      &quot;phone&quot; : &quot;+14155552671&quot;,
+      &quot;title&quot; : &quot;Chief Technology Officer&quot;,
+      &quot;department&quot; : &quot;Technology&quot;,
+      &quot;mobilePhone&quot; : &quot;+14155552671&quot;,
+      &quot;isVerified&quot; : false
+    } ]
+  }
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMTPrepareForExternalSFAPI</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>be3cecce-78f1-4a7e-a052-aeb58fa2f2c1</globalKey>
+        <inputFieldName>StepAccount:accountName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FYhJ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYhJ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:accountName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>4caa2953-8e01-4c9f-94dd-d4f8a76d9afd</globalKey>
+        <inputFieldName>StepAccount:billingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FZ3t</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZ3t</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:billingPostalCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>4dbce9ae-c3d6-4fcf-89fa-3ec527f13ab2</globalKey>
+        <inputFieldName>StepAccount:website</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FZ5V</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZ5V</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:website</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>70b6b067-cc23-448b-a3af-a5ce027e8387</globalKey>
+        <inputFieldName>StepAccount:phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FZ77</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZ77</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:phone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:StepContact:BlkContact LIST</formulaConverted>
+        <formulaExpression>LIST(StepContact:BlkContact)</formulaExpression>
+        <formulaResultPath>Contacts</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>01e6df46-ab7b-4e0e-853d-c36392a47e2c</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FYsb</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYsb</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>08321eef-e220-4a7f-8d80-893ceb634b53</globalKey>
+        <inputFieldName>Contacts</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FYuD</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYuD</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>5f2752f5-4966-47ca-9e4c-198066dabb2b</globalKey>
+        <inputFieldName>StepAccount:industry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FZ8j</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZ8j</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:industry</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a6ba0e04-638e-49aa-9414-4388efd73fad</globalKey>
+        <inputFieldName>StepAccount:billingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FYxR</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYxR</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:billingStreet</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>84aa51d4-6224-4456-8256-46a060fd0c49</globalKey>
+        <inputFieldName>StepAccount:billingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FYz3</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FYz3</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:billingCity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>61d69b15-68a8-4f43-a15b-a752860ad5f7</globalKey>
+        <inputFieldName>StepAccount:billingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FZ0f</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZ0f</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:billingCountry</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>8c936994-e5f0-4d37-ad2e-0f0fe0a4ddf7</globalKey>
+        <inputFieldName>StepAccount:billingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTPrepareForExternalSFAPI</name>
+        <omniDataTransformation>0kdaj000000FZ2H</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZ2H</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData:billingState</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;StepAccount&quot; : {
+    &quot;accountName&quot; : &quot;Salesforce.com&quot;,
+    &quot;phone&quot; : &quot;4555455555&quot;,
+    &quot;industry&quot; : &quot;Banking&quot;,
+    &quot;website&quot; : &quot;https://www.salesforce.uk&quot;
+  },
+  &quot;StepContact&quot; : {
+    &quot;BlkContact&quot; : [ {
+      &quot;firstName&quot; : &quot;Amit&quot;,
+      &quot;lastName&quot; : &quot;Singh&quot;,
+      &quot;email&quot; : &quot;asingh@gmail.com&quot;,
+      &quot;contactPhone&quot; : &quot;8965855555&quot;,
+      &quot;mobilePhone&quot; : &quot;8965855555&quot;,
+      &quot;title&quot; : &quot;Chief Technology Officer&quot;,
+      &quot;department&quot; : &quot;Technology&quot;
+    }, {
+      &quot;firstName&quot; : &quot;Amit&quot;,
+      &quot;lastName&quot; : &quot;Singh&quot;,
+      &quot;email&quot; : &quot;asingh@gmail.com&quot;,
+      &quot;contactPhone&quot; : &quot;8965855555&quot;,
+      &quot;mobilePhone&quot; : &quot;8965855555&quot;,
+      &quot;title&quot; : &quot;Chief Technology Officer&quot;,
+      &quot;department&quot; : &quot;Technology&quot;
+    } ]
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObject>json</sourceObject>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>DMTPrepareForExternalSFAPI_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

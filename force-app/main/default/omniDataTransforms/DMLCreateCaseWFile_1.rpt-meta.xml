@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;CollectCaseInfo&quot; : {
+    &quot;BlkCase&quot; : {
+      &quot;ChkbxFiletoUpload&quot; : true,
+      &quot;FileUpload&quot; : null,
+      &quot;Reason&quot; : &quot;Equipment Complexity&quot;,
+      &quot;CaseOrigin&quot; : &quot;Phone&quot;,
+      &quot;ContactId&quot; : &quot;003aj00000KDQe8AAH&quot;,
+      &quot;CaseSubject&quot; : &quot;The charging ports are not working&quot;,
+      &quot;CaseDescription&quot; : &quot;The charging ports are not working&quot;
+    },
+    &quot;BlkAsset&quot; : {
+      &quot;AccountId&quot; : &quot;001aj000017N13yAAC&quot;,
+      &quot;ProductName&quot; : &quot;Laptop&quot;,
+      &quot;ProductCode&quot; : &quot;LP001&quot;,
+      &quot;ProductID&quot; : &quot;01taj00000GNhGFAA1&quot;,
+      &quot;AssetStatus&quot; : &quot;Purchased&quot;,
+      &quot;AssetName&quot; : &quot;Apple Laptop M4&quot;,
+      &quot;AssetSerial&quot; : &quot;APPLP001&quot;,
+      &quot;AssetID&quot; : &quot;02iaj000000PWKuAAO&quot;,
+      &quot;AccountName&quot; : &quot;Any Partner Inc&quot;
+    }
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMLCreateCaseWFile</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>6109a0dc-df28-473e-9c24-8f9fb03502fa</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedFieldName>Id</linkedFieldName>
+        <linkedObjectSequence>1.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000Fom5</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000Fom5</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>LinkedEntityId</outputFieldName>
+        <outputObjectName>ContentDocumentLink</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>e9363a76-08a1-4d44-9ce4-93146700c79b</globalKey>
+        <inputFieldName>CollectCaseInfo:BlkCase:CaseOrigin</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000Fq1V</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000Fq1V</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Origin</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>7295c04d-be70-49cd-b355-8dd78e0ab3f6</globalKey>
+        <inputFieldName>CollectCaseInfo:BlkCase:Type</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000Fq37</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000Fq37</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Type</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>ec34c7fe-3518-4f03-a448-24eca0ab3b3a</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000Foe1</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000Foe1</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2b2f14d1-c27a-436c-b820-b86dbeedb66b</globalKey>
+        <inputFieldName>CollectCaseInfo:BlkCase:FileToUpload:data</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000Fonh</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000Fonh</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>ContentDocumentId</outputFieldName>
+        <outputObjectName>ContentDocumentLink</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ff371abe-a1e7-4d7c-8b8d-7f4fce1c95e0</globalKey>
+        <inputFieldName>CollectCaseInfo:BlkCase:CaseSubject</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000Foir</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000Foir</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Subject</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>a23d75af-db27-41f3-b548-ae8c379a414f</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000FokT</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FokT</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>ContentDocumentLink</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>83ac382b-850c-48e9-b895-9f2415b4af36</globalKey>
+        <inputFieldName>CollectCaseInfo:BlkCase:Reason</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000Fofd</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000Fofd</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Reason</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>12fa7829-2d09-4422-8bb2-e4fca0ea2364</globalKey>
+        <inputFieldName>CollectCaseInfo:BlkAsset:AssetID</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000FohF</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FohF</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AssetId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>28fb7b27-29bd-49e0-ab66-b5d94284c1e6</globalKey>
+        <inputFieldName>CollectCaseInfo:BlkCase:ContactId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000Foan</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000Foan</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ContactId</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>41380fd3-f06b-47e3-89c5-34d170397098</globalKey>
+        <inputFieldName>CollectCaseInfo:BlkCase:CaseDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLCreateCaseWFile</name>
+        <omniDataTransformation>0kdaj000000FocP</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FocP</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>Case</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;CollectCaseInfo&quot; : {
+    &quot;BlkCase&quot; : {
+      &quot;ChkbxFiletoUpload&quot; : true,
+      &quot;FileUpload&quot; : null,
+      &quot;Reason&quot; : &quot;Equipment Complexity&quot;,
+      &quot;CaseOrigin&quot; : &quot;Phone&quot;,
+      &quot;ContactId&quot; : &quot;003aj00000KDQe8AAH&quot;,
+      &quot;CaseSubject&quot; : &quot;The charging ports are not working&quot;,
+      &quot;CaseDescription&quot; : &quot;The charging ports are not working&quot;
+    },
+    &quot;BlkAsset&quot; : {
+      &quot;AccountId&quot; : &quot;001aj000017N13yAAC&quot;,
+      &quot;ProductName&quot; : &quot;Laptop&quot;,
+      &quot;ProductCode&quot; : &quot;LP001&quot;,
+      &quot;ProductID&quot; : &quot;01taj00000GNhGFAA1&quot;,
+      &quot;AssetStatus&quot; : &quot;Purchased&quot;,
+      &quot;AssetName&quot; : &quot;Apple Laptop M4&quot;,
+      &quot;AssetSerial&quot; : &quot;APPLP001&quot;,
+      &quot;AssetID&quot; : &quot;02iaj000000PWKuAAO&quot;,
+      &quot;AccountName&quot; : &quot;Any Partner Inc&quot;
+    }
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DMLCreateCaseWFile_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1692,8 +1692,8 @@
             <name>SD_Declaration</name>
             <omniProcessVersionNumber>0.0</omniProcessVersionNumber>
             <propertySetConfig>{
-  &quot;controlWidth&quot; : 12,
-  &quot;label&quot; : &quot;Declaration&quot;,
+  &quot;controlWidth&quot; : 12.0,
+  &quot;label&quot; : &quot;Declaration Acknowledgement&quot;,
   &quot;text&quot; : &quot;I declare that the information provided in this assessment is true, accurate, and complete to the best of my knowledge. I understand that SmartDrive Insurance will rely on these responses to assess my risk profile and calculate my premium, and that providing false or incomplete information may result in a revised premium, a declined application, or cancellation of any policy issued. I consent to SmartDrive using and storing my responses for underwriting, quoting, and related communication. I understand that any quote provided is an estimate and does not constitute a binding offer of insurance.&quot;,
   &quot;required&quot; : true,
   &quot;readOnly&quot; : false,

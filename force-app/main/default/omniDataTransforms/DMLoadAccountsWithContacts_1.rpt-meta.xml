@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;records&quot; : [ {
+    &quot;account&quot; : {
+      &quot;Name&quot; : &quot;Midwest Manufacturing Corp&quot;,
+      &quot;Type&quot; : &quot;Customer - Direct&quot;,
+      &quot;Industry&quot; : &quot;Manufacturing&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0789&quot;,
+      &quot;Fax&quot; : &quot;+1-555-0790&quot;,
+      &quot;Website&quot; : &quot;https://www.midwestmfg.com&quot;,
+      &quot;BillingStreet&quot; : &quot;789 Industrial Boulevard&quot;,
+      &quot;BillingCity&quot; : &quot;Chicago&quot;,
+      &quot;BillingState&quot; : &quot;IL&quot;,
+      &quot;BillingPostalCode&quot; : &quot;60601&quot;,
+      &quot;BillingCountry&quot; : &quot;United States&quot;,
+      &quot;ShippingStreet&quot; : &quot;789 Industrial Boulevard&quot;,
+      &quot;ShippingCity&quot; : &quot;Chicago&quot;,
+      &quot;ShippingState&quot; : &quot;IL&quot;,
+      &quot;ShippingPostalCode&quot; : &quot;60601&quot;,
+      &quot;ShippingCountry&quot; : &quot;United States&quot;,
+      &quot;NumberOfEmployees&quot; : 1200,
+      &quot;AnnualRevenue&quot; : 75000000,
+      &quot;Rating&quot; : &quot;Hot&quot;,
+      &quot;AccountSource&quot; : &quot;Trade Show&quot;,
+      &quot;Description&quot; : &quot;Large-scale automotive parts manufacturer with multiple facilities&quot;
+    },
+    &quot;contact&quot; : {
+      &quot;FirstName&quot; : &quot;Michael&quot;,
+      &quot;LastName&quot; : &quot;Davis&quot;,
+      &quot;Email&quot; : &quot;michael.davis@midwestmfg.com&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0789&quot;,
+      &quot;MobilePhone&quot; : &quot;+1-555-0790&quot;,
+      &quot;Title&quot; : &quot;Operations Manager&quot;,
+      &quot;Department&quot; : &quot;Operations&quot;,
+      &quot;MailingStreet&quot; : &quot;789 Industrial Boulevard&quot;,
+      &quot;MailingCity&quot; : &quot;Chicago&quot;,
+      &quot;MailingState&quot; : &quot;IL&quot;,
+      &quot;MailingPostalCode&quot; : &quot;60601&quot;,
+      &quot;MailingCountry&quot; : &quot;United States&quot;,
+      &quot;LeadSource&quot; : &quot;Trade Show&quot;,
+      &quot;HasOptedOutOfEmail&quot; : false,
+      &quot;DoNotCall&quot; : true,
+      &quot;Description&quot; : &quot;Manufacturing operations expert with lean manufacturing expertise&quot;
+    }
+  }, {
+    &quot;account&quot; : {
+      &quot;Name&quot; : &quot;Austin Creative Studios&quot;,
+      &quot;Type&quot; : &quot;Prospect&quot;,
+      &quot;Industry&quot; : &quot;Media &amp; Entertainment&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0321&quot;,
+      &quot;Website&quot; : &quot;https://www.austincreative.com&quot;,
+      &quot;BillingStreet&quot; : &quot;321 South Lamar Boulevard&quot;,
+      &quot;BillingCity&quot; : &quot;Austin&quot;,
+      &quot;BillingState&quot; : &quot;TX&quot;,
+      &quot;BillingPostalCode&quot; : &quot;78704&quot;,
+      &quot;BillingCountry&quot; : &quot;United States&quot;,
+      &quot;ShippingStreet&quot; : &quot;321 South Lamar Boulevard&quot;,
+      &quot;ShippingCity&quot; : &quot;Austin&quot;,
+      &quot;ShippingState&quot; : &quot;TX&quot;,
+      &quot;ShippingPostalCode&quot; : &quot;78704&quot;,
+      &quot;ShippingCountry&quot; : &quot;United States&quot;,
+      &quot;NumberOfEmployees&quot; : 35,
+      &quot;AnnualRevenue&quot; : 2800000,
+      &quot;Rating&quot; : &quot;Cold&quot;,
+      &quot;AccountSource&quot; : &quot;Social Media&quot;,
+      &quot;Description&quot; : &quot;Boutique design studio specializing in brand identity and digital experiences&quot;
+    },
+    &quot;contact&quot; : {
+      &quot;FirstName&quot; : &quot;Emily&quot;,
+      &quot;LastName&quot; : &quot;Chen&quot;,
+      &quot;Email&quot; : &quot;emily.chen@austincreative.com&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0321&quot;,
+      &quot;MobilePhone&quot; : &quot;+1-555-0322&quot;,
+      &quot;Title&quot; : &quot;Creative Director&quot;,
+      &quot;Department&quot; : &quot;Design&quot;,
+      &quot;MailingStreet&quot; : &quot;321 South Lamar Boulevard&quot;,
+      &quot;MailingCity&quot; : &quot;Austin&quot;,
+      &quot;MailingState&quot; : &quot;TX&quot;,
+      &quot;MailingPostalCode&quot; : &quot;78704&quot;,
+      &quot;MailingCountry&quot; : &quot;United States&quot;,
+      &quot;LeadSource&quot; : &quot;Social Media&quot;,
+      &quot;HasOptedOutOfEmail&quot; : true,
+      &quot;DoNotCall&quot; : false,
+      &quot;Description&quot; : &quot;Award-winning designer with expertise in brand identity&quot;
+    }
+  }, {
+    &quot;account&quot; : {
+      &quot;Name&quot; : &quot;Pacific Northwest Enterprises&quot;,
+      &quot;Type&quot; : &quot;Customer - Channel&quot;,
+      &quot;Industry&quot; : &quot;Retail&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0654&quot;,
+      &quot;Fax&quot; : &quot;+1-555-0655&quot;,
+      &quot;Website&quot; : &quot;https://www.pacificnw.com&quot;,
+      &quot;BillingStreet&quot; : &quot;654 Pine Street, Suite 1000&quot;,
+      &quot;BillingCity&quot; : &quot;Seattle&quot;,
+      &quot;BillingState&quot; : &quot;WA&quot;,
+      &quot;BillingPostalCode&quot; : &quot;98101&quot;,
+      &quot;BillingCountry&quot; : &quot;United States&quot;,
+      &quot;ShippingStreet&quot; : &quot;1200 Harbor Drive&quot;,
+      &quot;ShippingCity&quot; : &quot;Seattle&quot;,
+      &quot;ShippingState&quot; : &quot;WA&quot;,
+      &quot;ShippingPostalCode&quot; : &quot;98134&quot;,
+      &quot;ShippingCountry&quot; : &quot;United States&quot;,
+      &quot;NumberOfEmployees&quot; : 500,
+      &quot;AnnualRevenue&quot; : 45000000,
+      &quot;Rating&quot; : &quot;Warm&quot;,
+      &quot;AccountSource&quot; : &quot;Partner Referral&quot;,
+      &quot;TickerSymbol&quot; : &quot;PNW&quot;,
+      &quot;Description&quot; : &quot;Regional retail chain with focus on outdoor and lifestyle products&quot;
+    },
+    &quot;contact&quot; : {
+      &quot;FirstName&quot; : &quot;Robert&quot;,
+      &quot;LastName&quot; : &quot;Wilson&quot;,
+      &quot;Email&quot; : &quot;robert.wilson@pacificnw.com&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0654&quot;,
+      &quot;MobilePhone&quot; : &quot;+1-555-0655&quot;,
+      &quot;Title&quot; : &quot;Regional Sales Manager&quot;,
+      &quot;Department&quot; : &quot;Sales&quot;,
+      &quot;MailingStreet&quot; : &quot;654 Pine Street, Suite 1000&quot;,
+      &quot;MailingCity&quot; : &quot;Seattle&quot;,
+      &quot;MailingState&quot; : &quot;WA&quot;,
+      &quot;MailingPostalCode&quot; : &quot;98101&quot;,
+      &quot;MailingCountry&quot; : &quot;United States&quot;,
+      &quot;LeadSource&quot; : &quot;Partner Referral&quot;,
+      &quot;HasOptedOutOfEmail&quot; : false,
+      &quot;DoNotCall&quot; : false,
+      &quot;Description&quot; : &quot;Experienced sales professional with strong retail industry knowledge&quot;
+    }
+  } ]
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMLoadAccountsWithContacts</name>
+    <nullInputsIncludedInOutput>true</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>42c3869c-8e4d-44b7-8d83-186291888164</globalKey>
+        <inputFieldName>records:account:BillingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B32b</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B32b</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingStreet</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>91454b80-6513-4264-8597-e59681283f9f</globalKey>
+        <inputFieldName>records:contact:MobilePhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B34D</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B34D</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>MobilePhone</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9b9fdf2a-ac5b-4157-a6c4-87152cfb13b8</globalKey>
+        <inputFieldName>records:account:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B3Dt</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B3Dt</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1bae273e-9c63-4843-9eaa-fceb20828961</globalKey>
+        <inputFieldName>records:account:BillingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B2xl</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2xl</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingPostalCode</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>16853abf-9b24-47dc-875d-77761a73c5c6</globalKey>
+        <inputFieldName>records:account:BillingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B2zN</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2zN</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingCity</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f6514b88-b1aa-40d4-bc65-6907f7aeee50</globalKey>
+        <inputFieldName>records:account:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B2rJ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2rJ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>45f075cf-9a2e-40b2-a4e6-00ca8b62ad80</globalKey>
+        <inputFieldName>records:contact:Email</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B393</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B393</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Email</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2b905fb2-e83a-49b6-95ea-230e0ba9fa2e</globalKey>
+        <inputFieldName>records:account:BillingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B35p</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B35p</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingCountry</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2356fd2f-ebc0-417f-870b-198317a132d5</globalKey>
+        <inputFieldName>records:account:BillingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B37R</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B37R</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingState</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>18454d80-2783-4cce-9bd1-8069a3b5f55f</globalKey>
+        <inputFieldName>records:contact:Phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B2w9</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2w9</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Phone</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d743bc3b-162c-485f-a1d7-2223c1ff15d8</globalKey>
+        <inputFieldName>records:account:Type</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B2sv</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2sv</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Type</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>97740586-6a30-488a-8f1a-b878d7796f75</globalKey>
+        <inputFieldName>records:contact:Title</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B2uX</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2uX</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Title</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>6dcddd67-83c9-475b-bb21-6d543c0db9b0</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B2o5</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2o5</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1ab2b5b1-54de-476f-83d7-2c932ca5459b</globalKey>
+        <inputFieldName>records:contact:FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B3Af</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B3Af</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>FirstName</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>9fc12aeb-c626-4fe6-a626-20e92644250d</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B2mT</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2mT</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2f832720-66f1-449f-8a8e-95154fbddfb0</globalKey>
+        <inputFieldName>records:contact:LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountsWithContacts</name>
+        <omniDataTransformation>0kdaj000000B30z</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B30z</omniDataTransformationId>
+        <outputCreationSequence>2.0</outputCreationSequence>
+        <outputFieldName>LastName</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;records&quot; : [ {
+    &quot;account&quot; : {
+      &quot;Name&quot; : &quot;Midwest Manufacturing Corp&quot;,
+      &quot;Type&quot; : &quot;Customer - Direct&quot;,
+      &quot;Industry&quot; : &quot;Manufacturing&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0789&quot;,
+      &quot;Fax&quot; : &quot;+1-555-0790&quot;,
+      &quot;Website&quot; : &quot;https://www.midwestmfg.com&quot;,
+      &quot;BillingStreet&quot; : &quot;789 Industrial Boulevard&quot;,
+      &quot;BillingCity&quot; : &quot;Chicago&quot;,
+      &quot;BillingState&quot; : &quot;IL&quot;,
+      &quot;BillingPostalCode&quot; : &quot;60601&quot;,
+      &quot;BillingCountry&quot; : &quot;United States&quot;,
+      &quot;ShippingStreet&quot; : &quot;789 Industrial Boulevard&quot;,
+      &quot;ShippingCity&quot; : &quot;Chicago&quot;,
+      &quot;ShippingState&quot; : &quot;IL&quot;,
+      &quot;ShippingPostalCode&quot; : &quot;60601&quot;,
+      &quot;ShippingCountry&quot; : &quot;United States&quot;,
+      &quot;NumberOfEmployees&quot; : 1200,
+      &quot;AnnualRevenue&quot; : 75000000,
+      &quot;Rating&quot; : &quot;Hot&quot;,
+      &quot;AccountSource&quot; : &quot;Trade Show&quot;,
+      &quot;Description&quot; : &quot;Large-scale automotive parts manufacturer with multiple facilities&quot;
+    },
+    &quot;contact&quot; : {
+      &quot;FirstName&quot; : &quot;Michael&quot;,
+      &quot;LastName&quot; : &quot;Davis&quot;,
+      &quot;Email&quot; : &quot;michael.davis@midwestmfg.com&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0789&quot;,
+      &quot;MobilePhone&quot; : &quot;+1-555-0790&quot;,
+      &quot;Title&quot; : &quot;Operations Manager&quot;,
+      &quot;Department&quot; : &quot;Operations&quot;,
+      &quot;MailingStreet&quot; : &quot;789 Industrial Boulevard&quot;,
+      &quot;MailingCity&quot; : &quot;Chicago&quot;,
+      &quot;MailingState&quot; : &quot;IL&quot;,
+      &quot;MailingPostalCode&quot; : &quot;60601&quot;,
+      &quot;MailingCountry&quot; : &quot;United States&quot;,
+      &quot;LeadSource&quot; : &quot;Trade Show&quot;,
+      &quot;HasOptedOutOfEmail&quot; : false,
+      &quot;DoNotCall&quot; : true,
+      &quot;Description&quot; : &quot;Manufacturing operations expert with lean manufacturing expertise&quot;
+    }
+  }, {
+    &quot;account&quot; : {
+      &quot;Name&quot; : &quot;Austin Creative Studios&quot;,
+      &quot;Type&quot; : &quot;Prospect&quot;,
+      &quot;Industry&quot; : &quot;Media &amp; Entertainment&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0321&quot;,
+      &quot;Website&quot; : &quot;https://www.austincreative.com&quot;,
+      &quot;BillingStreet&quot; : &quot;321 South Lamar Boulevard&quot;,
+      &quot;BillingCity&quot; : &quot;Austin&quot;,
+      &quot;BillingState&quot; : &quot;TX&quot;,
+      &quot;BillingPostalCode&quot; : &quot;78704&quot;,
+      &quot;BillingCountry&quot; : &quot;United States&quot;,
+      &quot;ShippingStreet&quot; : &quot;321 South Lamar Boulevard&quot;,
+      &quot;ShippingCity&quot; : &quot;Austin&quot;,
+      &quot;ShippingState&quot; : &quot;TX&quot;,
+      &quot;ShippingPostalCode&quot; : &quot;78704&quot;,
+      &quot;ShippingCountry&quot; : &quot;United States&quot;,
+      &quot;NumberOfEmployees&quot; : 35,
+      &quot;AnnualRevenue&quot; : 2800000,
+      &quot;Rating&quot; : &quot;Cold&quot;,
+      &quot;AccountSource&quot; : &quot;Social Media&quot;,
+      &quot;Description&quot; : &quot;Boutique design studio specializing in brand identity and digital experiences&quot;
+    },
+    &quot;contact&quot; : {
+      &quot;FirstName&quot; : &quot;Emily&quot;,
+      &quot;LastName&quot; : &quot;Chen&quot;,
+      &quot;Email&quot; : &quot;emily.chen@austincreative.com&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0321&quot;,
+      &quot;MobilePhone&quot; : &quot;+1-555-0322&quot;,
+      &quot;Title&quot; : &quot;Creative Director&quot;,
+      &quot;Department&quot; : &quot;Design&quot;,
+      &quot;MailingStreet&quot; : &quot;321 South Lamar Boulevard&quot;,
+      &quot;MailingCity&quot; : &quot;Austin&quot;,
+      &quot;MailingState&quot; : &quot;TX&quot;,
+      &quot;MailingPostalCode&quot; : &quot;78704&quot;,
+      &quot;MailingCountry&quot; : &quot;United States&quot;,
+      &quot;LeadSource&quot; : &quot;Social Media&quot;,
+      &quot;HasOptedOutOfEmail&quot; : true,
+      &quot;DoNotCall&quot; : false,
+      &quot;Description&quot; : &quot;Award-winning designer with expertise in brand identity&quot;
+    }
+  }, {
+    &quot;account&quot; : {
+      &quot;Name&quot; : &quot;Pacific Northwest Enterprises&quot;,
+      &quot;Type&quot; : &quot;Customer - Channel&quot;,
+      &quot;Industry&quot; : &quot;Retail&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0654&quot;,
+      &quot;Fax&quot; : &quot;+1-555-0655&quot;,
+      &quot;Website&quot; : &quot;https://www.pacificnw.com&quot;,
+      &quot;BillingStreet&quot; : &quot;654 Pine Street, Suite 1000&quot;,
+      &quot;BillingCity&quot; : &quot;Seattle&quot;,
+      &quot;BillingState&quot; : &quot;WA&quot;,
+      &quot;BillingPostalCode&quot; : &quot;98101&quot;,
+      &quot;BillingCountry&quot; : &quot;United States&quot;,
+      &quot;ShippingStreet&quot; : &quot;1200 Harbor Drive&quot;,
+      &quot;ShippingCity&quot; : &quot;Seattle&quot;,
+      &quot;ShippingState&quot; : &quot;WA&quot;,
+      &quot;ShippingPostalCode&quot; : &quot;98134&quot;,
+      &quot;ShippingCountry&quot; : &quot;United States&quot;,
+      &quot;NumberOfEmployees&quot; : 500,
+      &quot;AnnualRevenue&quot; : 45000000,
+      &quot;Rating&quot; : &quot;Warm&quot;,
+      &quot;AccountSource&quot; : &quot;Partner Referral&quot;,
+      &quot;TickerSymbol&quot; : &quot;PNW&quot;,
+      &quot;Description&quot; : &quot;Regional retail chain with focus on outdoor and lifestyle products&quot;
+    },
+    &quot;contact&quot; : {
+      &quot;FirstName&quot; : &quot;Robert&quot;,
+      &quot;LastName&quot; : &quot;Wilson&quot;,
+      &quot;Email&quot; : &quot;robert.wilson@pacificnw.com&quot;,
+      &quot;Phone&quot; : &quot;+1-555-0654&quot;,
+      &quot;MobilePhone&quot; : &quot;+1-555-0655&quot;,
+      &quot;Title&quot; : &quot;Regional Sales Manager&quot;,
+      &quot;Department&quot; : &quot;Sales&quot;,
+      &quot;MailingStreet&quot; : &quot;654 Pine Street, Suite 1000&quot;,
+      &quot;MailingCity&quot; : &quot;Seattle&quot;,
+      &quot;MailingState&quot; : &quot;WA&quot;,
+      &quot;MailingPostalCode&quot; : &quot;98101&quot;,
+      &quot;MailingCountry&quot; : &quot;United States&quot;,
+      &quot;LeadSource&quot; : &quot;Partner Referral&quot;,
+      &quot;HasOptedOutOfEmail&quot; : false,
+      &quot;DoNotCall&quot; : false,
+      &quot;Description&quot; : &quot;Experienced sales professional with strong retail industry knowledge&quot;
+    }
+  } ]
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>true</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DMLoadAccountsWithContacts_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

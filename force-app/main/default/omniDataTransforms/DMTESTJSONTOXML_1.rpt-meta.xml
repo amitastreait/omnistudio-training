@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;FulfillmentOrder&quot; : {
+    &quot;OrderID&quot; : &quot;WEB-2024-001234&quot;,
+    &quot;Priority&quot; : &quot;STANDARD&quot;,
+    &quot;FulfillmentCenter&quot; : &quot;PDX-01&quot;,
+    &quot;ShippingDetails&quot; : {
+      &quot;Method&quot; : &quot;FREE_GROUND&quot;,
+      &quot;Address&quot; : {
+        &quot;Line1&quot; : &quot;123 Main St&quot;,
+        &quot;City&quot; : &quot;Portland&quot;,
+        &quot;State&quot; : &quot;OR&quot;,
+        &quot;PostalCode&quot; : &quot;97201&quot;,
+        &quot;Validated&quot; : true
+      }
+    },
+    &quot;BillingDetails&quot; : {
+      &quot;Address&quot; : {
+        &quot;Line1&quot; : &quot;123 Main St&quot;,
+        &quot;City&quot; : &quot;Portland&quot;,
+        &quot;State&quot; : &quot;OR&quot;,
+        &quot;PostalCode&quot; : &quot;97201&quot;,
+        &quot;Validated&quot; : true
+      }
+    },
+    &quot;LineItems&quot; : [ {
+      &quot;SKU&quot; : &quot;PROD-ABC-001&quot;,
+      &quot;Quantity&quot; : 2,
+      &quot;UnitPrice&quot; : 29.99,
+      &quot;TotalValue&quot; : 59.98,
+      &quot;InventoryLocation&quot; : &quot;A1-B2-C3&quot;
+    }, {
+      &quot;SKU&quot; : &quot;PROD-ABC-001&quot;,
+      &quot;Quantity&quot; : 2,
+      &quot;UnitPrice&quot; : 29.99,
+      &quot;TotalValue&quot; : 59.98,
+      &quot;InventoryLocation&quot; : &quot;A1-B2-C3&quot;
+    } ],
+    &quot;OrderTotals&quot; : {
+      &quot;Subtotal&quot; : 59.98,
+      &quot;Tax&quot; : 5.99,
+      &quot;Total&quot; : 65.97
+    }
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMTESTJSONTOXML</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b6b72ae1-89e4-404b-b263-6d9614eb7e27</globalKey>
+        <inputFieldName>FulfillmentOrder:BillingDetails:Address:State</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B76D</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B76D</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:BillingDetails:Address:State</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>c5ddad05-846d-46d6-9785-8589cfecff59</globalKey>
+        <inputFieldName>FulfillmentOrder:LineItems:UnitPrice</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6tJ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6tJ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:LineItems:LineItem:UnitPrice</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ccd85134-7fde-450d-a549-be57fc943d2a</globalKey>
+        <inputFieldName>FulfillmentOrder:ShippingDetails:Address:Line1</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6jd</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6jd</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:ShippingDetails:Address:Line1</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1944b7bc-87ac-4032-ab8a-7088773642b3</globalKey>
+        <inputFieldName>FulfillmentOrder:BillingDetails:Address:PostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B79R</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B79R</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:BillingDetails:Address:PostalCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>3067104d-af5e-45e1-827c-102f0cb93c00</globalKey>
+        <inputFieldName>FulfillmentOrder:OrderTotals:Total</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B71N</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B71N</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:OrderTotals:Total</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a6d05b8d-6b95-4131-8bfe-e9a49836ad68</globalKey>
+        <inputFieldName>FulfillmentOrder:LineItems:InventoryLocation</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6wX</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6wX</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:LineItems:LineItem:InventoryLocation</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2c2aec17-e0fd-4747-bb0c-09d5a8490b09</globalKey>
+        <inputFieldName>ShippingAddressValidated</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B7Cf</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7Cf</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:ShippingDetails:Address:Validated</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>89a4c32d-5325-44d6-8adf-f3a9c54738d2</globalKey>
+        <inputFieldName>FulfillmentOrder:ShippingDetails:Address:PostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6oT</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6oT</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:ShippingDetails:Address:PostalCode</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>5abf632b-81b5-4b2b-a781-cb8cf52d6b99</globalKey>
+        <inputFieldName>FulfillmentOrder:FulfillmentCenter</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6gP</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6gP</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:FulfillmentCenter</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>5e0425d0-1707-4104-b9b0-98182008767a</globalKey>
+        <inputFieldName>FulfillmentOrder:BillingDetails:Address:Line1</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B72z</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B72z</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:BillingDetails:Address:Line1</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a58b7d71-e658-4f24-8468-d8b6a72f44ab</globalKey>
+        <inputFieldName>FulfillmentOrder:BillingDetails:Address:City</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B74b</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B74b</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:BillingDetails:Address:City</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>54de6d39-17a6-4d66-b55f-11ca875c336e</globalKey>
+        <inputFieldName>BillingDetailsDetails</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B7Ft</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7Ft</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:BillingDetails:Address:Validated</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>395a2494-395c-424b-8646-e520496315b4</globalKey>
+        <inputFieldName>FulfillmentOrder:OrderTotals:Tax</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6zl</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6zl</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:OrderTotals:Tax</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:FulfillmentOrder:ShippingDetails:Address:Validated &quot;Validated&quot; &quot;Not/\/\/Validated&quot; IF</formulaConverted>
+        <formulaExpression>IF(FulfillmentOrder:ShippingDetails:Address:Validated, &quot;Validated&quot;, &quot;Not Validated&quot;)</formulaExpression>
+        <formulaResultPath>ShippingAddressValidated</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>8981db26-2b72-4827-ad41-dd4ec29fd57d</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B7B3</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7B3</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>67958f0c-c3e9-4552-a8c6-d0db01175aea</globalKey>
+        <inputFieldName>FulfillmentOrder:LineItems:Quantity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6rh</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6rh</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:LineItems:LineItem:Quantity</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>44a909be-3fbe-4e19-b4dc-6927bb4b8379</globalKey>
+        <inputFieldName>FulfillmentOrder:LineItems:SKU</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6bZ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6bZ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:LineItems:LineItem:SKU</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>c8b8d1b9-3892-4612-bd40-45ca6eb9aef6</globalKey>
+        <inputFieldName>FulfillmentOrder:ShippingDetails:Address:City</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6lF</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6lF</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:ShippingDetails:Address:City</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>091ed504-7044-4784-a33c-70647f1f40b4</globalKey>
+        <inputFieldName>FulfillmentOrder:BillingDetails:Address:State</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B77p</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B77p</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:BillingDetails:Address:State</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>da872881-0047-44ba-a172-f6291f248436</globalKey>
+        <inputFieldName>FulfillmentOrder:OrderID</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6Zx</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6Zx</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:OrderID</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>3f31cf9b-e607-4b6e-b796-d7dda169faa4</globalKey>
+        <inputFieldName>FulfillmentOrder:OrderTotals:Subtotal</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6y9</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6y9</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:OrderTotals:Subtotal</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>835800e7-b49f-4e8f-baba-571963db680d</globalKey>
+        <inputFieldName>FulfillmentOrder:LineItems:TotalValue</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6uv</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6uv</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:LineItems:LineItem:TotalValue</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>0025fdb2-9821-448a-87ca-571a1827721c</globalKey>
+        <inputFieldName>FulfillmentOrder:LineItems:SKU</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6q5</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6q5</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:LineItems:LineItem:SKU</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:FulfillmentOrder:BillingDetails:Address:Validated &quot;Validated&quot; &quot;Not/\/\/Validated&quot; IF</formulaConverted>
+        <formulaExpression>IF(FulfillmentOrder:BillingDetails:Address:Validated, &quot;Validated&quot;, &quot;Not Validated&quot;)</formulaExpression>
+        <formulaResultPath>BillingDetailsDetails</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>bef90f3a-ff9b-46bb-b4be-9f1fcf8db1c8</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B7EH</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7EH</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ef34ed0a-7404-4e15-a853-dd173b1df831</globalKey>
+        <inputFieldName>FulfillmentOrder:ShippingDetails:Address:State</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6mr</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6mr</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:ShippingDetails:Address:State</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>0fa6d82d-2712-4ade-a310-4782569d4be4</globalKey>
+        <inputFieldName>FulfillmentOrder:ShippingDetails:Method</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6i1</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6i1</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:ShippingDetails:Method</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>29532fd2-cc98-49c0-bfff-3329145550ac</globalKey>
+        <inputFieldName>FulfillmentOrder:Priority</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTESTJSONTOXML</name>
+        <omniDataTransformation>0kdaj000000B6en</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B6en</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:Priority</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>XML</outputType>
+    <previewJsonData>{
+  &quot;FulfillmentOrder&quot; : {
+    &quot;OrderID&quot; : &quot;WEB-2024-001234&quot;,
+    &quot;Priority&quot; : &quot;STANDARD&quot;,
+    &quot;FulfillmentCenter&quot; : &quot;PDX-01&quot;,
+    &quot;ShippingDetails&quot; : {
+      &quot;Method&quot; : &quot;FREE_GROUND&quot;,
+      &quot;Address&quot; : {
+        &quot;Line1&quot; : &quot;123 Main St&quot;,
+        &quot;City&quot; : &quot;Portland&quot;,
+        &quot;State&quot; : &quot;OR&quot;,
+        &quot;PostalCode&quot; : &quot;97201&quot;,
+        &quot;Validated&quot; : true
+      }
+    },
+    &quot;BillingDetails&quot; : {
+      &quot;Address&quot; : {
+        &quot;Line1&quot; : &quot;123 Main St&quot;,
+        &quot;City&quot; : &quot;Portland&quot;,
+        &quot;State&quot; : &quot;OR&quot;,
+        &quot;PostalCode&quot; : &quot;97201&quot;,
+        &quot;Validated&quot; : false
+      }
+    },
+    &quot;LineItems&quot; : [ {
+      &quot;SKU&quot; : &quot;PROD-ABC-001&quot;,
+      &quot;Quantity&quot; : 2,
+      &quot;UnitPrice&quot; : 29.99,
+      &quot;TotalValue&quot; : 59.98,
+      &quot;InventoryLocation&quot; : &quot;A1-B2-C3&quot;
+    }, {
+      &quot;SKU&quot; : &quot;PROD-ABC-001&quot;,
+      &quot;Quantity&quot; : 2,
+      &quot;UnitPrice&quot; : 29.99,
+      &quot;TotalValue&quot; : 59.98,
+      &quot;InventoryLocation&quot; : &quot;A1-B2-C3&quot;
+    } ],
+    &quot;OrderTotals&quot; : {
+      &quot;Subtotal&quot; : 59.98,
+      &quot;Tax&quot; : 5.99,
+      &quot;Total&quot; : 65.97
+    }
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>DMTESTJSONTOXML_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

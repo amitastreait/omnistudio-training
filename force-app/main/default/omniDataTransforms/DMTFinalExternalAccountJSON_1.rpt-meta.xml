@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;requestData&quot; : {
+    &quot;accountData&quot; : {
+      &quot;website&quot; : &quot;https://www.salesforce.uk&quot;,
+      &quot;phone&quot; : &quot;4555455555&quot;,
+      &quot;accountName&quot; : &quot;Salesforce.com&quot;,
+      &quot;industry&quot; : &quot;Banking&quot;
+    },
+    &quot;contacts&quot; : [ {
+      &quot;firstName&quot; : &quot;Amit&quot;,
+      &quot;lastName&quot; : &quot;Singh&quot;,
+      &quot;mobilePhone&quot; : &quot;8965855555&quot;,
+      &quot;contactPhone&quot; : &quot;8965855555&quot;,
+      &quot;title&quot; : &quot;Chief Technology Officer&quot;,
+      &quot;department&quot; : &quot;Technology&quot;,
+      &quot;email&quot; : &quot;asingh@gmail.com&quot;
+    }, {
+      &quot;firstName&quot; : &quot;Amit&quot;,
+      &quot;lastName&quot; : &quot;Singh&quot;,
+      &quot;mobilePhone&quot; : &quot;8965855555&quot;,
+      &quot;contactPhone&quot; : &quot;8965855555&quot;,
+      &quot;title&quot; : &quot;Chief Technology Officer&quot;,
+      &quot;department&quot; : &quot;Technology&quot;,
+      &quot;email&quot; : &quot;asingh@gmail.com&quot;
+    } ]
+  }
+}</expectedInputJson>
+    <expectedOutputJson>{
+  &quot;requestData&quot; : {
+    &quot;contacts&quot; : [ {
+      &quot;email&quot; : &quot;asingh@gmail.com&quot;,
+      &quot;department&quot; : &quot;Executive&quot;,
+      &quot;title&quot; : &quot;Chief Executive Officer&quot;,
+      &quot;contactPhone&quot; : &quot;8555555555&quot;,
+      &quot;mobilePhone&quot; : &quot;8558895555&quot;,
+      &quot;lastName&quot; : &quot;Singh&quot;,
+      &quot;firstName&quot; : &quot;Amit&quot;
+    } ],
+    &quot;accountData&quot; : {
+      &quot;billingCity&quot; : &quot;SF&quot;,
+      &quot;billingState&quot; : &quot;CA&quot;,
+      &quot;industry&quot; : &quot;Banking&quot;,
+      &quot;billingCountry&quot; : &quot;United States&quot;,
+      &quot;billingPostalCode&quot; : &quot;58644&quot;,
+      &quot;accountName&quot; : &quot;Salesforce.com&quot;,
+      &quot;phone&quot; : &quot;2128425500&quot;,
+      &quot;billingStreet&quot; : &quot;124 Main Street&quot;,
+      &quot;website&quot; : &quot;https://www.example.com&quot;
+    }
+  }
+}</expectedOutputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMTFinalExternalAccountJSON</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>8153c623-079a-4a30-8b14-604a96508616</globalKey>
+        <inputFieldName>requestData:contacts:mobilePhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTFinalExternalAccountJSON</name>
+        <omniDataTransformation>0kdaj000000FZOr</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZOr</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:mobilePhone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2c76c4ab-6f9f-4c3b-9284-6c5af80ea506</globalKey>
+        <inputFieldName>requestData:contacts:firstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTFinalExternalAccountJSON</name>
+        <omniDataTransformation>0kdaj000000FZQT</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZQT</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:firstName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>24ca84b1-c789-43e9-aca2-c10d2550c1c5</globalKey>
+        <inputFieldName>requestData:contacts:email</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTFinalExternalAccountJSON</name>
+        <omniDataTransformation>0kdaj000000FZS5</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZS5</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:email</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6c3b41c1-6451-49e9-9170-a31be12e5dfa</globalKey>
+        <inputFieldName>requestData:contacts:contactPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTFinalExternalAccountJSON</name>
+        <omniDataTransformation>0kdaj000000FZLd</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZLd</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:phone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6248071e-b44d-4e3c-acf3-6247e3abcbc5</globalKey>
+        <inputFieldName>requestData:contacts:department</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTFinalExternalAccountJSON</name>
+        <omniDataTransformation>0kdaj000000FZNF</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZNF</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:department</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>985dcc38-e42f-441b-9a8b-45fc727171af</globalKey>
+        <inputFieldName>requestData:accountData</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTFinalExternalAccountJSON</name>
+        <omniDataTransformation>0kdaj000000FZGn</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZGn</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:accountData</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1c543a53-5e12-4817-9d0f-8a52813261da</globalKey>
+        <inputFieldName>requestData:contacts:title</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTFinalExternalAccountJSON</name>
+        <omniDataTransformation>0kdaj000000FZIP</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZIP</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:title</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a65b2e6f-c771-4bfe-9132-490bf1306273</globalKey>
+        <inputFieldName>requestData:contacts:lastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTFinalExternalAccountJSON</name>
+        <omniDataTransformation>0kdaj000000FZK1</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FZK1</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>requestData:contacts:lastName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;requestData&quot; : {
+    &quot;accountData&quot; : {
+      &quot;website&quot; : &quot;https://www.salesforce.uk&quot;,
+      &quot;phone&quot; : &quot;4555455555&quot;,
+      &quot;accountName&quot; : &quot;Salesforce.com&quot;,
+      &quot;industry&quot; : &quot;Banking&quot;
+    },
+    &quot;contacts&quot; : [ {
+      &quot;firstName&quot; : &quot;Amit&quot;,
+      &quot;lastName&quot; : &quot;Singh&quot;,
+      &quot;mobilePhone&quot; : &quot;8965855555&quot;,
+      &quot;contactPhone&quot; : &quot;8965855555&quot;,
+      &quot;title&quot; : &quot;Chief Technology Officer&quot;,
+      &quot;department&quot; : &quot;Technology&quot;,
+      &quot;email&quot; : &quot;asingh@gmail.com&quot;
+    } ]
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>DMTFinalExternalAccountJSON_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d18b1a9c-8b8f-4ae1-849a-8e24c67aae7e</globalKey>
+        <inputFieldName>Opportunities:IsWon</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AB3p</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AB3p</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Boolean</outputFieldFormat>
+        <outputFieldName>REPEATER1:IF_IsWon</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>be3553b2-1e08-4bd6-add8-fa102eb16afb</globalKey>
+        <inputFieldName>Opportunities:CloseDate</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AB5R</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AB5R</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Date(MM/dd/yyyy)</outputFieldFormat>
+        <outputFieldName>REPEATER1:CloseDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9d2eddb7-9bee-4683-9f3c-550d97e8866f</globalKey>
+        <inputFieldName>Opportunities:StageName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AAyz</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AAyz</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>REPEATER1:StageName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f4850e1b-efad-406d-a34d-434de6698d34</globalKey>
+        <inputFieldName>AccountPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AAu9</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AAu9</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Phone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>9c6e2105-487e-4ae2-b3c5-04f5d2e995b2</globalKey>
+        <inputFieldName>TODAY</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000ABGj</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000ABGj</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Date(MM/dd/yyyy)</outputFieldFormat>
+        <outputFieldName>DocGenDate</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b7d2cdf3-d164-4b23-903c-5218ea2e7f8d</globalKey>
+        <inputFieldName>AccountDescription</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AAsX</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AAsX</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>07fd099c-467f-4844-8717-f4b211b190c2</globalKey>
+        <inputFieldName>AccountPhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000ABAH</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000ABAH</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Phone</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>97a15e32-b38e-4aae-8f7a-f483d6087a12</globalKey>
+        <inputFieldName>Opportunities:Competitors</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AB8f</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AB8f</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>REPEATER1:Competitors</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| TODAY</formulaConverted>
+        <formulaExpression>TODAY()</formulaExpression>
+        <formulaResultPath>TODAY</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>e60f6e52-d433-42f2-9c2b-a1e4f50b4bea</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000ABF7</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000ABF7</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>7527da24-a18d-4526-baf3-2f3aa51fb2c5</globalKey>
+        <inputFieldName>Opportunities:Amount</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AB0b</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AB0b</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Currency</outputFieldFormat>
+        <outputFieldName>REPEATER1:Amount</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ca225982-59a8-4dd7-86ba-8284d0668218</globalKey>
+        <inputFieldName>Opportunities:OpportunityType</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AB2D</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AB2D</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldFormat>Currency</outputFieldFormat>
+        <outputFieldName>REPEATER1:OpportunityType</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d94f6107-8076-4ada-8c7e-e055dc06bceb</globalKey>
+        <inputFieldName>OwnerEmail</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000ABBt</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000ABBt</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Email</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>6c44f712-3ad6-42cd-a48a-99cbfec468d7</globalKey>
+        <inputFieldName>AccountName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000ABDV</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000ABDV</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>83c4039b-7425-4add-99ad-6aa56154d52a</globalKey>
+        <inputFieldName>Opportunities:Description</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000ABNB</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000ABNB</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>REPEATER1:Description</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>dc34bcf7-0d15-4772-98fd-6eae3e787770</globalKey>
+        <inputFieldName>OwnerName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AAvl</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AAvl</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>UserFullName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>bac02168-0d22-45ea-a9c6-8850bfc0df41</globalKey>
+        <inputFieldName>Opportunities:OpportunityName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AAxN</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AAxN</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>REPEATER1:OpportunityName</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2dd6938a-f855-4ab0-88e8-fbcdffbfe4eb</globalKey>
+        <inputFieldName>Opportunities:Description</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTAccountsWithOpportunitiesDocGenExample</name>
+        <omniDataTransformation>0kdaj000000AB73</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000AB73</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>REPEATER1:Description</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;AccountDescription&quot; : &quot;World&apos;s third largest oil and gas company.&quot;,
+  &quot;AccountPhone&quot; : &quot;(212) 842-5500&quot;,
+  &quot;OwnerName&quot; : &quot;Amit Singh&quot;,
+  &quot;Opportunities&quot; : [ {
+    &quot;OpportunityName&quot; : &quot;United Oil Emergency Generators&quot;,
+    &quot;Description&quot; : &quot;United Oil Emergency Generators&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$440,000.00&quot;,
+    &quot;StageName&quot; : &quot;Closed Won&quot;,
+    &quot;IsWon&quot; : true,
+    &quot;Amount&quot; : &quot;$440,000.00&quot;,
+    &quot;Competitors&quot; : &quot;Honda, Mitsubishi&quot;,
+    &quot;OpportunityType&quot; : &quot;Existing Customer - Upgrade&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  }, {
+    &quot;OpportunityName&quot; : &quot;United Oil Installations&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$270,000.00&quot;,
+    &quot;StageName&quot; : &quot;Closed Won&quot;,
+    &quot;IsWon&quot; : true,
+    &quot;Amount&quot; : &quot;$270,000.00&quot;,
+    &quot;OpportunityType&quot; : &quot;Existing Customer - Upgrade&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  }, {
+    &quot;OpportunityName&quot; : &quot;United Oil Installations&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$243,000.00&quot;,
+    &quot;StageName&quot; : &quot;Negotiation/Review&quot;,
+    &quot;IsWon&quot; : false,
+    &quot;Amount&quot; : &quot;$270,000.00&quot;,
+    &quot;OpportunityType&quot; : &quot;Existing Customer - Upgrade&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  }, {
+    &quot;OpportunityName&quot; : &quot;United Oil Office Portable Generators&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$112,500.00&quot;,
+    &quot;StageName&quot; : &quot;Negotiation/Review&quot;,
+    &quot;IsWon&quot; : false,
+    &quot;Amount&quot; : &quot;$125,000.00&quot;,
+    &quot;Competitors&quot; : &quot;Yamaha&quot;,
+    &quot;OpportunityType&quot; : &quot;Existing Customer - Upgrade&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  }, {
+    &quot;OpportunityName&quot; : &quot;United Oil Installations&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$235,000.00&quot;,
+    &quot;StageName&quot; : &quot;Closed Won&quot;,
+    &quot;IsWon&quot; : true,
+    &quot;Amount&quot; : &quot;$235,000.00&quot;,
+    &quot;OpportunityType&quot; : &quot;Existing Customer - Upgrade&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  }, {
+    &quot;OpportunityName&quot; : &quot;United Oil Plant Standby Generators&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$135,000.00&quot;,
+    &quot;StageName&quot; : &quot;Needs Analysis&quot;,
+    &quot;IsWon&quot; : false,
+    &quot;Amount&quot; : &quot;$675,000.00&quot;,
+    &quot;Competitors&quot; : &quot;Caterpillar, Mitsubishi, Hawkpower&quot;,
+    &quot;OpportunityType&quot; : &quot;Existing Customer - Upgrade&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  }, {
+    &quot;OpportunityName&quot; : &quot;United Oil Refinery Generators&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$915,000.00&quot;,
+    &quot;StageName&quot; : &quot;Closed Won&quot;,
+    &quot;IsWon&quot; : true,
+    &quot;Amount&quot; : &quot;$915,000.00&quot;,
+    &quot;Competitors&quot; : &quot;John Deere, Mitsubishi, Hawkpower&quot;,
+    &quot;OpportunityType&quot; : &quot;New Customer&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  }, {
+    &quot;OpportunityName&quot; : &quot;United Oil Refinery Generators&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$202,500.00&quot;,
+    &quot;StageName&quot; : &quot;Proposal/Price Quote&quot;,
+    &quot;IsWon&quot; : false,
+    &quot;Amount&quot; : &quot;$270,000.00&quot;,
+    &quot;Competitors&quot; : &quot;John Deere&quot;,
+    &quot;OpportunityType&quot; : &quot;Existing Customer - Upgrade&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  }, {
+    &quot;OpportunityName&quot; : &quot;United Oil SLA&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$120,000.00&quot;,
+    &quot;StageName&quot; : &quot;Closed Won&quot;,
+    &quot;IsWon&quot; : true,
+    &quot;Amount&quot; : &quot;$120,000.00&quot;,
+    &quot;OpportunityType&quot; : &quot;Existing Customer - Upgrade&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  }, {
+    &quot;OpportunityName&quot; : &quot;United Oil Standby Generators&quot;,
+    &quot;ExpectedRevenue&quot; : &quot;$120,000.00&quot;,
+    &quot;StageName&quot; : &quot;Closed Won&quot;,
+    &quot;IsWon&quot; : true,
+    &quot;Amount&quot; : &quot;$120,000.00&quot;,
+    &quot;Competitors&quot; : &quot;John Deere, Mitsubishi, Hawkpower&quot;,
+    &quot;OpportunityType&quot; : &quot;Existing Customer - Upgrade&quot;,
+    &quot;CloseDate&quot; : &quot;09/24/2022&quot;
+  } ],
+  &quot;AccountType&quot; : &quot;Customer - Direct&quot;,
+  &quot;OwnerEmail&quot; : &quot;amitasinghsfdc@gmail.com&quot;,
+  &quot;AnnualRevenue&quot; : &quot;$5,600,000,000.00&quot;,
+  &quot;AccountName&quot; : &quot;United Oil &amp; Gas Corp.&quot;
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <targetOutputFileName>AccountWithOpportunitiesTemplate(Version 1)</targetOutputFileName>
+    <type>Transform</type>
+    <uniqueName>DMTAccountsWithOpportunitiesDocGenExample_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;accounts&quot; : [ {
+    &quot;Name&quot; : &quot;TechCorp Solutions Inc.&quot;,
+    &quot;Type&quot; : &quot;Customer&quot;,
+    &quot;Industry&quot; : &quot;Technology&quot;,
+    &quot;Phone&quot; : &quot;+1-555-0123&quot;,
+    &quot;Fax&quot; : &quot;+1-555-0124&quot;,
+    &quot;Website&quot; : &quot;https://www.techcorp.com&quot;,
+    &quot;BillingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;BillingCity&quot; : &quot;San Francisco&quot;,
+    &quot;BillingState&quot; : &quot;CA&quot;,
+    &quot;BillingPostalCode&quot; : &quot;94105&quot;,
+    &quot;BillingCountry&quot; : &quot;United States&quot;,
+    &quot;ShippingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;ShippingCity&quot; : &quot;San Francisco&quot;,
+    &quot;ShippingState&quot; : &quot;CA&quot;,
+    &quot;ShippingPostalCode&quot; : &quot;94105&quot;,
+    &quot;ShippingCountry&quot; : &quot;United States&quot;,
+    &quot;NumberOfEmployees&quot; : 250,
+    &quot;AnnualRevenue&quot; : 15000000,
+    &quot;Rating&quot; : &quot;Hot&quot;,
+    &quot;AccountSource&quot; : &quot;Web&quot;,
+    &quot;TickerSymbol&quot; : &quot;TECH&quot;,
+    &quot;ExternalId&quot; : &quot;788978234&quot;,
+    &quot;Description&quot; : &quot;Leading software development company specializing in enterprise solutions&quot;
+  }, {
+    &quot;Name&quot; : &quot;Global Marketing Partners LLC&quot;,
+    &quot;Type&quot; : &quot;Prospect&quot;,
+    &quot;Industry&quot; : &quot;Marketing and Advertising&quot;,
+    &quot;Phone&quot; : &quot;+1-555-0456&quot;,
+    &quot;Website&quot; : &quot;https://www.globalmarketing.com&quot;,
+    &quot;BillingStreet&quot; : &quot;456 Madison Avenue, Floor 12&quot;,
+    &quot;BillingCity&quot; : &quot;New York&quot;,
+    &quot;BillingState&quot; : &quot;NY&quot;,
+    &quot;BillingPostalCode&quot; : &quot;10022&quot;,
+    &quot;BillingCountry&quot; : &quot;United States&quot;,
+    &quot;ShippingStreet&quot; : &quot;789 Broadway, Suite 200&quot;,
+    &quot;ShippingCity&quot; : &quot;New York&quot;,
+    &quot;ShippingState&quot; : &quot;NY&quot;,
+    &quot;ShippingPostalCode&quot; : &quot;10003&quot;,
+    &quot;ShippingCountry&quot; : &quot;United States&quot;,
+    &quot;NumberOfEmployees&quot; : 85,
+    &quot;AnnualRevenue&quot; : 8500000,
+    &quot;Rating&quot; : &quot;Warm&quot;,
+    &quot;AccountSource&quot; : &quot;Referral&quot;,
+    &quot;ExternalId&quot; : &quot;78897823344&quot;,
+    &quot;Description&quot; : &quot;Full-service marketing agency with Fortune 500 clients&quot;
+  } ]
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMLoadAccountRecord</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>ccb4f7fb-f143-4524-b75a-a08f34b3278f</globalKey>
+        <inputFieldName>accounts:ShippingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1td</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1td</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingState</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d447d978-66fd-4991-bfb8-3bb7e45ec2c8</globalKey>
+        <inputFieldName>accounts:Rating</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1vF</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1vF</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Rating</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a2905832-707c-44e3-b743-1d940fd74f22</globalKey>
+        <inputFieldName>accounts:ShippingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1f7</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1f7</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingCountry</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>a43e0ac7-e552-4ff1-952f-34ca9bb33ee4</globalKey>
+        <inputFieldName>accounts:ExternalId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B3H7</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B3H7</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ExternalId__c</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>true</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>0f1982f3-3ef4-4ead-922e-bf617336f9f8</globalKey>
+        <inputFieldName>accounts:BillingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1bt</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1bt</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingCity</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2b1ca6e4-9fcd-435c-9700-537376130f8e</globalKey>
+        <inputFieldName>accounts:AnnualRevenue</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1dV</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1dV</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AnnualRevenue</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1d831ce7-8bdf-42a5-bd9b-a7f96f68cec2</globalKey>
+        <inputFieldName>accounts:BillingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1nB</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1nB</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingState</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>dc458117-2c2e-4fde-b46f-f69d7e9adcf3</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B0sj</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B0sj</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>745c196c-3c86-4ddf-9310-fc71ff9d3d36</globalKey>
+        <inputFieldName>accounts:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B0uL</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B0uL</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>59b03ccf-6aeb-4b6d-b216-8b7f8fca980f</globalKey>
+        <inputFieldName>accounts:Industry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B21h</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B21h</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Industry</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>97c9ece0-aa7d-4c12-a153-6685dcf1e568</globalKey>
+        <inputFieldName>accounts:ShippingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B23J</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B23J</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingStreet</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>32f77862-4367-4d78-b432-67727d27e6e6</globalKey>
+        <inputFieldName>accounts:TickerSymbol</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1wr</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1wr</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>TickerSymbol</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>24167e8a-abbd-4f4a-ae3a-591bba1a59ac</globalKey>
+        <inputFieldName>accounts:BillingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1yT</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1yT</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingCountry</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>709b82a0-a8a4-437d-94c1-66fa88127e59</globalKey>
+        <inputFieldName>accounts:Phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1s1</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1s1</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Phone</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>93c0b60b-ab9d-4644-ba69-8f4fc13bac15</globalKey>
+        <inputFieldName>accounts:Fax</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1on</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1on</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Fax</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>5baa3b02-bdb9-4db3-bf20-f769a1dac406</globalKey>
+        <inputFieldName>accounts:BillingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1qP</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1qP</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingStreet</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>dd7de5f5-1a8c-432c-8307-670295815e71</globalKey>
+        <inputFieldName>accounts:Description</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1Ll</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1Ll</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>0c07627e-0aa9-47fb-b9a2-69631bd1206c</globalKey>
+        <inputFieldName>accounts:Type</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B0vx</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B0vx</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Type</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>dd2be464-1af0-4c8c-bddc-3ff26117e90a</globalKey>
+        <inputFieldName>accounts:BillingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1gj</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1gj</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingPostalCode</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>42546702-827b-40d0-91fa-9d6e9c7c9ba5</globalKey>
+        <inputFieldName>accounts:NumberOfEmployees</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1iL</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1iL</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>NumberOfEmployees</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>10272251-af88-45ee-927c-921077111486</globalKey>
+        <inputFieldName>accounts:ShippingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B24v</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B24v</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingCity</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>35697115-6c7e-49f2-8464-f1d171111ceb</globalKey>
+        <inputFieldName>accounts:AccountSource</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B205</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B205</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountSource</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>647ab531-7001-4209-8c1f-9b85542121c6</globalKey>
+        <inputFieldName>accounts:Website</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1jx</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1jx</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Website</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2c3f37c8-b652-45b4-87ab-e872de21257f</globalKey>
+        <inputFieldName>accounts:ShippingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadAccountRecord</name>
+        <omniDataTransformation>0kdaj000000B1lZ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B1lZ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingPostalCode</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;accounts&quot; : [ {
+    &quot;Name&quot; : &quot;TechCorp Inc.&quot;,
+    &quot;Type&quot; : &quot;Customer&quot;,
+    &quot;Industry&quot; : &quot;Education&quot;,
+    &quot;Phone&quot; : &quot;+1-666-0123&quot;,
+    &quot;Fax&quot; : &quot;+1-666-0124&quot;,
+    &quot;Website&quot; : &quot;https://www.techcorp.com&quot;,
+    &quot;BillingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;BillingCity&quot; : &quot;San Francisco&quot;,
+    &quot;BillingState&quot; : &quot;CA&quot;,
+    &quot;BillingPostalCode&quot; : &quot;94105&quot;,
+    &quot;BillingCountry&quot; : &quot;United States&quot;,
+    &quot;ShippingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;ShippingCity&quot; : &quot;San Francisco&quot;,
+    &quot;ShippingState&quot; : &quot;CA&quot;,
+    &quot;ShippingPostalCode&quot; : &quot;94105&quot;,
+    &quot;ShippingCountry&quot; : &quot;United States&quot;,
+    &quot;NumberOfEmployees&quot; : 250,
+    &quot;AnnualRevenue&quot; : 15000000,
+    &quot;Rating&quot; : &quot;Hot&quot;,
+    &quot;AccountSource&quot; : &quot;Web&quot;,
+    &quot;TickerSymbol&quot; : &quot;EDU&quot;,
+    &quot;ExternalId&quot; : &quot;788978234&quot;,
+    &quot;Description&quot; : &quot;Leading software development company specializing in enterprise solutions&quot;
+  }, {
+    &quot;Name&quot; : &quot;Global Marketing Partners LLC&quot;,
+    &quot;Type&quot; : &quot;Prospect&quot;,
+    &quot;Industry&quot; : &quot;Marketing and Advertising&quot;,
+    &quot;Phone&quot; : &quot;+1-555-0456&quot;,
+    &quot;Website&quot; : &quot;https://www.globalmarketing.com&quot;,
+    &quot;BillingStreet&quot; : &quot;456 Madison Avenue, Floor 12&quot;,
+    &quot;BillingCity&quot; : &quot;New York&quot;,
+    &quot;BillingState&quot; : &quot;NY&quot;,
+    &quot;BillingPostalCode&quot; : &quot;10022&quot;,
+    &quot;BillingCountry&quot; : &quot;United States&quot;,
+    &quot;ShippingStreet&quot; : &quot;789 Broadway, Suite 200&quot;,
+    &quot;ShippingCity&quot; : &quot;New York&quot;,
+    &quot;ShippingState&quot; : &quot;NY&quot;,
+    &quot;ShippingPostalCode&quot; : &quot;10003&quot;,
+    &quot;ShippingCountry&quot; : &quot;United States&quot;,
+    &quot;NumberOfEmployees&quot; : 85,
+    &quot;AnnualRevenue&quot; : 8500000,
+    &quot;Rating&quot; : &quot;Warm&quot;,
+    &quot;AccountSource&quot; : &quot;Referral&quot;,
+    &quot;ExternalId&quot; : &quot;78897823344&quot;,
+    &quot;Description&quot; : &quot;Full-service marketing agency with Fortune 500 clients&quot;
+  } ]
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DMLoadAccountRecord_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

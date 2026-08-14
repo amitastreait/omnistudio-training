@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;contacts&quot; : [ {
+    &quot;FirstName&quot; : &quot;John&quot;,
+    &quot;Account&quot; : &quot;TechCorp Solutions Inc.&quot;,
+    &quot;LastName&quot; : &quot;Smith&quot;,
+    &quot;Email&quot; : &quot;john.smith@techcorp.com&quot;,
+    &quot;Phone&quot; : &quot;+1-555-0123&quot;,
+    &quot;MobilePhone&quot; : &quot;+1-555-0124&quot;,
+    &quot;Title&quot; : &quot;Chief Technology Officer&quot;,
+    &quot;Department&quot; : &quot;Executive&quot;,
+    &quot;MailingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;MailingCity&quot; : &quot;San Francisco&quot;,
+    &quot;MailingState&quot; : &quot;CA&quot;,
+    &quot;MailingPostalCode&quot; : &quot;94105&quot;,
+    &quot;MailingCountry&quot; : &quot;United States&quot;,
+    &quot;LeadSource&quot; : &quot;Web&quot;,
+    &quot;HasOptedOutOfEmail&quot; : false,
+    &quot;DoNotCall&quot; : false,
+    &quot;Description&quot; : &quot;Senior technology executive with 15+ years of experience&quot;
+  }, {
+    &quot;Account&quot; : &quot;Global Marketing Partners LLC&quot;,
+    &quot;FirstName&quot; : &quot;Sarah&quot;,
+    &quot;LastName&quot; : &quot;Johnson&quot;,
+    &quot;Email&quot; : &quot;sarah.johnson@globalmarketing.com&quot;,
+    &quot;Phone&quot; : &quot;+1-555-0456&quot;,
+    &quot;MobilePhone&quot; : &quot;+1-555-0457&quot;,
+    &quot;Title&quot; : &quot;Marketing Director&quot;,
+    &quot;Department&quot; : &quot;Marketing&quot;,
+    &quot;MailingStreet&quot; : &quot;456 Madison Avenue, Floor 12&quot;,
+    &quot;MailingCity&quot; : &quot;New York&quot;,
+    &quot;MailingState&quot; : &quot;NY&quot;,
+    &quot;MailingPostalCode&quot; : &quot;10022&quot;,
+    &quot;MailingCountry&quot; : &quot;United States&quot;,
+    &quot;LeadSource&quot; : &quot;Referral&quot;,
+    &quot;HasOptedOutOfEmail&quot; : false,
+    &quot;DoNotCall&quot; : false,
+    &quot;Description&quot; : &quot;Creative marketing professional specializing in digital campaigns&quot;
+  } ]
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMLoadContactsWithAccount</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>959f2c69-422b-41b9-a536-0080249460bb</globalKey>
+        <inputFieldName>contacts:LeadSource</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2Uj</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2Uj</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LeadSource</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>4b7bba68-fd53-4de6-9ad9-2d678006a5aa</globalKey>
+        <inputFieldName>contacts:Description</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2WL</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2WL</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>7b495332-95a5-40a8-97fe-f17bd24cf817</globalKey>
+        <inputFieldName>contacts:Account</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <lookupByFieldName>Name</lookupByFieldName>
+        <lookupObjectName>Account</lookupObjectName>
+        <lookupReturnedFieldName>Id</lookupReturnedFieldName>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2Mf</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2Mf</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountId</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1e4917f0-b986-4e58-8007-9a86a2a01520</globalKey>
+        <inputFieldName>contacts:LastName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2OH</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2OH</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>LastName</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>33b97dc7-7898-4301-91bc-838c920e5ffb</globalKey>
+        <inputFieldName>contacts:MailingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2hd</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2hd</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>MailingCity</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>afbdc495-3052-4c32-875a-e6ff9f8b3513</globalKey>
+        <inputFieldName>contacts:MailingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2jF</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2jF</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>MailingCountry</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f329c52d-8979-4014-a6d8-eb6ec0020dce</globalKey>
+        <inputFieldName>contacts:MobilePhone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2Xx</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2Xx</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>MobilePhone</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>8cc8fdae-f363-4510-9b21-7c96a955cde7</globalKey>
+        <inputFieldName>contacts:MailingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2ZZ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2ZZ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>MailingState</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>46657200-22e0-48cc-9660-d9d32d0a7377</globalKey>
+        <inputFieldName>contacts:Department</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2bB</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2bB</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Department</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>542d01a4-7c76-4a65-a0d4-e36854ecba89</globalKey>
+        <inputFieldName>contacts:Title</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2T7</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2T7</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Title</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>415a9270-fb48-4e01-8ace-52fb973d8021</globalKey>
+        <inputFieldName>contacts:MailingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2Pt</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2Pt</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>MailingStreet</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>baf9533d-9281-4503-9e7a-0d6acd902233</globalKey>
+        <inputFieldName>contacts:FirstName</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2RV</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2RV</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FirstName</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>7539e7ec-feef-4b55-96f8-133a0bf46a68</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2L3</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2L3</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>1136dfab-4264-4699-a0b0-2b06e2de3bf8</globalKey>
+        <inputFieldName>contacts:MailingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2kr</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2kr</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>OtherStreet</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>862e8504-df8e-49e8-8281-fab6172b3072</globalKey>
+        <inputFieldName>contacts:Phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2g1</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2g1</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Phone</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>8f2da3b9-3057-4886-8695-cdf085aabceb</globalKey>
+        <inputFieldName>contacts:Email</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2cn</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2cn</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Email</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>08366253-4d7c-4fd5-b973-43a6474588a7</globalKey>
+        <inputFieldName>contacts:MailingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLoadContactsWithAccount</name>
+        <omniDataTransformation>0kdaj000000B2eP</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B2eP</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>MailingPostalCode</outputFieldName>
+        <outputObjectName>Contact</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;contacts&quot; : [ {
+    &quot;FirstName&quot; : &quot;John&quot;,
+    &quot;Account&quot; : &quot;TechCorp Solutions Inc.&quot;,
+    &quot;LastName&quot; : &quot;Smith&quot;,
+    &quot;Email&quot; : &quot;john.smith@techcorp.com&quot;,
+    &quot;Phone&quot; : &quot;+1-555-0123&quot;,
+    &quot;MobilePhone&quot; : &quot;+1-555-0124&quot;,
+    &quot;Title&quot; : &quot;Chief Technology Officer&quot;,
+    &quot;Department&quot; : &quot;Executive&quot;,
+    &quot;MailingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;MailingCity&quot; : &quot;San Francisco&quot;,
+    &quot;MailingState&quot; : &quot;CA&quot;,
+    &quot;MailingPostalCode&quot; : &quot;94105&quot;,
+    &quot;MailingCountry&quot; : &quot;United States&quot;,
+    &quot;LeadSource&quot; : &quot;Web&quot;,
+    &quot;HasOptedOutOfEmail&quot; : false,
+    &quot;DoNotCall&quot; : false,
+    &quot;Description&quot; : &quot;Senior technology executive with 15+ years of experience&quot;
+  }, {
+    &quot;Account&quot; : &quot;Global Marketing Partners LLC&quot;,
+    &quot;FirstName&quot; : &quot;Sarah&quot;,
+    &quot;LastName&quot; : &quot;Johnson&quot;,
+    &quot;Email&quot; : &quot;sarah.johnson@globalmarketing.com&quot;,
+    &quot;Phone&quot; : &quot;+1-555-0456&quot;,
+    &quot;MobilePhone&quot; : &quot;+1-555-0457&quot;,
+    &quot;Title&quot; : &quot;Marketing Director&quot;,
+    &quot;Department&quot; : &quot;Marketing&quot;,
+    &quot;MailingStreet&quot; : &quot;456 Madison Avenue, Floor 12&quot;,
+    &quot;MailingCity&quot; : &quot;New York&quot;,
+    &quot;MailingState&quot; : &quot;NY&quot;,
+    &quot;MailingPostalCode&quot; : &quot;10022&quot;,
+    &quot;MailingCountry&quot; : &quot;United States&quot;,
+    &quot;LeadSource&quot; : &quot;Referral&quot;,
+    &quot;HasOptedOutOfEmail&quot; : false,
+    &quot;DoNotCall&quot; : false,
+    &quot;Description&quot; : &quot;Creative marketing professional specializing in digital campaigns&quot;
+  } ]
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DMLoadContactsWithAccount_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

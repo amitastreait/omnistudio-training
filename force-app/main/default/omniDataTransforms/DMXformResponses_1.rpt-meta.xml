@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;capital&quot; : [ &quot;Ottawa&quot; ],
+  &quot;flag&quot; : &quot;🇨🇦&quot;,
+  &quot;independent&quot; : true,
+  &quot;landlocked&quot; : false,
+  &quot;borders&quot; : [ &quot;USA&quot; ],
+  &quot;postalCode&quot; : {
+    &quot;regex&quot; : &quot;^([ABCEGHJKLMNPRSTVXY]\\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\\d[ABCEGHJKLMNPRSTVWXYZ]\\d)$&quot;,
+    &quot;format&quot; : &quot;@#@ #@#&quot;
+  },
+  &quot;flags&quot; : {
+    &quot;svg&quot; : &quot;https://flagcdn.com/ca.svg&quot;,
+    &quot;png&quot; : &quot;https://flagcdn.com/w320/ca.png&quot;,
+    &quot;alt&quot; : &quot;The flag of Canada is composed of a red vertical band on the hoist and fly sides and a central white square that is twice the width of the vertical bands. A large eleven-pointed red maple leaf is centered in the white square.&quot;
+  },
+  &quot;capitalInfo&quot; : {
+    &quot;latlng&quot; : [ 45.42, -75.7 ]
+  },
+  &quot;ccn3&quot; : &quot;124&quot;,
+  &quot;coatOfArms&quot; : {
+    &quot;svg&quot; : &quot;https://mainfacts.com/media/images/coats_of_arms/ca.svg&quot;,
+    &quot;png&quot; : &quot;https://mainfacts.com/media/images/coats_of_arms/ca.png&quot;
+  },
+  &quot;demonyms&quot; : {
+    &quot;fra&quot; : {
+      &quot;f&quot; : &quot;Canadienne&quot;,
+      &quot;m&quot; : &quot;Canadien&quot;
+    },
+    &quot;eng&quot; : {
+      &quot;f&quot; : &quot;Canadian&quot;,
+      &quot;m&quot; : &quot;Canadian&quot;
+    }
+  },
+  &quot;fifa&quot; : &quot;CAN&quot;,
+  &quot;cioc&quot; : &quot;CAN&quot;,
+  &quot;car&quot; : {
+    &quot;side&quot; : &quot;right&quot;,
+    &quot;signs&quot; : [ &quot;CDN&quot; ]
+  },
+  &quot;translations&quot; : {
+    &quot;hun&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;swe&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;zho&quot; : {
+      &quot;common&quot; : &quot;加拿大&quot;,
+      &quot;official&quot; : &quot;加拿大&quot;
+    },
+    &quot;est&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;fin&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;pol&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;kor&quot; : {
+      &quot;common&quot; : &quot;캐나다&quot;,
+      &quot;official&quot; : &quot;캐나다&quot;
+    },
+    &quot;ces&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;tur&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;ara&quot; : {
+      &quot;common&quot; : &quot;كندا&quot;,
+      &quot;official&quot; : &quot;كندا&quot;
+    },
+    &quot;rus&quot; : {
+      &quot;common&quot; : &quot;Канада&quot;,
+      &quot;official&quot; : &quot;Канада&quot;
+    },
+    &quot;por&quot; : {
+      &quot;common&quot; : &quot;Canadá&quot;,
+      &quot;official&quot; : &quot;Canadá&quot;
+    },
+    &quot;bre&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;fra&quot; : {
+      &quot;common&quot; : &quot;Canada&quot;,
+      &quot;official&quot; : &quot;Canada&quot;
+    },
+    &quot;deu&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;ita&quot; : {
+      &quot;common&quot; : &quot;Canada&quot;,
+      &quot;official&quot; : &quot;Canada&quot;
+    },
+    &quot;per&quot; : {
+      &quot;common&quot; : &quot;کانادا&quot;,
+      &quot;official&quot; : &quot;کانادا&quot;
+    },
+    &quot;spa&quot; : {
+      &quot;common&quot; : &quot;Canadá&quot;,
+      &quot;official&quot; : &quot;Canadá&quot;
+    },
+    &quot;urd&quot; : {
+      &quot;common&quot; : &quot;کینیڈا&quot;,
+      &quot;official&quot; : &quot;کینیڈا&quot;
+    },
+    &quot;nld&quot; : {
+      &quot;common&quot; : &quot;Canada&quot;,
+      &quot;official&quot; : &quot;Canada&quot;
+    },
+    &quot;jpn&quot; : {
+      &quot;common&quot; : &quot;カナダ&quot;,
+      &quot;official&quot; : &quot;カナダ&quot;
+    },
+    &quot;hrv&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;srp&quot; : {
+      &quot;common&quot; : &quot;Канада&quot;,
+      &quot;official&quot; : &quot;Канада&quot;
+    },
+    &quot;slk&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;cym&quot; : {
+      &quot;common&quot; : &quot;Canada&quot;,
+      &quot;official&quot; : &quot;Canada&quot;
+    }
+  },
+  &quot;altSpellings&quot; : [ &quot;CA&quot; ],
+  &quot;area&quot; : 9984670,
+  &quot;languages&quot; : {
+    &quot;fra&quot; : &quot;French&quot;,
+    &quot;eng&quot; : &quot;English&quot;
+  },
+  &quot;maps&quot; : {
+    &quot;openStreetMaps&quot; : &quot;https://www.openstreetmap.org/relation/1428125&quot;,
+    &quot;googleMaps&quot; : &quot;https://goo.gl/maps/jmEVLugreeqiZXxbA&quot;
+  },
+  &quot;subregion&quot; : &quot;North America&quot;,
+  &quot;idd&quot; : {
+    &quot;suffixes&quot; : [ &quot;&quot; ],
+    &quot;root&quot; : &quot;+1&quot;
+  },
+  &quot;tld&quot; : [ &quot;.ca&quot; ],
+  &quot;unMember&quot; : true,
+  &quot;gini&quot; : {
+    &quot;2017&quot; : 33.3
+  },
+  &quot;continents&quot; : [ &quot;North America&quot; ],
+  &quot;population&quot; : 38005238,
+  &quot;startOfWeek&quot; : &quot;sunday&quot;,
+  &quot;timezones&quot; : [ &quot;UTC-08:00&quot;, &quot;UTC-07:00&quot;, &quot;UTC-06:00&quot;, &quot;UTC-05:00&quot;, &quot;UTC-04:00&quot;, &quot;UTC-03:30&quot; ],
+  &quot;name&quot; : {
+    &quot;nativeName&quot; : {
+      &quot;fra&quot; : {
+        &quot;common&quot; : &quot;Canada&quot;,
+        &quot;official&quot; : &quot;Canada&quot;
+      },
+      &quot;eng&quot; : {
+        &quot;common&quot; : &quot;Canada&quot;,
+        &quot;official&quot; : &quot;Canada&quot;
+      }
+    },
+    &quot;common&quot; : &quot;Canada&quot;,
+    &quot;official&quot; : &quot;Canada&quot;
+  },
+  &quot;cca3&quot; : &quot;CAN&quot;,
+  &quot;region&quot; : &quot;Americas&quot;,
+  &quot;latlng&quot; : [ 60, -95 ],
+  &quot;cca2&quot; : &quot;CA&quot;,
+  &quot;status&quot; : &quot;officially-assigned&quot;,
+  &quot;currencies&quot; : {
+    &quot;CAD&quot; : {
+      &quot;symbol&quot; : &quot;$&quot;,
+      &quot;name&quot; : &quot;Canadian dollar&quot;
+    }
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMXformResponses</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b425f507-299f-459e-bb75-c35aac5074e5</globalKey>
+        <inputFieldName>CountryAPI:coatOfArms</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMXformResponses</name>
+        <omniDataTransformation>0kdaj000000E6gf</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000E6gf</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>CoatOfArms</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>575d1dd7-5744-4839-902c-0ef13d3c954d</globalKey>
+        <inputFieldName>CountryAPI:flags</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMXformResponses</name>
+        <omniDataTransformation>0kdaj000000E6f3</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000E6f3</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Flags</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f84bbb47-e0f1-47eb-9871-cd7db1ba83b1</globalKey>
+        <inputFieldName>CountryAPI:flag</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMXformResponses</name>
+        <omniDataTransformation>0kdaj000000E6bp</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000E6bp</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Flag</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>22f26dc9-48bd-4dce-87a4-cda5d4dd1181</globalKey>
+        <inputFieldName>CountryAPI:population</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMXformResponses</name>
+        <omniDataTransformation>0kdaj000000E6dR</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000E6dR</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Population</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>e7d7ca62-c200-436c-afbb-5daae964fcd0</globalKey>
+        <inputFieldName>RegionSubregion</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMXformResponses</name>
+        <omniDataTransformation>0kdaj000000E6Wz</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000E6Wz</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>RegionSubregion</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>5dec5f79-6389-4288-bc33-882edc86c48c</globalKey>
+        <inputFieldName>CountryAPI:area</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMXformResponses</name>
+        <omniDataTransformation>0kdaj000000E6aD</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000E6aD</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AreaKM</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:CountryAPI:region &quot;/\/\/&gt;/\/\/&quot; var:CountryAPI:subregion CONCAT</formulaConverted>
+        <formulaExpression>CONCAT(%CountryAPI:region%,&quot; &gt; &quot;,%CountryAPI:subregion%)</formulaExpression>
+        <formulaResultPath>RegionSubregion</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>c75065b0-986d-4e0d-a5a6-0dc0fd20a33b</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMXformResponses</name>
+        <omniDataTransformation>0kdaj000000E6Tl</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000E6Tl</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:CountryAPI:area .386 * 0 ROUND</formulaConverted>
+        <formulaExpression>ROUND(%CountryAPI:area%*.386,0)</formulaExpression>
+        <formulaResultPath>AreaMiles</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>92339325-430c-46fe-85bc-95dcc1f83d0d</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMXformResponses</name>
+        <omniDataTransformation>0kdaj000000E6VN</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000E6VN</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>135da7b6-a976-4344-90aa-08b5fbbec328</globalKey>
+        <inputFieldName>AreaMiles</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMXformResponses</name>
+        <omniDataTransformation>0kdaj000000E6Yb</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000E6Yb</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AreaMiles</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>JSON</outputType>
+    <previewJsonData>{
+  &quot;capital&quot; : [ &quot;Ottawa&quot; ],
+  &quot;flag&quot; : &quot;🇨🇦&quot;,
+  &quot;independent&quot; : true,
+  &quot;landlocked&quot; : false,
+  &quot;borders&quot; : [ &quot;USA&quot; ],
+  &quot;postalCode&quot; : {
+    &quot;regex&quot; : &quot;^([ABCEGHJKLMNPRSTVXY]\\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\\d[ABCEGHJKLMNPRSTVWXYZ]\\d)$&quot;,
+    &quot;format&quot; : &quot;@#@ #@#&quot;
+  },
+  &quot;flags&quot; : {
+    &quot;svg&quot; : &quot;https://flagcdn.com/ca.svg&quot;,
+    &quot;png&quot; : &quot;https://flagcdn.com/w320/ca.png&quot;,
+    &quot;alt&quot; : &quot;The flag of Canada is composed of a red vertical band on the hoist and fly sides and a central white square that is twice the width of the vertical bands. A large eleven-pointed red maple leaf is centered in the white square.&quot;
+  },
+  &quot;capitalInfo&quot; : {
+    &quot;latlng&quot; : [ 45.42, -75.7 ]
+  },
+  &quot;ccn3&quot; : &quot;124&quot;,
+  &quot;coatOfArms&quot; : {
+    &quot;svg&quot; : &quot;https://mainfacts.com/media/images/coats_of_arms/ca.svg&quot;,
+    &quot;png&quot; : &quot;https://mainfacts.com/media/images/coats_of_arms/ca.png&quot;
+  },
+  &quot;demonyms&quot; : {
+    &quot;fra&quot; : {
+      &quot;f&quot; : &quot;Canadienne&quot;,
+      &quot;m&quot; : &quot;Canadien&quot;
+    },
+    &quot;eng&quot; : {
+      &quot;f&quot; : &quot;Canadian&quot;,
+      &quot;m&quot; : &quot;Canadian&quot;
+    }
+  },
+  &quot;fifa&quot; : &quot;CAN&quot;,
+  &quot;cioc&quot; : &quot;CAN&quot;,
+  &quot;car&quot; : {
+    &quot;side&quot; : &quot;right&quot;,
+    &quot;signs&quot; : [ &quot;CDN&quot; ]
+  },
+  &quot;translations&quot; : {
+    &quot;hun&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;swe&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;zho&quot; : {
+      &quot;common&quot; : &quot;加拿大&quot;,
+      &quot;official&quot; : &quot;加拿大&quot;
+    },
+    &quot;est&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;fin&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;pol&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;kor&quot; : {
+      &quot;common&quot; : &quot;캐나다&quot;,
+      &quot;official&quot; : &quot;캐나다&quot;
+    },
+    &quot;ces&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;tur&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;ara&quot; : {
+      &quot;common&quot; : &quot;كندا&quot;,
+      &quot;official&quot; : &quot;كندا&quot;
+    },
+    &quot;rus&quot; : {
+      &quot;common&quot; : &quot;Канада&quot;,
+      &quot;official&quot; : &quot;Канада&quot;
+    },
+    &quot;por&quot; : {
+      &quot;common&quot; : &quot;Canadá&quot;,
+      &quot;official&quot; : &quot;Canadá&quot;
+    },
+    &quot;bre&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;fra&quot; : {
+      &quot;common&quot; : &quot;Canada&quot;,
+      &quot;official&quot; : &quot;Canada&quot;
+    },
+    &quot;deu&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;ita&quot; : {
+      &quot;common&quot; : &quot;Canada&quot;,
+      &quot;official&quot; : &quot;Canada&quot;
+    },
+    &quot;per&quot; : {
+      &quot;common&quot; : &quot;کانادا&quot;,
+      &quot;official&quot; : &quot;کانادا&quot;
+    },
+    &quot;spa&quot; : {
+      &quot;common&quot; : &quot;Canadá&quot;,
+      &quot;official&quot; : &quot;Canadá&quot;
+    },
+    &quot;urd&quot; : {
+      &quot;common&quot; : &quot;کینیڈا&quot;,
+      &quot;official&quot; : &quot;کینیڈا&quot;
+    },
+    &quot;nld&quot; : {
+      &quot;common&quot; : &quot;Canada&quot;,
+      &quot;official&quot; : &quot;Canada&quot;
+    },
+    &quot;jpn&quot; : {
+      &quot;common&quot; : &quot;カナダ&quot;,
+      &quot;official&quot; : &quot;カナダ&quot;
+    },
+    &quot;hrv&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;srp&quot; : {
+      &quot;common&quot; : &quot;Канада&quot;,
+      &quot;official&quot; : &quot;Канада&quot;
+    },
+    &quot;slk&quot; : {
+      &quot;common&quot; : &quot;Kanada&quot;,
+      &quot;official&quot; : &quot;Kanada&quot;
+    },
+    &quot;cym&quot; : {
+      &quot;common&quot; : &quot;Canada&quot;,
+      &quot;official&quot; : &quot;Canada&quot;
+    }
+  },
+  &quot;altSpellings&quot; : [ &quot;CA&quot; ],
+  &quot;area&quot; : 9984670,
+  &quot;languages&quot; : {
+    &quot;fra&quot; : &quot;French&quot;,
+    &quot;eng&quot; : &quot;English&quot;
+  },
+  &quot;maps&quot; : {
+    &quot;openStreetMaps&quot; : &quot;https://www.openstreetmap.org/relation/1428125&quot;,
+    &quot;googleMaps&quot; : &quot;https://goo.gl/maps/jmEVLugreeqiZXxbA&quot;
+  },
+  &quot;subregion&quot; : &quot;North America&quot;,
+  &quot;idd&quot; : {
+    &quot;suffixes&quot; : [ &quot;&quot; ],
+    &quot;root&quot; : &quot;+1&quot;
+  },
+  &quot;tld&quot; : [ &quot;.ca&quot; ],
+  &quot;unMember&quot; : true,
+  &quot;gini&quot; : {
+    &quot;2017&quot; : 33.3
+  },
+  &quot;continents&quot; : [ &quot;North America&quot; ],
+  &quot;population&quot; : 38005238,
+  &quot;startOfWeek&quot; : &quot;sunday&quot;,
+  &quot;timezones&quot; : [ &quot;UTC-08:00&quot;, &quot;UTC-07:00&quot;, &quot;UTC-06:00&quot;, &quot;UTC-05:00&quot;, &quot;UTC-04:00&quot;, &quot;UTC-03:30&quot; ],
+  &quot;name&quot; : {
+    &quot;nativeName&quot; : {
+      &quot;fra&quot; : {
+        &quot;common&quot; : &quot;Canada&quot;,
+        &quot;official&quot; : &quot;Canada&quot;
+      },
+      &quot;eng&quot; : {
+        &quot;common&quot; : &quot;Canada&quot;,
+        &quot;official&quot; : &quot;Canada&quot;
+      }
+    },
+    &quot;common&quot; : &quot;Canada&quot;,
+    &quot;official&quot; : &quot;Canada&quot;
+  },
+  &quot;cca3&quot; : &quot;CAN&quot;,
+  &quot;region&quot; : &quot;Americas&quot;,
+  &quot;latlng&quot; : [ 60, -95 ],
+  &quot;cca2&quot; : &quot;CA&quot;,
+  &quot;status&quot; : &quot;officially-assigned&quot;,
+  &quot;currencies&quot; : {
+    &quot;CAD&quot; : {
+      &quot;symbol&quot; : &quot;$&quot;,
+      &quot;name&quot; : &quot;Canadian dollar&quot;
+    }
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>DMXformResponses_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

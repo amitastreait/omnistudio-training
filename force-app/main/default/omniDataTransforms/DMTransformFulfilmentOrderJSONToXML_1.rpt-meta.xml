@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;FulfillmentOrder&quot; : {
+    &quot;OrderID&quot; : &quot;WEB-2024-001234&quot;,
+    &quot;Priority&quot; : &quot;STANDARD&quot;,
+    &quot;FulfillmentCenter&quot; : &quot;PDX-01&quot;,
+    &quot;ShippingDetails&quot; : {
+      &quot;Method&quot; : &quot;FREE_GROUND&quot;,
+      &quot;Address&quot; : {
+        &quot;Line1&quot; : &quot;123 Main St&quot;,
+        &quot;City&quot; : &quot;Portland&quot;,
+        &quot;State&quot; : &quot;OR&quot;,
+        &quot;PostalCode&quot; : &quot;97201&quot;,
+        &quot;Validated&quot; : true
+      }
+    },
+    &quot;BillingDetails&quot; : {
+      &quot;Address&quot; : {
+        &quot;Line1&quot; : &quot;123 Main St&quot;,
+        &quot;City&quot; : &quot;Portland&quot;,
+        &quot;State&quot; : &quot;OR&quot;,
+        &quot;PostalCode&quot; : &quot;97201&quot;,
+        &quot;Validated&quot; : false
+      }
+    },
+    &quot;LineItems&quot; : [ {
+      &quot;SKU&quot; : &quot;PROD-ABC-001&quot;,
+      &quot;Quantity&quot; : 2,
+      &quot;UnitPrice&quot; : 29.99,
+      &quot;TotalValue&quot; : 59.98,
+      &quot;InventoryLocation&quot; : &quot;A1-B2-C3&quot;
+    }, {
+      &quot;SKU&quot; : &quot;PROD-ABC-001&quot;,
+      &quot;Quantity&quot; : 2,
+      &quot;UnitPrice&quot; : 29.99,
+      &quot;TotalValue&quot; : 59.98,
+      &quot;InventoryLocation&quot; : &quot;A1-B2-C3&quot;
+    } ],
+    &quot;OrderTotals&quot; : {
+      &quot;Subtotal&quot; : 59.98,
+      &quot;Tax&quot; : 5.99,
+      &quot;Total&quot; : 65.97
+    }
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMTransformFulfilmentOrderJSONToXML</name>
+    <nullInputsIncludedInOutput>false</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:FulfillmentOrder:ShippingDetails:Address:Validated true == &quot;Validated&quot; &quot;Address/\/\/Not/\/\/Validated&quot; IF</formulaConverted>
+        <formulaExpression>IF(FulfillmentOrder:ShippingDetails:Address:Validated == true , &quot;Validated&quot;, &quot;Address Not Validated&quot;)</formulaExpression>
+        <formulaResultPath>ShippingDetailsValidated</formulaResultPath>
+        <formulaSequence>1.0</formulaSequence>
+        <globalKey>7273aa50-6c0a-414d-8376-9eac51279663</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformFulfilmentOrderJSONToXML</name>
+        <omniDataTransformation>0kdaj000000B7Nx</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7Nx</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <formulaConverted>| var:FulfillmentOrder:BillingDetails:Address:Validated true == &quot;Validated&quot; &quot;Address/\/\/Not/\/\/Validated&quot; IF</formulaConverted>
+        <formulaExpression>IF(FulfillmentOrder:BillingDetails:Address:Validated == true, &quot;Validated&quot;, &quot;Address Not Validated&quot;)</formulaExpression>
+        <formulaResultPath>BillingDetailsValidated</formulaResultPath>
+        <formulaSequence>2.0</formulaSequence>
+        <globalKey>486bac25-67a9-4fd7-8c76-afe7d7b498bf</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformFulfilmentOrderJSONToXML</name>
+        <omniDataTransformation>0kdaj000000B7PZ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7PZ</omniDataTransformationId>
+        <outputCreationSequence>0.0</outputCreationSequence>
+        <outputFieldName>Formula</outputFieldName>
+        <outputObjectName>Formula</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>98819f1f-fe9c-4e20-a16d-ddaf7325a4a9</globalKey>
+        <inputFieldName>BillingDetailsValidated</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformFulfilmentOrderJSONToXML</name>
+        <omniDataTransformation>0kdaj000000B7Sn</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7Sn</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:BillingDetails:Address:Validated</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>522778c8-ae85-4db0-ae54-286f372bad23</globalKey>
+        <inputFieldName>FulfillmentOrder:ShippingDetails:Method</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformFulfilmentOrderJSONToXML</name>
+        <omniDataTransformation>0kdaj000000B7J7</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7J7</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:ShippingDetails:Method</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>2f38b98f-e4a9-4837-b92a-b128fb6fb30b</globalKey>
+        <inputFieldName>FulfillmentOrder:OrderID</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformFulfilmentOrderJSONToXML</name>
+        <omniDataTransformation>0kdaj000000B7HV</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7HV</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:OrderID</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>18151f19-8e96-445b-bd96-aa89ee171314</globalKey>
+        <inputFieldName>FulfillmentOrder:ShippingDetails:Address:State</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformFulfilmentOrderJSONToXML</name>
+        <omniDataTransformation>0kdaj000000B7Kj</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7Kj</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:ShippingDetails:Address:State</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>4a024f6d-c490-45fb-9faf-860e183a8e0c</globalKey>
+        <inputFieldName>FulfillmentOrder:LineItems:SKU</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformFulfilmentOrderJSONToXML</name>
+        <omniDataTransformation>0kdaj000000B7ML</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7ML</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:LineItems:LineItem:SKU</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>e5f082d8-a9e3-4d60-b0b2-1c2d52ff5733</globalKey>
+        <inputFieldName>ShippingDetailsValidated</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMTransformFulfilmentOrderJSONToXML</name>
+        <omniDataTransformation>0kdaj000000B7RB</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000B7RB</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>FulfillmentOrder:ShippingDetails:Address:Validated</outputFieldName>
+        <outputObjectName>json</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <transformValuesMappings>{ }</transformValuesMappings>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>XML</outputType>
+    <previewJsonData>{
+  &quot;FulfillmentOrder&quot; : {
+    &quot;OrderID&quot; : &quot;WEB-2024-001234&quot;,
+    &quot;Priority&quot; : &quot;STANDARD&quot;,
+    &quot;FulfillmentCenter&quot; : &quot;PDX-01&quot;,
+    &quot;ShippingDetails&quot; : {
+      &quot;Method&quot; : &quot;FREE_GROUND&quot;,
+      &quot;Address&quot; : {
+        &quot;Line1&quot; : &quot;123 Main St&quot;,
+        &quot;City&quot; : &quot;Portland&quot;,
+        &quot;State&quot; : &quot;OR&quot;,
+        &quot;PostalCode&quot; : &quot;97201&quot;,
+        &quot;Validated&quot; : true
+      }
+    },
+    &quot;BillingDetails&quot; : {
+      &quot;Address&quot; : {
+        &quot;Line1&quot; : &quot;123 Main St&quot;,
+        &quot;City&quot; : &quot;Portland&quot;,
+        &quot;State&quot; : &quot;OR&quot;,
+        &quot;PostalCode&quot; : &quot;97201&quot;,
+        &quot;Validated&quot; : true
+      }
+    },
+    &quot;LineItems&quot; : [ {
+      &quot;SKU&quot; : &quot;PROD-XYZ-001&quot;,
+      &quot;Quantity&quot; : 2,
+      &quot;UnitPrice&quot; : 29.99,
+      &quot;TotalValue&quot; : 59.98,
+      &quot;InventoryLocation&quot; : &quot;A1-B2-C3&quot;
+    }, {
+      &quot;SKU&quot; : &quot;PROD-ABC-001&quot;,
+      &quot;Quantity&quot; : 2,
+      &quot;UnitPrice&quot; : 29.99,
+      &quot;TotalValue&quot; : 59.98,
+      &quot;InventoryLocation&quot; : &quot;A1-B2-C3&quot;
+    } ],
+    &quot;OrderTotals&quot; : {
+      &quot;Subtotal&quot; : 59.98,
+      &quot;Tax&quot; : 5.99,
+      &quot;Total&quot; : 65.97
+    }
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>false</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Transform</type>
+    <uniqueName>DMTransformFulfilmentOrderJSONToXML_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>

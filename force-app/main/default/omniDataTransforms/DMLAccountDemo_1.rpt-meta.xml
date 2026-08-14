@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniDataTransform xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <assignmentRulesUsed>false</assignmentRulesUsed>
+    <deletedOnSuccess>false</deletedOnSuccess>
+    <errorIgnored>false</errorIgnored>
+    <expectedInputJson>{
+  &quot;Account&quot; : {
+    &quot;Name&quot; : &quot;PantherSchools Inc.&quot;,
+    &quot;Type&quot; : &quot;Customer&quot;,
+    &quot;Industry&quot; : &quot;Education&quot;,
+    &quot;Phone&quot; : &quot;+1-777-0123&quot;,
+    &quot;Fax&quot; : &quot;+1-777-0124&quot;,
+    &quot;Website&quot; : &quot;https://www.PantherSchools.com&quot;,
+    &quot;BillingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;BillingCity&quot; : &quot;San Francisco&quot;,
+    &quot;BillingState&quot; : &quot;CA&quot;,
+    &quot;BillingPostalCode&quot; : &quot;94105&quot;,
+    &quot;BillingCountry&quot; : &quot;United States&quot;,
+    &quot;ShippingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;ShippingCity&quot; : &quot;San Francisco&quot;,
+    &quot;ShippingState&quot; : &quot;CA&quot;,
+    &quot;ShippingPostalCode&quot; : &quot;94105&quot;,
+    &quot;ShippingCountry&quot; : &quot;United States&quot;,
+    &quot;NumberOfEmployees&quot; : 250,
+    &quot;AnnualRevenue&quot; : 15000000,
+    &quot;Rating&quot; : &quot;Hot&quot;,
+    &quot;AccountSource&quot; : &quot;Web&quot;,
+    &quot;TickerSymbol&quot; : &quot;EDU&quot;,
+    &quot;ExternalId&quot; : &quot;788973438234&quot;,
+    &quot;Description&quot; : &quot;Leading software development company specializing in enterprise solutions&quot;
+  }
+}</expectedInputJson>
+    <fieldLevelSecurityEnabled>true</fieldLevelSecurityEnabled>
+    <inputType>JSON</inputType>
+    <isManagedUsingStdDesigner>true</isManagedUsingStdDesigner>
+    <name>DMLAccountDemo</name>
+    <nullInputsIncludedInOutput>true</nullInputsIncludedInOutput>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>f47a84df-834a-472e-827f-147856d9f3f1</globalKey>
+        <inputFieldName>Account:ShippingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWdt</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWdt</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingState</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>80248a59-b8c6-43d5-b7dd-ba19600c6439</globalKey>
+        <inputFieldName>Account:ShippingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWfV</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWfV</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingCity</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>322e78c0-292f-4ef5-982e-8bd0b994d2c9</globalKey>
+        <inputFieldName>Account:Website</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWSb</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWSb</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Website</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>22146aa1-3956-427e-af4e-b644a001568f</globalKey>
+        <inputFieldName>Account:Type</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWUD</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWUD</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Type</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>33ceb9be-c43b-4561-ae74-fe15ce8c8ffc</globalKey>
+        <inputFieldName>Account:ExternalId</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWh7</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWh7</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ExternalId__c</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>fa2d8da1-f280-4f1b-8e17-25240e544003</globalKey>
+        <inputFieldName>Account:BillingCity</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWIv</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWIv</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingCity</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b7b40bff-e105-4fe3-881a-3f13d66a84f6</globalKey>
+        <inputFieldName>Account:BillingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWKX</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWKX</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingStreet</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>4d668807-7d36-4444-b452-29dcb7d33091</globalKey>
+        <inputFieldName>Account:BillingState</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWpB</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWpB</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingState</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>0300f59c-9561-4a45-addf-213c1fc7a30f</globalKey>
+        <inputFieldName>Account:AccountSource</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWVp</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWVp</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AccountSource</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b83a942a-6482-431e-a231-b417348c9e0a</globalKey>
+        <inputFieldName>Account:BillingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWXR</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWXR</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingPostalCode</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>fc650b51-29fe-4266-a69f-6b98d61bbd2f</globalKey>
+        <inputFieldName>Account:ShippingStreet</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWZ3</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWZ3</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingStreet</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>94f7f2d1-054e-4842-9def-787696d74a0b</globalKey>
+        <inputFieldName>Account:Name</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWNl</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWNl</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Name</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>83dc6805-2efd-4b00-82a6-2cac768d6b4b</globalKey>
+        <inputFieldName>Account:Phone</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWPN</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWPN</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Phone</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>7c8165b8-1d60-4624-b003-dcb56826e489</globalKey>
+        <inputFieldName>Account:TickerSymbol</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWqn</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWqn</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>TickerSymbol</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>true</disabled>
+        <filterGroup>0.0</filterGroup>
+        <filterOperator>=</filterOperator>
+        <globalKey>eeff2cae-cfd5-4950-8162-97bfc65eb6e1</globalKey>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <migrationValue>FAKEMAPPING</migrationValue>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWFh</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWFh</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Id</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>e40a2587-a585-421f-a2f7-ab95777bde3f</globalKey>
+        <inputFieldName>Account:Fax</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWHJ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWHJ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Fax</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>db839adb-61e2-40ab-b9b4-871d889f39cd</globalKey>
+        <inputFieldName>Account:ShippingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWij</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWij</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingCountry</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>47f80d5a-b047-464a-a7ce-873f18759fff</globalKey>
+        <inputFieldName>Account:AnnualRevenue</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWkL</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWkL</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>AnnualRevenue</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>d3b77b81-e49e-4721-b4e7-6f58624ca48f</globalKey>
+        <inputFieldName>Account:Description</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWaf</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWaf</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Description</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>759753d0-d0ca-4225-bd2a-4e8543317dd4</globalKey>
+        <inputFieldName>Account:NumberOfEmployees</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWcH</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWcH</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>NumberOfEmployees</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>298b93cd-8aaf-4a3e-8988-cfcf89e256c0</globalKey>
+        <inputFieldName>Account:BillingCountry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWM9</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWM9</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>BillingCountry</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b69a3c80-33a3-4afa-973e-ce1afbf0996b</globalKey>
+        <inputFieldName>Account:ShippingPostalCode</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWlx</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWlx</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>ShippingPostalCode</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>b1bc08cc-767b-4571-9bac-b1bdc4109ff0</globalKey>
+        <inputFieldName>Account:Rating</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWnZ</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWnZ</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Rating</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <omniDataTransformItem>
+        <disabled>false</disabled>
+        <filterGroup>0.0</filterGroup>
+        <globalKey>173fd220-ce80-48c2-897d-b29a48137b26</globalKey>
+        <inputFieldName>Account:Industry</inputFieldName>
+        <inputObjectQuerySequence>0.0</inputObjectQuerySequence>
+        <linkedObjectSequence>0.0</linkedObjectSequence>
+        <name>DMLAccountDemo</name>
+        <omniDataTransformation>0kdaj000000FWQz</omniDataTransformation>
+        <omniDataTransformationId>0kdaj000000FWQz</omniDataTransformationId>
+        <outputCreationSequence>1.0</outputCreationSequence>
+        <outputFieldName>Industry</outputFieldName>
+        <outputObjectName>Account</outputObjectName>
+        <requiredForUpsert>false</requiredForUpsert>
+        <upsertKey>false</upsertKey>
+    </omniDataTransformItem>
+    <outputType>SObject</outputType>
+    <previewJsonData>{
+  &quot;Account&quot; : {
+    &quot;Name&quot; : &quot;PantherSchools Inc.&quot;,
+    &quot;Type&quot; : &quot;Customer&quot;,
+    &quot;Industry&quot; : &quot;Education&quot;,
+    &quot;Phone&quot; : &quot;+1-777-0123&quot;,
+    &quot;Fax&quot; : &quot;+1-777-0124&quot;,
+    &quot;Website&quot; : &quot;https://www.PantherSchools.com&quot;,
+    &quot;BillingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;BillingCity&quot; : &quot;San Francisco&quot;,
+    &quot;BillingState&quot; : &quot;CA&quot;,
+    &quot;BillingPostalCode&quot; : &quot;94105&quot;,
+    &quot;BillingCountry&quot; : &quot;United States&quot;,
+    &quot;ShippingStreet&quot; : &quot;123 Technology Drive, Suite 500&quot;,
+    &quot;ShippingCity&quot; : &quot;San Francisco&quot;,
+    &quot;ShippingState&quot; : &quot;CA&quot;,
+    &quot;ShippingPostalCode&quot; : &quot;94105&quot;,
+    &quot;ShippingCountry&quot; : &quot;United States&quot;,
+    &quot;NumberOfEmployees&quot; : 250,
+    &quot;AnnualRevenue&quot; : 15000000,
+    &quot;Rating&quot; : &quot;Hot&quot;,
+    &quot;AccountSource&quot; : &quot;Web&quot;,
+    &quot;TickerSymbol&quot; : &quot;EDU&quot;,
+    &quot;ExternalId&quot; : &quot;788973438234&quot;,
+    &quot;Description&quot; : &quot;Leading software development company specializing in enterprise solutions&quot;
+  }
+}</previewJsonData>
+    <processSuperBulk>false</processSuperBulk>
+    <responseCacheTtlMinutes>0.0</responseCacheTtlMinutes>
+    <rollbackOnError>true</rollbackOnError>
+    <sourceObjectDefault>false</sourceObjectDefault>
+    <synchronousProcessThreshold>0.0</synchronousProcessThreshold>
+    <type>Load</type>
+    <uniqueName>DMLAccountDemo_1</uniqueName>
+    <versionNumber>1.0</versionNumber>
+    <xmlDeclarationRemoved>false</xmlDeclarationRemoved>
+</OmniDataTransform>
