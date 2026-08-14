@@ -2,59 +2,10 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>Coverage_Plan__c</members>
+		<members>Expense__c</members>
 		<members>Insurance_Underwriting_Rule__c</members>
 		<members>State_Surcharge_Rule__c</members>
 		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>Coverage_Plan__c</members>
-		<members>Insurance_Underwriting_Rule__c</members>
-		<members>State_Surcharge_Rule__c</members>
-		<name>CustomTab</name>
-	</types>
-	<types>
-		<members>SmartDerive_Base_Premium</members>
-		<members>SmartDriveMembershipRoadsideFee</members>
-		<members>SmartDrive_Base_Premium</members>
-		<members>SmartDrive_Experience_Discount</members>
-		<members>SmartDrive_Membership_Roadside_Fee</members>
-		<members>SmartDrive_Risk_Level</members>
-		<name>DecisionMatrixDefinition</name>
-	</types>
-	<types>
-		<members>Insurance_Underwriting_Rule</members>
-		<members>SmartDrive_State_Surcharge</members>
-		<name>DecisionTable</name>
-	</types>
-	<types>
-		<members>SmartDrive_Premium_Engine</members>
-		<name>ExpressionSetDefinition</name>
-	</types>
-	<types>
-		<members>AddressVerificationAPI</members>
-		<members>PostGrid</members>
-		<members>WeatherAPI</members>
-		<name>ExternalCredential</name>
-	</types>
-	<types>
-		<members>Coverage_Plan__c-Coverage Plan Layout</members>
-		<members>Insurance_Underwriting_Rule__c-Insurance Underwriting Rule Layout</members>
-		<members>State_Surcharge_Rule__c-State Surcharge Rule Layout</members>
-		<name>Layout</name>
-	</types>
-	<types>
-		<members>callDataMapper</members>
-		<members>callDataMapperFromLWC</members>
-		<members>callIntegrationProcedure</members>
-		<name>LightningComponentBundle</name>
-	</types>
-	<types>
-		<members>PantherSchools_SF</members>
-		<members>PostGridAPI</members>
-		<members>VerifyAddress</members>
-		<members>WeatherAPI</members>
-		<members>Weather_API</members>
-		<name>NamedCredential</name>
 	</types>
 	<types>
 		<members>ContactExtractTBE_1</members>
@@ -63,119 +14,11 @@
 		<members>DMEAccountWithOpportunities_1</members>
 		<members>DMEContactRecords_1</members>
 		<members>DMEDocGenExampleV1_1</members>
-		<members>DMEDocGenExample_1</members>
-		<members>DMEExtractAssetRecord_1</members>
-		<members>DMEExtractAssetRelatedToAccount_1</members>
-		<members>DMEExtractAssetsEditBlock_1</members>
-		<members>DMEExtractContactInformation_1</members>
-		<members>DMEExtractContacts_1</members>
-		<members>DMEGETAccountDetails_1</members>
-		<members>DMEGetAccountsWithContacts_1</members>
-		<members>DMEOpportunityRecord_1</members>
-		<members>DMESearchContactByNameAndAccount_1</members>
-		<members>DMETESTLOADACCOUNT_1</members>
-		<members>DMETurboExtract_1</members>
-		<members>DMExtractAccountData_1</members>
-		<members>DMLAccountDemo_1</members>
-		<members>DMLAccountRecord_1</members>
-		<members>DMLCreateCaseRecord_1</members>
-		<members>DMLCreateCaseWFile_1</members>
-		<members>DMLCreateCaseWOAttachment_1</members>
-		<members>DMLCreateContact_1</members>
-		<members>DMLoadAccountRecord_1</members>
-		<members>DMLoadAccountsWithContacts_1</members>
-		<members>DMLoadContactsWithAccount_1</members>
-		<members>DMSaveAccountDetails_1</members>
-		<members>DMSearchAccountByName_1</members>
-		<members>DMTAccountsWithOpportunitiesDocGenExampleV1_1</members>
-		<members>DMTAccountsWithOpportunitiesDocGenExample_1</members>
-		<members>DMTDocGenExampleV1_1</members>
-		<members>DMTDocGenExample_1</members>
-		<members>DMTEGetOpenCaseRecords_1</members>
-		<members>DMTESTJSONTOXML_1</members>
-		<members>DMTFinalExternalAccountJSON_1</members>
-		<members>DMTPrepareForExternalSFAPI_1</members>
-		<members>DMTRCaseRecord_1</members>
-		<members>DMTRGetLeadsWithCampaignInformation_1</members>
-		<members>DMTTransformPolicies_1</members>
-		<members>DMTransforceTransactonData_1</members>
-		<members>DMTransformAssetToPolicy_1</members>
-		<members>DMTransformExternalDataToUnifiedCustomer_1</members>
-		<members>DMTransformFulfilmentOrderJSONToXML_1</members>
-		<members>DMTransformWeatherInformation_1</members>
-		<members>DMUpdatePrimaryContactOnAccount_1</members>
-		<members>DMXformResponses_1</members>
-		<members>DRExtractDocGenExample_1</members>
-		<members>TESTDMCreateNewCase_1</members>
-		<members>TestExpense_1</members>
-		<members>TestTransform_1</members>
-		<members>saveAccountDetails_1</members>
-		<members>teamChangePriContactTA_1</members>
-		<members>teamGetAssetAccountDataAS_1</members>
-		<members>testCreateNewCaseNoFile_1</members>
 		<name>OmniDataTransform</name>
 	</types>
 	<types>
-		<members>DataService_GetAccountClassification_English_1</members>
-		<members>GITHUB_REPO_English_1</members>
-		<members>PS_createAccountRecord_English_1</members>
-		<members>Vehicle_Discount_English_1</members>
-		<members>motor_BasePremimum_English_1</members>
-		<members>quote_calculate_English_1</members>
-		<members>sample_LoanApplication_English_2</members>
-		<members>team_AddressVerification_English_1</members>
-		<members>team_FetchAccountById_Procedure_1</members>
-		<members>team_GetAccountClassification_English_1</members>
-		<members>team_GetAccountDetails_English_1</members>
-		<members>team_GetAccountDetails_English_2</members>
-		<members>team_GetAccountDetails_English_3</members>
-		<members>team_GetAccountDetails_English_4</members>
-		<members>team_createCaseRecord_English_5</members>
-		<members>team_createExternalAccountContact_English_1</members>
-		<members>team_createExternalAccountContact_English_2</members>
-		<members>team_discountCalculation_English_1</members>
-		<members>team_getCountryAPI_English_1</members>
-		<members>team_getCustomerCreditScore_English_1</members>
-		<members>team_longRunningTest_English_1</members>
-		<members>team_loopBlockDemo_English_1</members>
-		<members>team_loopBlockDemo_English_2</members>
-		<members>team_loopBlockDemo_English_3</members>
-		<members>team_saveAccountDetailsRDM_English_1</members>
-		<members>team_saveAccountDetails_English_1</members>
-		<members>team_saveAccountDetails_English_2</members>
-		<members>team_saveAccountDetails_Procedure_1</members>
-		<members>team_saveCaseRecord_English_1</members>
-		<members>team_test_Procedure_1</members>
-		<members>team_tryCatchDemo_English_1</members>
-		<members>team_tryCatchDemo_English_2</members>
-		<members>team_tryCatchDemo_English_3</members>
-		<members>test_CreateNewCase_Procedure_1</members>
-		<members>test_CreateNewCase_Procedure_2</members>
-		<members>test_CreateNewCase_Procedure_3</members>
-		<members>test_createCase_Procedure_1</members>
+		<members>postgrid_lookupAddress_English_1</members>
 		<name>OmniIntegrationProcedure</name>
-	</types>
-	<types>
-		<members>Vehicle_Insurance_English_1</members>
-		<members>Vehicle_Premium_English_1</members>
-		<members>quote_motor_English_1</members>
-		<members>view_WeatherInformation_English_1</members>
-		<members>view_WeatherInformation_English_2</members>
-		<members>view_WeatherInformation_English_3</members>
-		<name>OmniScript</name>
-	</types>
-	<types>
-		<members>AccountInformation_SimpleAccounts_1</members>
-		<members>Account_RevenueClassification_1</members>
-		<members>getAccountClassification_Developer_6</members>
-		<members>opportunityHistoryChildComponent_Developer_3</members>
-		<members>pantherschoolsSelectedLists_PantherSchools_3</members>
-		<members>primaryContactCard_Account_4</members>
-		<members>relatedOpporrtunityRecords_Accounts_10</members>
-		<members>teamAccountInformationCard_Account_5</members>
-		<members>testSelectedCardsChild_Developer_4</members>
-		<members>weatherInformationCard_Developer_7</members>
-		<name>OmniUiCard</name>
 	</types>
 	<version>67.0</version>
 </Package>
